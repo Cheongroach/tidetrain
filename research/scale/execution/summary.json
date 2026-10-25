@@ -1,5 +1,5 @@
 {
-  "recorded_at_epoch": 1792916453.0553708,
+  "recorded_at_epoch": 1792919301.6411874,
   "direct_1000_gpu_authorized": true,
   "small_scale_prerequisite": false,
   "purpose": "protocol_capacity",
@@ -282,5 +282,46 @@
     "auto_retry_after_stop": true,
     "terminal_observation_seconds": 120,
     "root_cause_confirmed": false
+  },
+  "week_window_continuation": {
+    "recorded_at_epoch": 1792919301.6356184,
+    "label": "scale1000-a10-week",
+    "job_run_sid": "cb29420b46dc4e42",
+    "requested_gpus": 1000,
+    "requested_nodes": 250,
+    "gpus_per_node": 4,
+    "gpu_type": "NVIDIA-A10",
+    "platform_status": "started",
+    "trial_sid": "439260181",
+    "trial_status": "queued",
+    "actual_training_gpu_count": 0,
+    "accepted_tokens": 0,
+    "schedule_seconds": 604800,
+    "schedule_deadline": 1793523175.436395,
+    "rendezvous_seconds": 21600,
+    "training_seconds_after_cohort": 2700,
+    "absolute_deadline": 1793547475.4361963,
+    "max_allocated_gpu_hours": 20000,
+    "usage": {
+      "gpu_hours": 0.0,
+      "gpus_per_pod": 4,
+      "pods": {},
+      "purpose": "allocation_estimate_not_billing",
+      "sampled_at": 1792919150.6962662
+    },
+    "tests": {
+      "regressions": 15,
+      "cpu_http_rounds": 2,
+      "cpu_http_tokens": 32
+    },
+    "gateway_background_alive": true,
+    "watcher_background_alive": true,
+    "supervisor_verified": false,
+    "limitations": [
+      "no_gpu_training_result",
+      "local_supervisor_launch_failed_and_removed",
+      "head_failure_requires_manual_cpu_gateway_recovery",
+      "sampled_allocation_not_billing"
+    ]
   }
 }
