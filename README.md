@@ -19,7 +19,7 @@ Qwen2.5-0.5B 在两个真实单 GPU slot（A10、A100 PCIe 80GB）完成四轮 l
 
 本次证明了提交和恢复链路的正确性，**没有证明训练质量收益、DDP 非劣性或百卡／千卡性能**。完整结果见 [实测报告](results/qwen05b-4round/REPORT.md)。
 
-扩展改造已增加 safetensors 分片、流式归约、SQLite WAL 租约／fencing／CAS、紧凑恢复 manifest 和离线千卡启动入口。真实 Qwen checkpoint 的 CPU 分片审计误差为 0、峰值 RSS 1.61 GiB；11 项回归及两轮 CPU HTTP 恢复测试通过。已直接提交 1000 H20 与 1000 A10 请求；H20 启动失败，修正后的 A10 请求仍排队，尚无千卡性能结果。详见 [扩容执行记录](results/scale-20261025/REPORT.md)。
+扩展改造已增加 safetensors 分片、流式归约、SQLite WAL 租约／fencing／CAS、紧凑恢复 manifest 和离线千卡启动入口。真实 Qwen checkpoint 的 CPU 分片审计误差为 0、峰值 RSS 1.61 GiB；11 项回归及两轮 CPU HTTP 恢复测试通过。已直接提交 1000 H20 与 1000 A10 请求；H20 启动失败，修正后的 A10 请求在 staging 后触发平台自动续试，目前仍待分配节点，尚无千卡性能结果。详见 [扩容执行记录](results/scale-20261025/REPORT.md)。
 
 ## 项目成果：STAR
 
@@ -71,7 +71,7 @@ python -m unittest lowband_training.test_correctness \
   lowband_training.test_http lowband_training.test_fork_run \
   lowband_training.test_spot_task_endpoints \
   lowband_training.test_scale lowband_training.test_scale_http \
-  lowband_training.test_cuda_bootstrap
+  lowband_training.test_cuda_bootstrap lowband_training.test_watch_scale
 python -m lowband_training.smoke --help
 ```
 

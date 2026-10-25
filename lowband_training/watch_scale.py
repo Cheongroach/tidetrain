@@ -49,7 +49,7 @@ def main():
         parser.error("Polling interval must be 1–60 seconds")
     output = Path(args.output)
     output.mkdir(parents=True, exist_ok=True)
-    last_status = None
+    last_phase, last_pod_poll = None, 0.
     stop_requested = False
     while True:
         try:
@@ -63,12 +63,19 @@ def main():
             with (output / "status.jsonl").open("ab") as stream:
                 stream.write(canonical(record) + b"\n")
             (output / "latest.json").write_bytes(canonical(record))
-            if status != last_status or status in TERMINAL:
+            phase = (status, record["trial_status"], trial)
+            if phase != last_phase or status in TERMINAL:
                 print(canonical(record).decode(), flush=True)
-                if trial:
-                    (output / "pods.json").write_bytes(canonical(
-                        collect_pods(args.cli, args.control_plane, trial)))
-                last_status = status
+            if trial and (phase != last_phase or status in TERMINAL or
+                          time.monotonic() - last_pod_poll >= 60):
+                pods = collect_pods(args.cli, args.control_plane, trial)
+                (output / "pods.json").write_bytes(canonical(pods))
+                (output / "pod-counts.json").write_bytes(canonical({
+                    "time": time.time(), "total": len(pods),
+                    "hosted": sum(row["host_assigned"] for row in pods),
+                    "started": sum(bool(row["start_at"]) for row in pods)}))
+                last_pod_poll = time.monotonic()
+            last_phase = phase
             if status in TERMINAL:
                 return
         except (OSError, ValueError, RuntimeError, subprocess.TimeoutExpired, KeyError) as exc:
