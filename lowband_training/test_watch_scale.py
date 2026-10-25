@@ -4,7 +4,7 @@ from pathlib import Path
 import tempfile
 import unittest
 from unittest.mock import patch
-from .watch_scale import collect_pods, main
+from .watch_scale import account_usage, collect_pods, main
 
 
 def status(phase, state="started"):
@@ -67,6 +67,28 @@ class WatchScaleTest(unittest.TestCase):
             rows = collect_pods("cli", "cn", "trial")
         self.assertEqual([row["host_assigned"] for row in rows], [False, True])
         self.assertEqual(call.call_args_list[1].args[4]["page_token"], "2")
+
+    def test_week_window_does_not_stop_two_hour_queue_or_retry(self):
+        with tempfile.TemporaryDirectory() as directory:
+            argv = ["watch", "--cli", "cli", "--sid", "run", "--output", directory,
+                    "--deadline-epoch", "604800", "--interval", "300"]
+            with patch("sys.argv", argv), patch("lowband_training.watch_scale.time.sleep"), \
+                    patch("lowband_training.watch_scale.time.time", return_value=7200), \
+                    patch("lowband_training.watch_scale.call", side_effect=[
+                        status("queued"), status("killed", "stopped"), status("queued"),
+                        status("done", "success")]) as call, \
+                    patch("lowband_training.watch_scale.collect_pods", return_value=[]):
+                main()
+            self.assertFalse(any(row.args[3] == "stop" for row in call.call_args_list))
+
+    def test_allocation_accounting_survives_trial_switch(self):
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory)
+            pod = {"sid": "a", "host_assigned": True, "schedule_at": "1970-01-01T00:00:00Z",
+                   "start_at": None, "stop_at": None}
+            self.assertEqual(account_usage(output, [pod], 4, 3600), 4)
+            self.assertEqual(account_usage(output, [], 4, 7200), 8)
+            self.assertEqual(account_usage(output, [pod], 4, 7200), 8)
 
 
 if __name__ == "__main__":

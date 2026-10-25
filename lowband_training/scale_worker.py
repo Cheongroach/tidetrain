@@ -82,6 +82,21 @@ def upload_tree(client, shards, tree, uploaded):
         uploaded.add(ref["sha256"])
 
 
+def wait_for_cohort(client, lease, hardware, config):
+    wait_deadline = min(config["deadline"], time.time() + config["rendezvous_seconds"])
+    client.deadline = wait_deadline
+    while time.time() < wait_deadline:
+        lease = client.request("POST", "/renew", {"lease": lease})
+        ready = client.request("POST", "/ready", {"lease": lease, "hardware": hardware})
+        if ready["training_window"] is not None:
+            client.deadline = ready["training_window"]["deadline"]
+            return lease, client.deadline
+        interval = config.get("rendezvous_poll_seconds", 30)
+        time.sleep(min(max(0, wait_deadline - time.time()),
+                       client.jitter.uniform(interval * .5, interval * 1.5)))
+    raise TimeoutError("Allocated node rendezvous window expired")
+
+
 def run(endpoint, token, worker, root, device):
     started = time.time()
     client = CapacityClient(endpoint, token, timeout=30, deadline=time.time() + 300)
@@ -99,8 +114,15 @@ def run(endpoint, token, worker, root, device):
         if not torch.cuda.is_bf16_supported():
             raise RuntimeError("BF16 GPU required")
     model, data = create_model(config, dev), load_data(config)
+    deadline = config["deadline"]
+    if config.get("require_rendezvous"):
+        hardware = {"device": str(dev), "host": socket.gethostname(),
+                    "gpu": torch.cuda.get_device_name(dev) if dev.type == "cuda" else None,
+                    "gpu_uuid": str(torch.cuda.get_device_properties(dev).uuid)
+                    if dev.type == "cuda" and hasattr(torch.cuda.get_device_properties(dev), "uuid") else None}
+        lease, deadline = wait_for_cohort(client, lease, hardware, config)
     uploaded, submitted, rounds, rejected = set(), set(), [], 0
-    while time.time() < config["deadline"]:
+    while time.time() < deadline:
         base = client.request("GET", snapshot_route)["base"]
         if base["round"] >= config["rounds"]:
             report = {"worker": worker, "host": socket.gethostname(), "owner": owner,
@@ -131,7 +153,7 @@ def run(endpoint, token, worker, root, device):
             fetch_tree(client, shards, recovery)
             previous = shards.restore(recovery)
         delta, recovery, tokens, metrics = train_round(model, data, config, worker, state,
-                                                      previous, dev, config["deadline"])
+                                                      previous, dev, deadline)
         record = {"worker": worker, "base_round": base["round"], "epoch": base["epoch"],
                   "base_sha256": Ledger.state_hash(base["state"]), "fence": lease["fence"],
                   "tokens": tokens, "cursor": recovery["cursor"],

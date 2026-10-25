@@ -149,6 +149,8 @@ class Handler(BaseHTTPRequestHandler):
             self.reply(200, authority.ledger.acquire(**body))
         elif self.command == "POST" and route == "/renew":
             self.reply(200, authority.ledger.renew(body["lease"], 600))
+        elif self.command == "POST" and route == "/ready":
+            self.reply(200, authority.ledger.ready(body["lease"], body["hardware"]))
         elif self.command == "POST" and route == "/submit":
             authority.shards.verify_tree(body["record"]["delta"])
             authority.shards.verify_tree(body["record"]["recovery"])

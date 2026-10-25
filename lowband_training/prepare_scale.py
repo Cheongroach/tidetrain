@@ -15,20 +15,25 @@ FILES = ("__init__.py", "storage.py", "protocol.py", "train.py", "shards.py",
          "ledger.py", "http_transport.py", "scale_worker.py", "scale_node.py", "cuda_bootstrap.py")
 
 
-def configuration(members, deadline):
+def configuration(members, deadline, runtime_seconds=2700, rendezvous_seconds=21600):
     return {"model": "tiny", "seed": 44, "workers": [f"w{i:04d}" for i in range(members)],
             "quorum": members, "local_steps": 4, "batch_size": 1, "seq_len": 2,
             "rounds": 2, "inner_lr": .0001, "weight_decay": .01,
             "outer_lr": .7, "outer_momentum": .9, "round_timeout": 1200,
-            "max_seconds": 2700, "deadline": deadline, "chunk_bytes": 256 << 10,
+            "max_seconds": runtime_seconds, "deadline": deadline, "chunk_bytes": 256 << 10,
+            "rendezvous_seconds": rendezvous_seconds,
+            "schedule_seconds": 7 * 86400,
             "io_concurrency": 16, "purpose": "protocol_capacity"}
 
 
 def prepare(root, nodes, endpoint, token, cluster, group, queue, image_vid, seconds,
             gpus_per_node=8, gpu_type="NVIDIA_H20", cpu=32, memory_mb=131072,
-            preemptible=False, dependency_wheel=None):
+            preemptible=False, dependency_wheel=None, schedule_seconds=7 * 86400,
+            rendezvous_seconds=21600):
     if min(nodes, gpus_per_node, cpu, memory_mb) < 1 or seconds <= 120:
         raise ValueError("Positive resource sizes and lifetime over 120 seconds required")
+    if schedule_seconds <= 0 or rendezvous_seconds <= 0:
+        raise ValueError("Positive scheduling and rendezvous windows required")
     if dependency_wheel is None:
         raise ValueError("An offline safetensors wheel is required")
     wheel = Path(dependency_wheel)
@@ -75,11 +80,15 @@ mkdir -p /tmp/tidetrain-scale
 python3 - <<'TIDETRAIN_SOURCE'
 {bootstrap}
 TIDETRAIN_SOURCE
-exec timeout --signal=TERM --kill-after=30s {seconds}s python3 -m lowband_training.cuda_bootstrap \
+exec timeout --signal=TERM --kill-after=30s {rendezvous_seconds + seconds + 90}s python3 -m lowband_training.cuda_bootstrap \
 /tmp/tidetrain-scale/cuda.json python3 -m lowband_training.scale_node \
---endpoint {shlex.quote(endpoint)} --root /tmp/tidetrain-scale/results --gpus-per-node {gpus_per_node} --seconds {seconds - 90}
+--endpoint {shlex.quote(endpoint)} --root /tmp/tidetrain-scale/results --gpus-per-node {gpus_per_node} --seconds {rendezvous_seconds + seconds}
 """
-    config = configuration(members, time.time() + seconds + 3600)
+    config = configuration(members, time.time() + schedule_seconds + rendezvous_seconds + seconds,
+                           seconds, rendezvous_seconds)
+    config["schedule_seconds"] = schedule_seconds
+    config["schedule_deadline"] = time.time() + schedule_seconds
+    config["require_rendezvous"] = True
     (root / "config.json").write_bytes(canonical(config))
     (root / "source-manifest.json").write_bytes(canonical(hashes))
     (root / "dependency-manifest.json").write_bytes(canonical({
@@ -125,11 +134,13 @@ def main():
     parser.add_argument("--memory-mb", type=int, default=131072)
     parser.add_argument("--preemptible", action="store_true")
     parser.add_argument("--dependency-wheel", required=True)
+    parser.add_argument("--schedule-seconds", type=int, default=7 * 86400)
+    parser.add_argument("--rendezvous-seconds", type=int, default=21600)
     args = parser.parse_args()
     prepare(args.root, args.nodes, args.endpoint, Path(args.token_file).read_text().strip(),
             args.cluster, args.group, args.queue, args.image_vid, args.seconds,
             args.gpus_per_node, args.gpu_type, args.cpu, args.memory_mb, args.preemptible,
-            args.dependency_wheel)
+            args.dependency_wheel, args.schedule_seconds, args.rendezvous_seconds)
 
 
 if __name__ == "__main__":

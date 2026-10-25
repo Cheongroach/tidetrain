@@ -34,6 +34,8 @@ class Ledger:
                 CREATE TABLE IF NOT EXISTS updates(
                     version INTEGER, worker TEXT, value TEXT NOT NULL, PRIMARY KEY(version,worker));
                 CREATE TABLE IF NOT EXISTS recovery(sha256 TEXT PRIMARY KEY, value TEXT NOT NULL);
+                CREATE TABLE IF NOT EXISTS ready(
+                    worker TEXT PRIMARY KEY, fence INTEGER NOT NULL, value TEXT NOT NULL);
                 CREATE TABLE IF NOT EXISTS events(
                     seq INTEGER PRIMARY KEY AUTOINCREMENT, timestamp REAL NOT NULL,
                     kind TEXT NOT NULL, value TEXT NOT NULL);
@@ -141,6 +143,37 @@ class Ledger:
             expiry = time.time() + seconds
             db.execute("UPDATE leases SET expiry=? WHERE scope=?", (expiry, lease["scope"]))
             return {**lease, "expiry": expiry}
+
+    def ready(self, lease, hardware):
+        with self.transaction() as db:
+            self.check_lease(db, lease)
+            if not lease["scope"].startswith("worker:"):
+                raise Rejected("Worker lease required for readiness")
+            worker = lease["scope"].removeprefix("worker:")
+            previous = db.execute("SELECT fence FROM ready WHERE worker=?", (worker,)).fetchone()
+            db.execute("INSERT OR REPLACE INTO ready VALUES(?,?,?)",
+                       (worker, lease["fence"], canonical(hardware).decode()))
+            if not previous or previous[0] != lease["fence"]:
+                self.event(db, "worker_ready", {"worker": worker, "fence": lease["fence"],
+                                                "hardware": hardware})
+            config = json.loads(db.execute("SELECT value FROM meta WHERE key='config'").fetchone()[0])
+            count = db.execute("""
+                SELECT COUNT(*) FROM ready r JOIN leases l ON l.scope='worker:'||r.worker
+                WHERE r.fence=l.fence AND l.expiry>?
+            """, (time.time(),)).fetchone()[0]
+            started = db.execute("SELECT value FROM meta WHERE key='training_window'").fetchone()
+            if started:
+                window = json.loads(started[0])
+            elif count == len(config["workers"]):
+                now = time.time()
+                window = {"started_at": now, "deadline": min(
+                    config["deadline"], now + config["max_seconds"])}
+                db.execute("INSERT INTO meta VALUES('training_window',?)", (canonical(window).decode(),))
+                self.event(db, "cohort_started", {"ready_workers": count, **window})
+            else:
+                window = None
+            return {"ready_workers": count, "expected_workers": len(config["workers"]),
+                    "training_window": window}
 
     @staticmethod
     def state_hash(state):

@@ -169,6 +169,23 @@ class ScaleTests(unittest.TestCase):
                 client.request("POST", "/submit", {})
             self.assertEqual(call.call_count, 1)
 
+    def test_cohort_start_ignores_expired_or_fenced_readiness(self):
+        self.config.update(deadline=time.time() + 604800, max_seconds=2700)
+        ledger = Ledger(self.root / "cohort.db")
+        ledger.initialize(self.config, self.state)
+        a = ledger.acquire("worker:a", "old", .01)
+        self.assertIsNone(ledger.ready(a, {"device": "cpu"})["training_window"])
+        time.sleep(.02)
+        b = ledger.acquire("worker:b", "b", 60)
+        self.assertEqual(ledger.ready(b, {"device": "cpu"})["ready_workers"], 1)
+        a_new = ledger.acquire("worker:a", "new", 60)
+        started = ledger.ready(a_new, {"device": "cpu"})["training_window"]
+        self.assertAlmostEqual(started["deadline"] - started["started_at"], 2700)
+        self.assertEqual(ledger.ready(b, {"device": "cpu"})["training_window"], started)
+        self.assertEqual(sum(e["kind"] == "cohort_started" for e in ledger.events()), 1)
+        with self.assertRaises(Rejected):
+            ledger.ready(a, {"device": "cpu"})
+
 
 if __name__ == "__main__":
     unittest.main()

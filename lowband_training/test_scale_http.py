@@ -20,6 +20,7 @@ class ScaleHTTPTest(unittest.TestCase):
             root = Path(temporary)
             config = configuration(2, time.time() + 120)
             config["round_timeout"] = 60
+            config.update(require_rendezvous=True, rendezvous_poll_seconds=.1)
             (root / "config.json").write_text(json.dumps(config))
             token = secrets.token_hex(24)
             (root / "token").write_text(token)
@@ -65,6 +66,8 @@ class ScaleHTTPTest(unittest.TestCase):
                 snapshot = client.request("GET", "/snapshot")["base"]
                 self.assertEqual(snapshot["round"], 2)
                 self.assertEqual(snapshot["workers"], {})
+                metrics = json.loads((root / "gateway/metrics.json").read_text())
+                self.assertEqual(sum(e["kind"] == "cohort_started" for e in metrics["events"]), 1)
             finally:
                 for process in processes:
                     if process.poll() is None:

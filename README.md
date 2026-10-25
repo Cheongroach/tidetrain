@@ -19,7 +19,7 @@ Qwen2.5-0.5B 在两个真实单 GPU slot（A10、A100 PCIe 80GB）完成四轮 l
 
 本次证明了提交和恢复链路的正确性，**没有证明训练质量收益、DDP 非劣性或百卡／千卡性能**。完整结果见 [实测报告](results/qwen05b-4round/REPORT.md)。
 
-扩展改造已增加 safetensors 分片、流式归约、SQLite WAL 租约／fencing／CAS、紧凑恢复 manifest 和离线千卡启动入口。真实 Qwen checkpoint 的 CPU 分片审计误差为 0、峰值 RSS 1.61 GiB；11 项回归及两轮 CPU HTTP 恢复测试通过。已直接提交 1000 H20 与 1000 A10 请求；H20 启动失败，A10 累计 11 个 trial 未产生训练更新，截止停止后仍有平台自动续试，已再次停止并延长停止确认观察。尚无千卡性能结果。详见 [扩容执行记录](results/scale-20261025/REPORT.md)。
+扩展改造已增加 safetensors 分片、流式归约、SQLite WAL 租约／fencing／CAS、紧凑恢复 manifest 和离线千卡启动入口。真实 Qwen checkpoint 的 CPU 分片审计误差为 0、峰值 RSS 1.61 GiB。旧的短截止 A10 请求已停止；按一周调度窗口重新提交千卡 A10，当前 queued。新增就绪集合、独立训练计时及 GPU·h 预算跟踪，相关 15 项回归通过。尚无千卡性能结果。详见 [扩容执行记录](results/scale-20261025/REPORT.md)。
 
 ## 项目成果：STAR
 
@@ -89,7 +89,11 @@ python -m pip download --only-binary=:all: --no-deps \
 python -m lowband_training.prepare_scale --help
 # H20: --nodes 125 --gpus-per-node 8 --gpu-type NVIDIA_H20
 # A10: --nodes 250 --gpus-per-node 4 --gpu-type NVIDIA_A10
+# 默认排队一周；--schedule-seconds 604800 --rendezvous-seconds 21600
+# --seconds 2700 是全员就绪后的训练时限
 # --dependency-wheel 必须指向与镜像 CPython 3.11、平台架构匹配的 wheel
 ```
 
 按生成的 `config.json` 启动 `scale_gateway`，然后依平台流程预检、合并预检标识并提交。每个实验使用独立 endpoint／账本；当前网关是单宿主机实现，多区域聚合和 HA 尚待实现。
+
+网关与后台跟踪已通过独立进程启动；`watch_scale` 使用绝对截止与累计分配 GPU·h 预算，阶段切换和平台自动续试不会重置预算。排队时间按一周预留，至少 1–2 小时的调度等待不视为失败。
