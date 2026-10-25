@@ -19,6 +19,8 @@ Qwen2.5-0.5B 在两个真实单 GPU slot（A10、A100 PCIe 80GB）完成四轮 l
 
 本次证明了提交和恢复链路的正确性，**没有证明训练质量收益、DDP 非劣性或百卡／千卡性能**。完整结果见 [实测报告](results/qwen05b-4round/REPORT.md)。
 
+扩展改造已增加 safetensors 分片、流式归约、SQLite WAL 租约／fencing／CAS、紧凑恢复 manifest 和离线千卡启动入口。真实 Qwen checkpoint 的 CPU 分片审计误差为 0、峰值 RSS 1.61 GiB；11 项回归及两轮 CPU HTTP 恢复测试通过。已直接提交 1000 H20 与 1000 A10 请求；H20 启动失败，修正后的 A10 请求仍排队，尚无千卡性能结果。详见 [扩容执行记录](results/scale-20261025/REPORT.md)。
+
 ## 项目成果：STAR
 
 **S — 场景。** Spot GPU 会被替换，GPU 容器不能访问共享 HDFS/NAS，参数与 Adam 状态达到 GiB 规模；成功的进程退出并不保证产物仍然存在。
@@ -28,6 +30,8 @@ Qwen2.5-0.5B 在两个真实单 GPU slot（A10、A100 PCIe 80GB）完成四轮 l
 **A — 行动。** 实现内容寻址对象、SHA256 校验、commit-last manifest、实例身份与 generation 校验、任务租约、唯一控制器、冷缓存恢复和按接受 token 加权的外层 Nesterov 更新。先把 delta 与恢复状态收齐再发布持久存储，并将全参数审计和相同精度的完整验证作为终验。
 
 **R — 结果。** 完成 524,288 token 的四轮真实 GPU 实验，独立恢复重放逐项一致，21 份远端状态审计通过；定位中央状态 I/O 是扩展瓶颈。验证 perplexity 上升 32.87%，因此成果定位为训练系统正确性与恢复工程，不能写成模型效果提升。
+
+后续扩展把归约改为有界分片并直接申请千卡；已有 CPU checkpoint 数学证据和真实平台提交／失败证据，尚未完成千卡训练验收。
 
 ## 代码和分支
 
@@ -65,7 +69,9 @@ Python 3.11、PyTorch ≥2.2。GPU 路径需要支持 BF16 的 CUDA 环境；模
 python -m pip install -r requirements.txt
 python -m unittest lowband_training.test_correctness \
   lowband_training.test_http lowband_training.test_fork_run \
-  lowband_training.test_spot_task_endpoints
+  lowband_training.test_spot_task_endpoints \
+  lowband_training.test_scale lowband_training.test_scale_http \
+  lowband_training.test_cuda_bootstrap
 python -m lowband_training.smoke --help
 ```
 
@@ -73,4 +79,17 @@ python -m lowband_training.smoke --help
 
 ## 百卡、千卡扩展
 
-计划和执行状态见 [扩展计划](docs/SCALE_PLAN.md)。先改造分片数据路径、区域恢复状态和持久 fencing，再验证真实 GPU；质量对照使用固定 token 预算。百卡、千卡容量测试和模型质量实验分别记录，申请或排队不等同于实测完成。
+计划和执行状态见 [扩展计划](docs/SCALE_PLAN.md)。按用户要求直接申请千卡；小规模诊断与千卡请求并行。质量对照使用固定 token 预算，申请或排队不等同于实测完成。
+
+`prepare_scale` 生成可检查的完整 payload，不自动提交；使用自己的队列、镜像、可达网关和 token 文件：
+
+```bash
+python -m pip download --only-binary=:all: --no-deps \
+  safetensors==0.4.5 --dest runtime/wheels
+python -m lowband_training.prepare_scale --help
+# H20: --nodes 125 --gpus-per-node 8 --gpu-type NVIDIA_H20
+# A10: --nodes 250 --gpus-per-node 4 --gpu-type NVIDIA_A10
+# --dependency-wheel 必须指向与镜像 CPython 3.11、平台架构匹配的 wheel
+```
+
+按生成的 `config.json` 启动 `scale_gateway`，然后依平台流程预检、合并预检标识并提交。每个实验使用独立 endpoint／账本；当前网关是单宿主机实现，多区域聚合和 HA 尚待实现。

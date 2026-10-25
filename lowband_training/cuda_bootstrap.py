@@ -88,7 +88,7 @@ def main():
         raise SystemExit(0 if gpu_probe() else 1)
     report_path, command = sys.argv[1], sys.argv[2:]
     env = select_environment(command[0], report_path)
-    os.execve(command[0], command, env)
+    os.execvpe(command[0], command, env)
 
 
 if __name__ == "__main__":

@@ -6,7 +6,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from .cuda_bootstrap import select_environment
+from .cuda_bootstrap import main, select_environment
 
 
 class CudaBootstrapTest(unittest.TestCase):
@@ -47,6 +47,13 @@ class CudaBootstrapTest(unittest.TestCase):
         self.assertIsNone(report["selected"])
         self.assertGreaterEqual(len(seen), 2)
         self.assertIn("/usr/local/cuda/compat", env["LD_LIBRARY_PATH"])
+
+    def test_launch_resolves_python_through_path(self):
+        with patch("sys.argv", ["cuda_bootstrap", "report.json", "python3", "-m", "learner"]), \
+                patch("lowband_training.cuda_bootstrap.select_environment", return_value={"PATH": "/bin"}), \
+                patch("os.execvpe") as execute:
+            main()
+        execute.assert_called_once_with("python3", ["python3", "-m", "learner"], {"PATH": "/bin"})
 
 
 def sys_python():

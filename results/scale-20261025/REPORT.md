@@ -1,0 +1,42 @@
+# 千卡改造与执行记录
+
+记录日期：2026-10-25。用户明确授权直接千卡申请；小规模诊断不作为扩容前置条件。本文记录已实现的代码、实际提交及证据边界。
+
+## 实现与验证
+
+- `shards.py` 将参数、Adam、RNG、游标编码为保留类型的 safetensors 分片树；按 chunk 执行 token 加权的外层 Nesterov。SHA256 校验和对象先持久化、版本后提交保持原同步算法语义。
+- `ledger.py` 使用单宿主机 SQLite WAL 事务保存租约、递增 fence、版本 CAS、唯一 worker 更新及接受事件。恢复树单独按 hash 保存，全局版本只保留恢复 hash 与游标；HTTP 仅返回当前 worker 的恢复状态。
+- `scale_gateway.py` 限制并发请求线程和 chunk 大小；`scale_worker.py` 对暂态网络／过载错误实施 120 秒预算内的指数退避和抖动，409 旧版本冲突不会盲目重试。
+- `prepare_scale.py` 支持直接 125×8 H20 或 250×4 A10，嵌入源码 hash 及固定 `safetensors==0.4.5` CPython 3.11 wheel。worker 不依赖共享开发机目录或运行时互联网下载；CPU 网关必须可被 worker HTTP 访问。
+- 11 项故障、恢复、启动回归通过；额外的真实 CPU 子进程 HTTP 测试完成两轮、接受 32 token，第二轮恢复 optimizer/RNG 与游标 4→8，退出码为 0。CPU 测试不能替代 GPU 容量实验。
+
+真实 Qwen checkpoint 的 CPU 数学审计覆盖 290 个存储 tensor、494,032,768 个参数、788 个归约输出 chunk：FP32 逐 bit 与基线一致，最大误差 0，16 MiB chunk，峰值 RSS 1,726,603,264 bytes（1.61 GiB），耗时 359.906 秒。delta 为合成值；这不是训练质量或 GPU 吞吐结果。见 [审计数据](qwen-shard-audit.json)。
+
+## 实际扩容尝试
+
+| 请求 | 实际结果 |
+| --- | --- |
+| 104 H20，13×8 | 创建成功后启动失败；未分配宿主机，无训练产物 |
+| 1000 H20，125×8 | 多次实际提交；最近修正版有 125 个 Pod 记录，均无宿主机，退出码 -80003；ErrMsg 为空，日志与所查 K8s 事件为空，根因未确认 |
+| 1000 A10，250×4，显式抢占标志 | 创建后失败，平台明确返回 `uce spot cluster cannot set preemtable`；据此移除该标志 |
+| 1000 A10，250×4，修正后 | 任务 `81acf246903e749a` 已通过预检并提交；当前 queued，尚无 Pod 和训练更新 |
+
+16 卡独立诊断曾在单节点验证 8 个 H20 可见及 BF16 matmul 成功，随后暴露 PATH 启动和缺失 safetensors 问题。两者已修复，离线依赖 bootstrap 已实际执行通过；不能把硬件探针记为 8 个成功训练 learner。
+
+最新查询显示同账号两个 H20 队列合计约 60 张余量；两个 Spot A10 队列显示 1426／1005 张 GPU 余量，但 CPU 与内存聚合余量为负。聚合当前态不能证明历史失败根因，也不承诺排队 ETA。A10 请求以符合该节点最多 4 GPU 的规格提交。
+
+各次创建均对最终完整 payload 预检，`data.status=error` 禁止提交，warn/hint 可展示后继续；实际成功请求保留式合并 `request_context.precheck_sid`，在 30 分钟内创建。旧的缺依赖请求已停止并替换。研究分支保存脱敏 payload、源码／依赖 hash、Pod／时间线、应用错误与测试输出。
+
+## 扩展代价与下一步
+
+FP32 参数大小 D=1,976,131,072 bytes。当前完整恢复协议每个 warm round 仍约 6D/island；1000 个单卡 island 的字节契约为 11.857 TB/round。分片限制归约内存和突发请求大小，**没有减少总 checkpoint 字节**。容量 workload 使用 tiny Transformer、两轮、每 worker 每轮 8 token；即使完成千卡，它也只验证协议容量。
+
+实现仍只有一个 CPU 网关，SQLite 只保证同宿主机崩溃恢复和唯一接受权；多区域网关、树形聚合、跨宿主机 HA、异步碎片同步与压缩尚待实现。GPU worker 仍完整恢复 CPU 模型／optimizer；其内存不随 chunk 大小有界。
+
+千卡资源启动后收齐参与 GPU UUID、接受 token、恢复状态、网络字节及终态，再报告该规模结果。每节点入口限制 2700 秒运行；完整 1000 GPU 的该段理论上限为 750 GPU·h，不包含排队、平台 bootstrap 和失败开销，也不是消耗实测。原有 8+8 资源保持不变。
+
+已启动 `watch_scale.py` 后台跟踪最新 A10 请求，每 30 秒记录状态并在截止时间请求停止，直到平台确认终态。截止时间为 2026-10-25 07:32:22 UTC；队列等待也计入绝对时限。跟踪记录保存在本地 `runtime/scale1000-a10-v3/watch/`，公开归档是发布时的快照，不自动代表之后状态。
+
+质量路径独立推进：固定更大版本语料与 token 预算，比较同步 DDP、local-SGD、Streaming／Decoupled DiLoCo 和压缩配置，多个种子及完整验证。目前 Qwen 基线 perplexity 退化 32.87%，尚未解决；不能以扩容申请或 CPU 归约一致性证明质量收益。
+
+计划见 [SCALE_PLAN](../../docs/SCALE_PLAN.md)，机器可读结果见 [summary.json](summary.json)。研究分支的 `research/LITERATURE_REVIEW.md` 收录截至检索日的论文与官方实现，明确区分真实实验和模拟规模。
