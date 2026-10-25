@@ -17,3 +17,5 @@
 - 百卡／千卡申请、失败、空日志证据与 CPU 数学审计分开保留，模型质量对照仍未闭合。
 
 详细证据在 `research/scale/execution/`。主分支文档包含 STAR 成果介绍和多 worktree 检出方法。
+
+后续状态：任务进入 staging、产生 250 个未分配宿主机的 Pod；时间线确认 `job_auto_retry`，最新 trial 重新 queued。后台跟踪持续记录 trial 切换，绝对截止时间不随续试延长。

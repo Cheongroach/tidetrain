@@ -6,17 +6,23 @@
   "gpu_type": "NVIDIA_A10",
   "job_run_sid": "81acf246903e749a",
   "platform_status": "started",
-  "trial_sid": "439205861",
+  "trial_sid": "439214785",
   "trial_status": "queued",
   "created_at": "2026-10-25T06:21:40.382Z",
   "trial_evidence": [
     {
-      "sid": "439205861",
+      "sid": "439214785",
       "status": 3,
+      "error": ""
+    },
+    {
+      "sid": "439205861",
+      "status": 7,
       "error": ""
     }
   ],
-  "listed_pods": 0,
+  "listed_pods": 250,
   "hosted_pods": 0,
-  "pod_exit_codes": []
+  "pod_exit_codes": [],
+  "observed_prior_pod_count": 250
 }

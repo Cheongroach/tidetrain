@@ -1,6 +1,30 @@
 [
   {
     "event_type": "task_group_submit",
+    "created_at": "2026-10-25T06:43:40.734Z",
+    "job_run_sid": "81acf246903e749a",
+    "job_run_trial_sid": "439214785"
+  },
+  {
+    "event_type": "job_auto_retry",
+    "created_at": "2026-10-25T06:43:38.726Z",
+    "job_run_sid": "81acf246903e749a",
+    "job_run_trial_sid": "439214785"
+  },
+  {
+    "event_type": "job_staging",
+    "created_at": "2026-10-25T06:40:01.218Z",
+    "job_run_sid": "81acf246903e749a",
+    "job_run_trial_sid": "439205861"
+  },
+  {
+    "event_type": "job_queue",
+    "created_at": "2026-10-25T06:39:59.599Z",
+    "job_run_sid": "81acf246903e749a",
+    "job_run_trial_sid": "439205861"
+  },
+  {
+    "event_type": "task_group_submit",
     "created_at": "2026-10-25T06:21:43.529Z",
     "job_run_sid": "81acf246903e749a",
     "job_run_trial_sid": "439205861"
