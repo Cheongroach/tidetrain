@@ -44,14 +44,19 @@ def main():
     parser.add_argument("--output", required=True)
     parser.add_argument("--deadline-epoch", type=float, required=True)
     parser.add_argument("--interval", type=int, default=30)
+    parser.add_argument("--terminal-grace-seconds", type=int, default=120)
     args = parser.parse_args()
     if not 1 <= args.interval <= 60:
         parser.error("Polling interval must be 1–60 seconds")
+    if not 0 <= args.terminal_grace_seconds <= 3600:
+        parser.error("Terminal grace must be 0–3600 seconds")
     output = Path(args.output)
     output.mkdir(parents=True, exist_ok=True)
     last_phase, last_pod_poll = None, 0.
     stop_requested = False
+    terminal_since = None
     while True:
+        confirmed_terminal = False
         try:
             value = call(args.cli, args.control_plane, "runs", "get", {"sid": args.sid})["data"]
             status = value["status"]
@@ -75,13 +80,24 @@ def main():
                     "hosted": sum(row["host_assigned"] for row in pods),
                     "started": sum(bool(row["start_at"]) for row in pods)}))
                 last_pod_poll = time.monotonic()
-            last_phase = phase
             if status in TERMINAL:
-                return
+                confirmed_terminal = True
+                if time.time() < args.deadline_epoch:
+                    return
+                if terminal_since is None or phase != last_phase:
+                    terminal_since = time.monotonic()
+                # The platform may schedule an automatic retry shortly after
+                # reporting stopped. Observe a stable terminal window first.
+                if time.monotonic() - terminal_since >= args.terminal_grace_seconds:
+                    return
+            else:
+                terminal_since = None
+            last_phase = phase
         except (OSError, ValueError, RuntimeError, subprocess.TimeoutExpired, KeyError) as exc:
+            terminal_since = None
             print(canonical({"time": time.time(), "event": "monitor_query_failed",
                              "type": type(exc).__name__}).decode(), flush=True)
-        if time.time() >= args.deadline_epoch:
+        if time.time() >= args.deadline_epoch and not confirmed_terminal:
             try:
                 call(args.cli, args.control_plane, "runs", "stop",
                      {"sid": args.sid, "stop_reason": "Capacity experiment absolute deadline"})
