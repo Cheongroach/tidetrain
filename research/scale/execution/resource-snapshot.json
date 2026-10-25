@@ -1,0 +1,1088 @@
+[
+  {
+    "control_plane": "cn",
+    "queue": "queue-0001",
+    "group": "group-0001",
+    "cluster": "cluster-0001",
+    "rest_gpu": {
+      "A100-SXM-80GB": 0,
+      "NVIDIA-H20": 20
+    },
+    "rest_cpu": 406,
+    "rest_memory_mb": 5488640,
+    "gpuv_resource_flavor": {
+      "A100-SXM-80GB": [
+        {
+          "cpu": 14,
+          "gpu": 1,
+          "mem": 235520
+        },
+        {
+          "cpu": 29,
+          "gpu": 2,
+          "mem": 471040
+        },
+        {
+          "cpu": 59,
+          "gpu": 4,
+          "mem": 942080
+        },
+        {
+          "cpu": 118,
+          "gpu": 8,
+          "mem": 1884160
+        }
+      ],
+      "NVIDIA-H20": [
+        {
+          "cpu": 20,
+          "gpu": 1,
+          "mem": 230400
+        },
+        {
+          "cpu": 40,
+          "gpu": 2,
+          "mem": 460800
+        },
+        {
+          "cpu": 80,
+          "gpu": 4,
+          "mem": 921600
+        },
+        {
+          "cpu": 160,
+          "gpu": 8,
+          "mem": 1843200
+        }
+      ]
+    }
+  },
+  {
+    "control_plane": "cn",
+    "queue": "queue-0002",
+    "group": "group-0001",
+    "cluster": "cluster-0002",
+    "rest_gpu": {
+      "NVIDIA-H20": 40
+    },
+    "rest_cpu": 1568,
+    "rest_memory_mb": 20815872,
+    "gpuv_resource_flavor": {
+      "NVIDIA-H20": [
+        {
+          "cpu": 20,
+          "gpu": 1,
+          "mem": 230400
+        },
+        {
+          "cpu": 40,
+          "gpu": 2,
+          "mem": 460800
+        },
+        {
+          "cpu": 80,
+          "gpu": 4,
+          "mem": 921600
+        },
+        {
+          "cpu": 160,
+          "gpu": 8,
+          "mem": 1843200
+        }
+      ]
+    }
+  },
+  {
+    "control_plane": "cn",
+    "queue": "queue-0003",
+    "group": "group-0002",
+    "cluster": "cluster-0003",
+    "rest_gpu": {
+      "A100-SXM-80GB": -1185,
+      "NVIDIA-A10": 1426,
+      "NVIDIA-A30": 616,
+      "NVIDIA-L20": -848,
+      "NVIDIA-L40": 0,
+      "Tesla-T4": 1459,
+      "Tesla-V100-SXM2-32GB": 3343
+    },
+    "rest_cpu": -675,
+    "rest_memory_mb": -9326080,
+    "gpuv_resource_flavor": {
+      "A100-SXM-80GB": [
+        {
+          "cpu": 14,
+          "gpu": 1,
+          "mem": 235520
+        },
+        {
+          "cpu": 29,
+          "gpu": 2,
+          "mem": 471040
+        },
+        {
+          "cpu": 59,
+          "gpu": 4,
+          "mem": 942080
+        },
+        {
+          "cpu": 118,
+          "gpu": 8,
+          "mem": 1884160
+        }
+      ],
+      "NVIDIA-A10": [
+        {
+          "cpu": 31,
+          "gpu": 1,
+          "mem": 512000
+        },
+        {
+          "cpu": 62,
+          "gpu": 2,
+          "mem": 1024000
+        },
+        {
+          "cpu": 124,
+          "gpu": 4,
+          "mem": 2048000
+        }
+      ],
+      "NVIDIA-A30": [
+        {
+          "cpu": 31,
+          "gpu": 1,
+          "mem": 253952
+        },
+        {
+          "cpu": 62,
+          "gpu": 2,
+          "mem": 507904
+        },
+        {
+          "cpu": 124,
+          "gpu": 4,
+          "mem": 1015808
+        }
+      ],
+      "NVIDIA-L20": [
+        {
+          "cpu": 22,
+          "gpu": 1,
+          "mem": 117760
+        },
+        {
+          "cpu": 44,
+          "gpu": 2,
+          "mem": 235520
+        },
+        {
+          "cpu": 88,
+          "gpu": 4,
+          "mem": 471040
+        },
+        {
+          "cpu": 176,
+          "gpu": 8,
+          "mem": 942080
+        }
+      ],
+      "NVIDIA-L40": [
+        {
+          "cpu": 22,
+          "gpu": 1,
+          "mem": 117760
+        },
+        {
+          "cpu": 44,
+          "gpu": 2,
+          "mem": 235520
+        },
+        {
+          "cpu": 89,
+          "gpu": 4,
+          "mem": 471040
+        },
+        {
+          "cpu": 178,
+          "gpu": 8,
+          "mem": 942080
+        }
+      ],
+      "Tesla-T4": [
+        {
+          "cpu": 11,
+          "gpu": 1,
+          "mem": 29440
+        },
+        {
+          "cpu": 23,
+          "gpu": 2,
+          "mem": 58880
+        },
+        {
+          "cpu": 47,
+          "gpu": 4,
+          "mem": 117760
+        },
+        {
+          "cpu": 94,
+          "gpu": 8,
+          "mem": 235520
+        }
+      ],
+      "Tesla-V100-SXM2-32GB": [
+        {
+          "cpu": 11,
+          "gpu": 1,
+          "mem": 45568
+        },
+        {
+          "cpu": 23,
+          "gpu": 2,
+          "mem": 91136
+        },
+        {
+          "cpu": 46,
+          "gpu": 4,
+          "mem": 182272
+        },
+        {
+          "cpu": 92,
+          "gpu": 8,
+          "mem": 364544
+        }
+      ]
+    }
+  },
+  {
+    "control_plane": "cn",
+    "queue": "queue-0004",
+    "group": "group-0002",
+    "cluster": "cluster-0004",
+    "rest_gpu": {
+      "A100-SXM-80GB": -262,
+      "Ascend910B2": 0,
+      "NVIDIA-A10": 1005,
+      "NVIDIA-A30": 241,
+      "NVIDIA-L20": -1860,
+      "NVIDIA-L40": 0,
+      "Tesla-T4": 1542
+    },
+    "rest_cpu": -215,
+    "rest_memory_mb": -1408000,
+    "gpuv_resource_flavor": {
+      "A100-SXM-80GB": [
+        {
+          "cpu": 14,
+          "gpu": 1,
+          "mem": 235520
+        },
+        {
+          "cpu": 29,
+          "gpu": 2,
+          "mem": 471040
+        },
+        {
+          "cpu": 59,
+          "gpu": 4,
+          "mem": 942080
+        },
+        {
+          "cpu": 118,
+          "gpu": 8,
+          "mem": 1884160
+        }
+      ],
+      "Ascend910B2": [
+        {
+          "cpu": 10,
+          "gpu": 1,
+          "mem": 179200
+        },
+        {
+          "cpu": 20,
+          "gpu": 2,
+          "mem": 358400
+        },
+        {
+          "cpu": 40,
+          "gpu": 4,
+          "mem": 716800
+        },
+        {
+          "cpu": 80,
+          "gpu": 8,
+          "mem": 1433600
+        },
+        {
+          "cpu": 160,
+          "gpu": 16,
+          "mem": 2867200
+        }
+      ],
+      "NVIDIA-A10": [
+        {
+          "cpu": 31,
+          "gpu": 1,
+          "mem": 512000
+        },
+        {
+          "cpu": 62,
+          "gpu": 2,
+          "mem": 1024000
+        },
+        {
+          "cpu": 124,
+          "gpu": 4,
+          "mem": 2048000
+        }
+      ],
+      "NVIDIA-A30": [
+        {
+          "cpu": 31,
+          "gpu": 1,
+          "mem": 253952
+        },
+        {
+          "cpu": 62,
+          "gpu": 2,
+          "mem": 507904
+        },
+        {
+          "cpu": 124,
+          "gpu": 4,
+          "mem": 1015808
+        }
+      ],
+      "NVIDIA-L20": [
+        {
+          "cpu": 22,
+          "gpu": 1,
+          "mem": 117760
+        },
+        {
+          "cpu": 44,
+          "gpu": 2,
+          "mem": 235520
+        },
+        {
+          "cpu": 88,
+          "gpu": 4,
+          "mem": 471040
+        },
+        {
+          "cpu": 176,
+          "gpu": 8,
+          "mem": 942080
+        }
+      ],
+      "NVIDIA-L40": [
+        {
+          "cpu": 22,
+          "gpu": 1,
+          "mem": 117760
+        },
+        {
+          "cpu": 44,
+          "gpu": 2,
+          "mem": 235520
+        },
+        {
+          "cpu": 89,
+          "gpu": 4,
+          "mem": 471040
+        },
+        {
+          "cpu": 178,
+          "gpu": 8,
+          "mem": 942080
+        }
+      ],
+      "Tesla-T4": [
+        {
+          "cpu": 11,
+          "gpu": 1,
+          "mem": 29440
+        },
+        {
+          "cpu": 23,
+          "gpu": 2,
+          "mem": 58880
+        },
+        {
+          "cpu": 47,
+          "gpu": 4,
+          "mem": 117760
+        },
+        {
+          "cpu": 94,
+          "gpu": 8,
+          "mem": 235520
+        }
+      ]
+    }
+  },
+  {
+    "control_plane": "cn",
+    "queue": "queue-0003",
+    "group": "group-0003",
+    "cluster": "cluster-0003",
+    "rest_gpu": {
+      "A100-SXM-80GB": -1185,
+      "NVIDIA-A10": 1426,
+      "NVIDIA-A30": 616,
+      "NVIDIA-L20": -848,
+      "NVIDIA-L40": 0,
+      "Tesla-T4": 1459,
+      "Tesla-V100-SXM2-32GB": 3343
+    },
+    "rest_cpu": -675,
+    "rest_memory_mb": -9326080,
+    "gpuv_resource_flavor": {
+      "A100-SXM-80GB": [
+        {
+          "cpu": 14,
+          "gpu": 1,
+          "mem": 235520
+        },
+        {
+          "cpu": 29,
+          "gpu": 2,
+          "mem": 471040
+        },
+        {
+          "cpu": 59,
+          "gpu": 4,
+          "mem": 942080
+        },
+        {
+          "cpu": 118,
+          "gpu": 8,
+          "mem": 1884160
+        }
+      ],
+      "NVIDIA-A10": [
+        {
+          "cpu": 31,
+          "gpu": 1,
+          "mem": 512000
+        },
+        {
+          "cpu": 62,
+          "gpu": 2,
+          "mem": 1024000
+        },
+        {
+          "cpu": 124,
+          "gpu": 4,
+          "mem": 2048000
+        }
+      ],
+      "NVIDIA-A30": [
+        {
+          "cpu": 31,
+          "gpu": 1,
+          "mem": 253952
+        },
+        {
+          "cpu": 62,
+          "gpu": 2,
+          "mem": 507904
+        },
+        {
+          "cpu": 124,
+          "gpu": 4,
+          "mem": 1015808
+        }
+      ],
+      "NVIDIA-L20": [
+        {
+          "cpu": 22,
+          "gpu": 1,
+          "mem": 117760
+        },
+        {
+          "cpu": 44,
+          "gpu": 2,
+          "mem": 235520
+        },
+        {
+          "cpu": 88,
+          "gpu": 4,
+          "mem": 471040
+        },
+        {
+          "cpu": 176,
+          "gpu": 8,
+          "mem": 942080
+        }
+      ],
+      "NVIDIA-L40": [
+        {
+          "cpu": 22,
+          "gpu": 1,
+          "mem": 117760
+        },
+        {
+          "cpu": 44,
+          "gpu": 2,
+          "mem": 235520
+        },
+        {
+          "cpu": 89,
+          "gpu": 4,
+          "mem": 471040
+        },
+        {
+          "cpu": 178,
+          "gpu": 8,
+          "mem": 942080
+        }
+      ],
+      "Tesla-T4": [
+        {
+          "cpu": 11,
+          "gpu": 1,
+          "mem": 29440
+        },
+        {
+          "cpu": 23,
+          "gpu": 2,
+          "mem": 58880
+        },
+        {
+          "cpu": 47,
+          "gpu": 4,
+          "mem": 117760
+        },
+        {
+          "cpu": 94,
+          "gpu": 8,
+          "mem": 235520
+        }
+      ],
+      "Tesla-V100-SXM2-32GB": [
+        {
+          "cpu": 11,
+          "gpu": 1,
+          "mem": 45568
+        },
+        {
+          "cpu": 23,
+          "gpu": 2,
+          "mem": 91136
+        },
+        {
+          "cpu": 46,
+          "gpu": 4,
+          "mem": 182272
+        },
+        {
+          "cpu": 92,
+          "gpu": 8,
+          "mem": 364544
+        }
+      ]
+    }
+  },
+  {
+    "control_plane": "cn",
+    "queue": "queue-0004",
+    "group": "group-0003",
+    "cluster": "cluster-0004",
+    "rest_gpu": {
+      "A100-SXM-80GB": -262,
+      "Ascend910B2": 0,
+      "NVIDIA-A10": 1005,
+      "NVIDIA-A30": 241,
+      "NVIDIA-L20": -1860,
+      "NVIDIA-L40": 0,
+      "Tesla-T4": 1542
+    },
+    "rest_cpu": -215,
+    "rest_memory_mb": -1408000,
+    "gpuv_resource_flavor": {
+      "A100-SXM-80GB": [
+        {
+          "cpu": 14,
+          "gpu": 1,
+          "mem": 235520
+        },
+        {
+          "cpu": 29,
+          "gpu": 2,
+          "mem": 471040
+        },
+        {
+          "cpu": 59,
+          "gpu": 4,
+          "mem": 942080
+        },
+        {
+          "cpu": 118,
+          "gpu": 8,
+          "mem": 1884160
+        }
+      ],
+      "Ascend910B2": [
+        {
+          "cpu": 10,
+          "gpu": 1,
+          "mem": 179200
+        },
+        {
+          "cpu": 20,
+          "gpu": 2,
+          "mem": 358400
+        },
+        {
+          "cpu": 40,
+          "gpu": 4,
+          "mem": 716800
+        },
+        {
+          "cpu": 80,
+          "gpu": 8,
+          "mem": 1433600
+        },
+        {
+          "cpu": 160,
+          "gpu": 16,
+          "mem": 2867200
+        }
+      ],
+      "NVIDIA-A10": [
+        {
+          "cpu": 31,
+          "gpu": 1,
+          "mem": 512000
+        },
+        {
+          "cpu": 62,
+          "gpu": 2,
+          "mem": 1024000
+        },
+        {
+          "cpu": 124,
+          "gpu": 4,
+          "mem": 2048000
+        }
+      ],
+      "NVIDIA-A30": [
+        {
+          "cpu": 31,
+          "gpu": 1,
+          "mem": 253952
+        },
+        {
+          "cpu": 62,
+          "gpu": 2,
+          "mem": 507904
+        },
+        {
+          "cpu": 124,
+          "gpu": 4,
+          "mem": 1015808
+        }
+      ],
+      "NVIDIA-L20": [
+        {
+          "cpu": 22,
+          "gpu": 1,
+          "mem": 117760
+        },
+        {
+          "cpu": 44,
+          "gpu": 2,
+          "mem": 235520
+        },
+        {
+          "cpu": 88,
+          "gpu": 4,
+          "mem": 471040
+        },
+        {
+          "cpu": 176,
+          "gpu": 8,
+          "mem": 942080
+        }
+      ],
+      "NVIDIA-L40": [
+        {
+          "cpu": 22,
+          "gpu": 1,
+          "mem": 117760
+        },
+        {
+          "cpu": 44,
+          "gpu": 2,
+          "mem": 235520
+        },
+        {
+          "cpu": 89,
+          "gpu": 4,
+          "mem": 471040
+        },
+        {
+          "cpu": 178,
+          "gpu": 8,
+          "mem": 942080
+        }
+      ],
+      "Tesla-T4": [
+        {
+          "cpu": 11,
+          "gpu": 1,
+          "mem": 29440
+        },
+        {
+          "cpu": 23,
+          "gpu": 2,
+          "mem": 58880
+        },
+        {
+          "cpu": 47,
+          "gpu": 4,
+          "mem": 117760
+        },
+        {
+          "cpu": 94,
+          "gpu": 8,
+          "mem": 235520
+        }
+      ]
+    }
+  },
+  {
+    "control_plane": "cn",
+    "queue": "queue-0003",
+    "group": "group-0001",
+    "cluster": "cluster-0003",
+    "rest_gpu": {
+      "A100-SXM-80GB": -1185,
+      "NVIDIA-A10": 1426,
+      "NVIDIA-A30": 616,
+      "NVIDIA-L20": -848,
+      "NVIDIA-L40": 0,
+      "Tesla-T4": 1459,
+      "Tesla-V100-SXM2-32GB": 3343
+    },
+    "rest_cpu": -675,
+    "rest_memory_mb": -9326080,
+    "gpuv_resource_flavor": {
+      "A100-SXM-80GB": [
+        {
+          "cpu": 14,
+          "gpu": 1,
+          "mem": 235520
+        },
+        {
+          "cpu": 29,
+          "gpu": 2,
+          "mem": 471040
+        },
+        {
+          "cpu": 59,
+          "gpu": 4,
+          "mem": 942080
+        },
+        {
+          "cpu": 118,
+          "gpu": 8,
+          "mem": 1884160
+        }
+      ],
+      "NVIDIA-A10": [
+        {
+          "cpu": 31,
+          "gpu": 1,
+          "mem": 512000
+        },
+        {
+          "cpu": 62,
+          "gpu": 2,
+          "mem": 1024000
+        },
+        {
+          "cpu": 124,
+          "gpu": 4,
+          "mem": 2048000
+        }
+      ],
+      "NVIDIA-A30": [
+        {
+          "cpu": 31,
+          "gpu": 1,
+          "mem": 253952
+        },
+        {
+          "cpu": 62,
+          "gpu": 2,
+          "mem": 507904
+        },
+        {
+          "cpu": 124,
+          "gpu": 4,
+          "mem": 1015808
+        }
+      ],
+      "NVIDIA-L20": [
+        {
+          "cpu": 22,
+          "gpu": 1,
+          "mem": 117760
+        },
+        {
+          "cpu": 44,
+          "gpu": 2,
+          "mem": 235520
+        },
+        {
+          "cpu": 88,
+          "gpu": 4,
+          "mem": 471040
+        },
+        {
+          "cpu": 176,
+          "gpu": 8,
+          "mem": 942080
+        }
+      ],
+      "NVIDIA-L40": [
+        {
+          "cpu": 22,
+          "gpu": 1,
+          "mem": 117760
+        },
+        {
+          "cpu": 44,
+          "gpu": 2,
+          "mem": 235520
+        },
+        {
+          "cpu": 89,
+          "gpu": 4,
+          "mem": 471040
+        },
+        {
+          "cpu": 178,
+          "gpu": 8,
+          "mem": 942080
+        }
+      ],
+      "Tesla-T4": [
+        {
+          "cpu": 11,
+          "gpu": 1,
+          "mem": 29440
+        },
+        {
+          "cpu": 23,
+          "gpu": 2,
+          "mem": 58880
+        },
+        {
+          "cpu": 47,
+          "gpu": 4,
+          "mem": 117760
+        },
+        {
+          "cpu": 94,
+          "gpu": 8,
+          "mem": 235520
+        }
+      ],
+      "Tesla-V100-SXM2-32GB": [
+        {
+          "cpu": 11,
+          "gpu": 1,
+          "mem": 45568
+        },
+        {
+          "cpu": 23,
+          "gpu": 2,
+          "mem": 91136
+        },
+        {
+          "cpu": 46,
+          "gpu": 4,
+          "mem": 182272
+        },
+        {
+          "cpu": 92,
+          "gpu": 8,
+          "mem": 364544
+        }
+      ]
+    }
+  },
+  {
+    "control_plane": "cn",
+    "queue": "queue-0004",
+    "group": "group-0001",
+    "cluster": "cluster-0004",
+    "rest_gpu": {
+      "A100-SXM-80GB": -262,
+      "Ascend910B2": 0,
+      "NVIDIA-A10": 1005,
+      "NVIDIA-A30": 241,
+      "NVIDIA-L20": -1860,
+      "NVIDIA-L40": 0,
+      "Tesla-T4": 1542
+    },
+    "rest_cpu": -215,
+    "rest_memory_mb": -1408000,
+    "gpuv_resource_flavor": {
+      "A100-SXM-80GB": [
+        {
+          "cpu": 14,
+          "gpu": 1,
+          "mem": 235520
+        },
+        {
+          "cpu": 29,
+          "gpu": 2,
+          "mem": 471040
+        },
+        {
+          "cpu": 59,
+          "gpu": 4,
+          "mem": 942080
+        },
+        {
+          "cpu": 118,
+          "gpu": 8,
+          "mem": 1884160
+        }
+      ],
+      "Ascend910B2": [
+        {
+          "cpu": 10,
+          "gpu": 1,
+          "mem": 179200
+        },
+        {
+          "cpu": 20,
+          "gpu": 2,
+          "mem": 358400
+        },
+        {
+          "cpu": 40,
+          "gpu": 4,
+          "mem": 716800
+        },
+        {
+          "cpu": 80,
+          "gpu": 8,
+          "mem": 1433600
+        },
+        {
+          "cpu": 160,
+          "gpu": 16,
+          "mem": 2867200
+        }
+      ],
+      "NVIDIA-A10": [
+        {
+          "cpu": 31,
+          "gpu": 1,
+          "mem": 512000
+        },
+        {
+          "cpu": 62,
+          "gpu": 2,
+          "mem": 1024000
+        },
+        {
+          "cpu": 124,
+          "gpu": 4,
+          "mem": 2048000
+        }
+      ],
+      "NVIDIA-A30": [
+        {
+          "cpu": 31,
+          "gpu": 1,
+          "mem": 253952
+        },
+        {
+          "cpu": 62,
+          "gpu": 2,
+          "mem": 507904
+        },
+        {
+          "cpu": 124,
+          "gpu": 4,
+          "mem": 1015808
+        }
+      ],
+      "NVIDIA-L20": [
+        {
+          "cpu": 22,
+          "gpu": 1,
+          "mem": 117760
+        },
+        {
+          "cpu": 44,
+          "gpu": 2,
+          "mem": 235520
+        },
+        {
+          "cpu": 88,
+          "gpu": 4,
+          "mem": 471040
+        },
+        {
+          "cpu": 176,
+          "gpu": 8,
+          "mem": 942080
+        }
+      ],
+      "NVIDIA-L40": [
+        {
+          "cpu": 22,
+          "gpu": 1,
+          "mem": 117760
+        },
+        {
+          "cpu": 44,
+          "gpu": 2,
+          "mem": 235520
+        },
+        {
+          "cpu": 89,
+          "gpu": 4,
+          "mem": 471040
+        },
+        {
+          "cpu": 178,
+          "gpu": 8,
+          "mem": 942080
+        }
+      ],
+      "Tesla-T4": [
+        {
+          "cpu": 11,
+          "gpu": 1,
+          "mem": 29440
+        },
+        {
+          "cpu": 23,
+          "gpu": 2,
+          "mem": 58880
+        },
+        {
+          "cpu": 47,
+          "gpu": 4,
+          "mem": 117760
+        },
+        {
+          "cpu": 94,
+          "gpu": 8,
+          "mem": 235520
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "label": "scale16c",
+  "requested_gpus": 16,
+  "actual_training_gpu_count": 0,
+  "requested_nodes": 2,
+  "gpu_type": "NVIDIA_H20",
+  "job_run_sid": "f5aee96485e415aa",
+  "platform_status": "started",
+  "trial_sid": "439198896",
+  "trial_status": "staging",
+  "created_at": "2026-10-25T06:02:38.240Z",
+  "local_log_url_present": false,
+  "tls_log_rows": 0
+}

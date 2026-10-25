@@ -1,0 +1,20 @@
+[
+  {
+    "event_type": "job_failed",
+    "created_at": "2026-10-25T06:03:07.217Z",
+    "job_run_sid": "630e668d3081ea49",
+    "job_run_trial_sid": "439198988"
+  },
+  {
+    "event_type": "task_group_submit",
+    "created_at": "2026-10-25T06:02:51.574Z",
+    "job_run_sid": "630e668d3081ea49",
+    "job_run_trial_sid": "439198988"
+  },
+  {
+    "event_type": "job_created",
+    "created_at": "2026-10-25T06:02:50.245Z",
+    "job_run_sid": "630e668d3081ea49",
+    "job_run_trial_sid": "439198988"
+  }
+]

@@ -1,0 +1,97 @@
+[
+  {
+    "event": "source_verified",
+    "hashes": {
+      "__init__.py": "bdda15f446def7e045047d1ef08b83ae0083bb58a3650de932e7c293e51d3309",
+      "storage.py": "247560a485a8845912dbc4f09de4b96dd06162c75413e089969c4f8d9b90fa40",
+      "protocol.py": "e319288e3cd1be93f4ca5f7fcd58e7306b6698e98989d2492163df9d92740b7a",
+      "train.py": "448d30e2963fd34185a35cdb4274517cc1ed3bec08af9f60e6de1fafb66b0a10",
+      "shards.py": "deecfa34a9802bbff44f39f36298e2232f4d4ac2b41c60fe7da5c92223ebf933",
+      "ledger.py": "34ca090019c3ad2e82a3490e250803440d15b3508ee8e6dc975acc51bc645841",
+      "http_transport.py": "72594de9a608bbb2b08f05b6f9e254d906c30d1e8ffc8b2a9ee1a660bac9687f",
+      "scale_worker.py": "3009154112fba9846f01131ceb296b29b8cba25a68df8ad031e5c7de641b60c5",
+      "scale_node.py": "e233e96110a31b62cea6a0151d50356ef8adac6d0eb1b10bcd203c09cd01ab23",
+      "cuda_bootstrap.py": "3bafb15e54a0bd674977c8e299961aee93cf19258e866772f0d863119fa812ec"
+    }
+  },
+  {
+    "event": "cuda_bootstrap",
+    "attempts": [
+      {
+        "torch": "2.5.1+cu118",
+        "cuda_runtime": "11.8",
+        "ok": true,
+        "gpu": "NVIDIA H20",
+        "device_count": 8,
+        "bf16": true,
+        "libcuda_maps": [
+          "/usr/local/cuda-12.9/compat/libcuda.so.575.57.08"
+        ],
+        "candidate": "original",
+        "library_path": "/opt/tiger/nccl_net_plugin/lib:/opt/tiger/native_libhdfs/lib/native:/opt/tiger/jdk/jdk8u265-b01/jre/lib/amd64/server:/opt/tiger/yarn_deploy/hadoop_current/lib/native:/opt/tiger/yarn_deploy/hadoop_current/lib/native/ufs:/opt/tiger/yarn_deploy/hadoop/lib/native:/opt/tiger/yarn_deploy/hadoop_current/lib/native:/opt/tiger/yarn_deploy/hadoop_current/lzo/lib:/usr/local/cuda/lib64",
+        "returncode": 0,
+        "stderr": ""
+      }
+    ],
+    "selected": "original",
+    "ready": true,
+    "kernel_driver": "NVRM version: NVIDIA UNIX x86_64 Kernel Module  535.261.03  Sat Jun 14 16:05:50 UTC 2025\nGCC version:  gcc version 8.3.0 (Debian 8.3.0-6) \n",
+    "nvidia_smi": "NVIDIA H20, 535.261.03\nNVIDIA H20, 535.261.03\nNVIDIA H20, 535.261.03\nNVIDIA H20, 535.261.03\nNVIDIA H20, 535.261.03\nNVIDIA H20, 535.261.03\nNVIDIA H20, 535.261.03\nNVIDIA H20, 535.261.03",
+    "nvidia_smi_error": ""
+  },
+  {
+    "event": "scale_node_hardware",
+    "node": 1,
+    "hardware": "0, <gpu-uuid>, NVIDIA H20, 535.261.03\n1, <gpu-uuid>, NVIDIA H20, 535.261.03\n2, <gpu-uuid>, NVIDIA H20, 535.261.03\n3, <gpu-uuid>, NVIDIA H20, 535.261.03\n4, <gpu-uuid>, NVIDIA H20, 535.261.03\n5, <gpu-uuid>, NVIDIA H20, 535.261.03\n6, <gpu-uuid>, NVIDIA H20, 535.261.03\n7, <gpu-uuid>, NVIDIA H20, 535.261.03\n",
+    "returncode": 0,
+    "python": "3.11.2 (main, Apr 28 2025, 14:11:48) [GCC 12.2.0]"
+  },
+  {
+    "event": "scale_node_worker_exit",
+    "worker": "w0008",
+    "returncode": 1,
+    "log_tail": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/tmp/tidetrain-scale/code/lowband_training/scale_worker.py\", line 19, in <module>\n    from .shards import Shards, references\n  File \"/tmp/tidetrain-scale/code/lowband_training/shards.py\", line 18, in <module>\n    from safetensors.torch import load_file, save_file\nModuleNotFoundError: No module named 'safetensors'\n"
+  },
+  {
+    "event": "scale_node_worker_exit",
+    "worker": "w0009",
+    "returncode": 1,
+    "log_tail": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/tmp/tidetrain-scale/code/lowband_training/scale_worker.py\", line 19, in <module>\n    from .shards import Shards, references\n  File \"/tmp/tidetrain-scale/code/lowband_training/shards.py\", line 18, in <module>\n    from safetensors.torch import load_file, save_file\nModuleNotFoundError: No module named 'safetensors'\n"
+  },
+  {
+    "event": "scale_node_worker_exit",
+    "worker": "w0010",
+    "returncode": 1,
+    "log_tail": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/tmp/tidetrain-scale/code/lowband_training/scale_worker.py\", line 19, in <module>\n    from .shards import Shards, references\n  File \"/tmp/tidetrain-scale/code/lowband_training/shards.py\", line 18, in <module>\n    from safetensors.torch import load_file, save_file\nModuleNotFoundError: No module named 'safetensors'\n"
+  },
+  {
+    "event": "scale_node_worker_exit",
+    "worker": "w0011",
+    "returncode": 1,
+    "log_tail": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/tmp/tidetrain-scale/code/lowband_training/scale_worker.py\", line 19, in <module>\n    from .shards import Shards, references\n  File \"/tmp/tidetrain-scale/code/lowband_training/shards.py\", line 18, in <module>\n    from safetensors.torch import load_file, save_file\nModuleNotFoundError: No module named 'safetensors'\n"
+  },
+  {
+    "event": "scale_node_worker_exit",
+    "worker": "w0012",
+    "returncode": 1,
+    "log_tail": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/tmp/tidetrain-scale/code/lowband_training/scale_worker.py\", line 19, in <module>\n    from .shards import Shards, references\n  File \"/tmp/tidetrain-scale/code/lowband_training/shards.py\", line 18, in <module>\n    from safetensors.torch import load_file, save_file\nModuleNotFoundError: No module named 'safetensors'\n"
+  },
+  {
+    "event": "scale_node_worker_exit",
+    "worker": "w0013",
+    "returncode": 1,
+    "log_tail": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/tmp/tidetrain-scale/code/lowband_training/scale_worker.py\", line 19, in <module>\n    from .shards import Shards, references\n  File \"/tmp/tidetrain-scale/code/lowband_training/shards.py\", line 18, in <module>\n    from safetensors.torch import load_file, save_file\nModuleNotFoundError: No module named 'safetensors'\n"
+  },
+  {
+    "event": "scale_node_worker_exit",
+    "worker": "w0014",
+    "returncode": 1,
+    "log_tail": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/tmp/tidetrain-scale/code/lowband_training/scale_worker.py\", line 19, in <module>\n    from .shards import Shards, references\n  File \"/tmp/tidetrain-scale/code/lowband_training/shards.py\", line 18, in <module>\n    from safetensors.torch import load_file, save_file\nModuleNotFoundError: No module named 'safetensors'\n"
+  },
+  {
+    "event": "scale_node_worker_exit",
+    "worker": "w0015",
+    "returncode": 1,
+    "log_tail": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/tmp/tidetrain-scale/code/lowband_training/scale_worker.py\", line 19, in <module>\n    from .shards import Shards, references\n  File \"/tmp/tidetrain-scale/code/lowband_training/shards.py\", line 18, in <module>\n    from safetensors.torch import load_file, save_file\nModuleNotFoundError: No module named 'safetensors'\n"
+  }
+]

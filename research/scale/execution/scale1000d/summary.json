@@ -1,0 +1,12 @@
+{
+  "label": "scale1000d",
+  "requested_gpus": 1000,
+  "actual_training_gpu_count": 0,
+  "requested_nodes": 125,
+  "gpu_type": "NVIDIA_H20",
+  "job_run_sid": "e94e12df3bed1170",
+  "platform_status": "started",
+  "trial_sid": "439203534",
+  "trial_status": "queued",
+  "created_at": "2026-10-25T06:14:54.814Z"
+}

@@ -1,0 +1,261 @@
+{
+  "recorded_at_epoch": 1792910210.2759488,
+  "direct_1000_gpu_authorized": true,
+  "small_scale_prerequisite": false,
+  "purpose": "protocol_capacity",
+  "actual_scale_training_gpus": 0,
+  "attempts": [
+    {
+      "label": "scale16",
+      "requested_gpus": 16,
+      "actual_training_gpu_count": 0,
+      "requested_nodes": 2,
+      "gpu_type": "NVIDIA_H20",
+      "job_run_sid": "f2d55f6897ac1f96",
+      "platform_status": "failed_to_launch",
+      "trial_sid": "439196520",
+      "trial_status": "failed",
+      "created_at": "2026-10-25T05:55:44.522Z",
+      "trial_evidence": [
+        {
+          "sid": "439196520",
+          "status": 6,
+          "error": "queue name compute-124-lf-cloudnative-ai-search.douyin.life.nlp-guarantee is not belong to group primary-spot"
+        }
+      ],
+      "listed_pods": 0,
+      "hosted_pods": 0,
+      "pod_exit_codes": []
+    },
+    {
+      "label": "scale16c",
+      "requested_gpus": 16,
+      "actual_training_gpu_count": 0,
+      "requested_nodes": 2,
+      "gpu_type": "NVIDIA_H20",
+      "job_run_sid": "f5aee96485e415aa",
+      "platform_status": "started",
+      "trial_sid": "439198896",
+      "trial_status": "staging",
+      "created_at": "2026-10-25T06:02:38.240Z",
+      "local_log_url_present": false,
+      "tls_log_rows": 0
+    },
+    {
+      "label": "scale16d",
+      "requested_gpus": 16,
+      "actual_training_gpu_count": 0,
+      "requested_nodes": 2,
+      "gpu_type": "NVIDIA_H20",
+      "job_run_sid": "6219df1a02327707",
+      "platform_status": "failed",
+      "trial_sid": "439200930",
+      "trial_status": "failed",
+      "created_at": "2026-10-25T06:08:48.698Z",
+      "trial_evidence": [
+        {
+          "sid": "439200930",
+          "status": 5,
+          "error": ""
+        }
+      ],
+      "listed_pods": 2,
+      "hosted_pods": 2,
+      "pod_exit_codes": [
+        1,
+        70001
+      ],
+      "local_log_url_present": false
+    },
+    {
+      "label": "scale104c",
+      "requested_gpus": 104,
+      "actual_training_gpu_count": 0,
+      "requested_nodes": 13,
+      "gpu_type": "NVIDIA_H20",
+      "job_run_sid": "457b0564c89b2400",
+      "platform_status": "failed",
+      "trial_sid": "439198939",
+      "trial_status": "failed",
+      "created_at": "2026-10-25T06:02:43.657Z",
+      "trial_evidence": [
+        {
+          "sid": "439198939",
+          "status": 5,
+          "error": ""
+        }
+      ],
+      "listed_pods": 13,
+      "hosted_pods": 0,
+      "pod_exit_codes": [
+        -80003
+      ],
+      "local_log_url_present": false,
+      "tls_log_rows": 0,
+      "pod_event_queries": [
+        {
+          "pod": null,
+          "start_us": null,
+          "end_us": null,
+          "trace_count": 0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "label": "scale1000c",
+      "requested_gpus": 1000,
+      "actual_training_gpu_count": 0,
+      "requested_nodes": 125,
+      "gpu_type": "NVIDIA_H20",
+      "job_run_sid": "630e668d3081ea49",
+      "platform_status": "failed",
+      "trial_sid": "439198988",
+      "trial_status": "failed",
+      "created_at": "2026-10-25T06:02:50.163Z",
+      "trial_evidence": [
+        {
+          "sid": "439198988",
+          "status": 5,
+          "error": ""
+        }
+      ],
+      "listed_pods": 20,
+      "hosted_pods": 0,
+      "pod_exit_codes": [
+        -80003
+      ],
+      "local_log_url_present": false,
+      "tls_log_rows": 0,
+      "pod_event_queries": [
+        {
+          "pod": null,
+          "start_us": null,
+          "end_us": null,
+          "trace_count": 0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "label": "scale1000d",
+      "requested_gpus": 1000,
+      "actual_training_gpu_count": 0,
+      "requested_nodes": 125,
+      "gpu_type": "NVIDIA_H20",
+      "job_run_sid": "e94e12df3bed1170",
+      "platform_status": "started",
+      "trial_sid": "439203534",
+      "trial_status": "queued",
+      "created_at": "2026-10-25T06:14:54.814Z"
+    },
+    {
+      "label": "scale1000-h20-v2",
+      "requested_gpus": 1000,
+      "actual_training_gpu_count": 0,
+      "requested_nodes": 125,
+      "gpu_type": "NVIDIA_H20",
+      "job_run_sid": "186a98303620feb5",
+      "platform_status": "failed",
+      "trial_sid": "439204754",
+      "trial_status": "queued",
+      "created_at": "2026-10-25T06:18:45.382Z",
+      "trial_evidence": [
+        {
+          "sid": "439204754",
+          "status": 5,
+          "error": ""
+        }
+      ],
+      "listed_pods": 125,
+      "hosted_pods": 0,
+      "pod_exit_codes": [
+        -80003
+      ],
+      "local_log_url_present": false,
+      "tls_log_rows": 0,
+      "pod_event_queries": [
+        {
+          "pod": "trial-439204754-trialrun-439204754-worker-1",
+          "start_us": 1792908525382000,
+          "end_us": 1792909938246630,
+          "trace_count": 0,
+          "error": null
+        },
+        {
+          "pod": "trial-439204754-trialrun-439204754-worker-116",
+          "start_us": 1792908525382000,
+          "end_us": 1792909938246630,
+          "trace_count": 0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "label": "scale1000-a10-v2",
+      "requested_gpus": 1000,
+      "actual_training_gpu_count": 0,
+      "requested_nodes": 250,
+      "gpu_type": "NVIDIA_A10",
+      "job_run_sid": "d5155ed7ffe5dad1",
+      "platform_status": "failed_to_launch",
+      "trial_sid": "439204742",
+      "trial_status": "failed",
+      "created_at": "2026-10-25T06:18:43.971Z",
+      "trial_evidence": [
+        {
+          "sid": "439204742",
+          "status": 6,
+          "error": "submit task group failed with error: applyAfterResponseMWs error: Status code check failed, code=500: POST /api/v1/taskgroups 500, resp: {\"message\":\"uce spot cluster cannot set preemtable\"}"
+        }
+      ],
+      "listed_pods": 0,
+      "hosted_pods": 0,
+      "pod_exit_codes": []
+    },
+    {
+      "label": "scale1000-a10-v3",
+      "requested_gpus": 1000,
+      "actual_training_gpu_count": 0,
+      "requested_nodes": 250,
+      "gpu_type": "NVIDIA_A10",
+      "job_run_sid": "81acf246903e749a",
+      "platform_status": "started",
+      "trial_sid": "439205861",
+      "trial_status": "queued",
+      "created_at": "2026-10-25T06:21:40.382Z",
+      "trial_evidence": [
+        {
+          "sid": "439205861",
+          "status": 3,
+          "error": ""
+        }
+      ],
+      "listed_pods": 0,
+      "hosted_pods": 0,
+      "pod_exit_codes": []
+    }
+  ],
+  "tests": {
+    "unit_failure_recovery_launch": 11,
+    "cpu_http_rounds": 2,
+    "cpu_http_effective_tokens": 32,
+    "cpu_http_test_exit": 0
+  },
+  "limitations": [
+    "no_100_or_1000_gpu_performance_result",
+    "single_host_sqlite_not_multi_host_HA",
+    "worker_materializes_full_recovery",
+    "model_quality_comparison_pending"
+  ],
+  "latest_a10_watch": {
+    "control_plane": "cn",
+    "deadline_epoch": 1792913542.0673995,
+    "sid": "81acf246903e749a",
+    "status": "started",
+    "stop_requested": false,
+    "time": 1792910206.64304,
+    "trial": "439205861",
+    "trial_status": "queued"
+  }
+}

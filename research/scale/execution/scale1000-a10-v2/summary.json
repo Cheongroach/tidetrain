@@ -1,0 +1,22 @@
+{
+  "label": "scale1000-a10-v2",
+  "requested_gpus": 1000,
+  "actual_training_gpu_count": 0,
+  "requested_nodes": 250,
+  "gpu_type": "NVIDIA_A10",
+  "job_run_sid": "d5155ed7ffe5dad1",
+  "platform_status": "failed_to_launch",
+  "trial_sid": "439204742",
+  "trial_status": "failed",
+  "created_at": "2026-10-25T06:18:43.971Z",
+  "trial_evidence": [
+    {
+      "sid": "439204742",
+      "status": 6,
+      "error": "submit task group failed with error: applyAfterResponseMWs error: Status code check failed, code=500: POST /api/v1/taskgroups 500, resp: {\"message\":\"uce spot cluster cannot set preemtable\"}"
+    }
+  ],
+  "listed_pods": 0,
+  "hosted_pods": 0,
+  "pod_exit_codes": []
+}

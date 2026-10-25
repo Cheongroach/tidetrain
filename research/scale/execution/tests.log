@@ -1,0 +1,8 @@
+........{"event": "cuda_bootstrap", "attempts": [{"ok": true, "candidate": "original", "library_path": "/usr/local/cuda/compat:/runtime/lib", "returncode": 0, "stderr": ""}], "selected": "original", "ready": true, "nvidia_smi": "A10, 550.54.14", "nvidia_smi_error": ""}
+.{"event": "cuda_bootstrap", "attempts": [{"ok": false, "candidate": "original", "library_path": "/usr/local/cuda/compat:/runtime/lib", "returncode": 1, "stderr": ""}, {"ok": false, "candidate": "without_compat", "library_path": "/runtime/lib", "returncode": 1, "stderr": ""}, {"ok": false, "candidate": "host_first", "library_path": "/usr/lib/x86_64-linux-gnu:/runtime/lib", "returncode": 1, "stderr": ""}], "selected": null, "ready": false, "nvidia_smi": "A10, 550.54.14", "nvidia_smi_error": ""}
+.{"event": "cuda_bootstrap", "attempts": [{"ok": false, "candidate": "original", "library_path": "/usr/local/cuda/compat:/runtime/lib", "returncode": 1, "stderr": ""}, {"ok": true, "candidate": "without_compat", "library_path": "/runtime/lib", "returncode": 0, "stderr": ""}], "selected": "without_compat", "ready": true, "nvidia_smi": "A10, 550.54.14", "nvidia_smi_error": ""}
+.
+----------------------------------------------------------------------
+Ran 11 tests in 0.692s
+
+OK

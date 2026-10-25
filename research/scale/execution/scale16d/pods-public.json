@@ -1,0 +1,24 @@
+[
+  {
+    "sid": "5395311583",
+    "pod_name": "trial-439200930-trialrun-439200930-worker-0",
+    "status": 4,
+    "exit_status": 70001,
+    "gpuv": "NVIDIA-H20",
+    "schedule_at": "2026-10-25T06:09:33.000Z",
+    "start_at": null,
+    "stop_at": "2026-10-25T06:12:50.000Z",
+    "host": "host-0001"
+  },
+  {
+    "sid": "5395311601",
+    "pod_name": "trial-439200930-trialrun-439200930-worker-1",
+    "status": 4,
+    "exit_status": 1,
+    "gpuv": "NVIDIA-H20",
+    "schedule_at": "2026-10-25T06:09:33.000Z",
+    "start_at": "2026-10-25T06:11:33.000Z",
+    "stop_at": "2026-10-25T06:12:19.000Z",
+    "host": "host-0002"
+  }
+]

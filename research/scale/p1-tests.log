@@ -1,0 +1,10 @@
+test_bad_epoch_ancestry_and_recovery_cursor (lowband_training.test_scale.ScaleTests.test_bad_epoch_ancestry_and_recovery_cursor) ... ok
+test_chunked_outer_matches_baseline_bitwise (lowband_training.test_scale.ScaleTests.test_chunked_outer_matches_baseline_bitwise) ... ok
+test_complete_recovery_types_and_corruption (lowband_training.test_scale.ScaleTests.test_complete_recovery_types_and_corruption) ... ok
+test_fencing_and_duplicate_tokens (lowband_training.test_scale.ScaleTests.test_fencing_and_duplicate_tokens) ... ok
+test_parallel_authorities_and_crash_rollback (lowband_training.test_scale.ScaleTests.test_parallel_authorities_and_crash_rollback) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.481s
+
+OK

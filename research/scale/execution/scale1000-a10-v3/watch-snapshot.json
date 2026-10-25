@@ -1,0 +1,10 @@
+{
+  "control_plane": "cn",
+  "deadline_epoch": 1792913542.0673995,
+  "sid": "81acf246903e749a",
+  "status": "started",
+  "stop_requested": false,
+  "time": 1792910206.64304,
+  "trial": "439205861",
+  "trial_status": "queued"
+}

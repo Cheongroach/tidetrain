@@ -1,0 +1,35 @@
+{
+  "label": "scale1000c",
+  "requested_gpus": 1000,
+  "actual_training_gpu_count": 0,
+  "requested_nodes": 125,
+  "gpu_type": "NVIDIA_H20",
+  "job_run_sid": "630e668d3081ea49",
+  "platform_status": "failed",
+  "trial_sid": "439198988",
+  "trial_status": "failed",
+  "created_at": "2026-10-25T06:02:50.163Z",
+  "trial_evidence": [
+    {
+      "sid": "439198988",
+      "status": 5,
+      "error": ""
+    }
+  ],
+  "listed_pods": 20,
+  "hosted_pods": 0,
+  "pod_exit_codes": [
+    -80003
+  ],
+  "local_log_url_present": false,
+  "tls_log_rows": 0,
+  "pod_event_queries": [
+    {
+      "pod": null,
+      "start_us": null,
+      "end_us": null,
+      "trace_count": 0,
+      "error": null
+    }
+  ]
+}
