@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tidetrain"
+version = "0.1.0"
+description = "Versioned low-bandwidth training and recovery on preemptible GPUs"
+requires-python = ">=3.11"
+dependencies = ["torch>=2.2", "transformers==4.46.3", "safetensors==0.4.5"]
+
+[tool.setuptools.packages.find]
+include = ["lowband_training*"]
+
+[tool.setuptools.package-data]
+lowband_training = ["*.json", "*.md", "*.ipynb", "*.sh", "*.txt"]

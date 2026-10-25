@@ -1,0 +1,16 @@
+{
+  "scope": "left-endpoint integration of sampled cur_instances; includes idle/warmup/failure",
+  "exact_billing": false,
+  "samples": 184,
+  "first_observation": 1792847014.2530324,
+  "last_observation": 1792905709.079733,
+  "sampled_gpu_hours_by_type": {
+    "a10": 105.38789917627975,
+    "a100-pcie-80GB": 98.23440662437018
+  },
+  "sampled_gpu_hours": 203.62230580064994,
+  "peak_reported_instances": 16,
+  "unknown_count_slot_hours": 5.131442170474265,
+  "intervals_with_unknown_counts": 22,
+  "limits": "Failed-query intervals are excluded for the affected slot; counts there are unknown, not zero. The integral covers observed counts only and may omit rollout overlap or changes between samples; last interval is not extrapolated."
+}

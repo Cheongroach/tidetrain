@@ -1,0 +1,45 @@
+{
+  "run_id": "qwen05b-spot-20261025-c3",
+  "base_round": 1,
+  "reference_type": "Independent GPU replay of round 1 from durable global parameters and optimizer/RNG/cursor",
+  "original_instance": "instance-0005",
+  "replay_instance": "instance-0009",
+  "input_state": {
+    "bytes": 1976222459,
+    "sha256": "4af6c66b6652b7722b09123b16369def9697a8aec5f2ad8797170a1f12998fe6"
+  },
+  "previous": {
+    "bytes": 3952504290,
+    "sha256": "a1c4e5f9667edfe6fd6624020f606207021264dd7f6e166228a8370bacb020ab"
+  },
+  "result": {
+    "metrics": {
+      "compute_seconds": 34.1961722522974,
+      "first_train_loss": 2.749056577682495,
+      "last_train_loss": 3.7315964698791504,
+      "local_validation_loss": 2.2308714389801025,
+      "mean_train_loss": 2.924143483862281,
+      "peak_allocated_bytes": 9919601664
+    },
+    "recovery": {
+      "sha256": "79997c5ceb7a0f739a5616907f7b392068ac403920ac4bcbe49d04df8c9aecde",
+      "bytes": 3952504290
+    },
+    "delta": {
+      "sha256": "5d4d66a7408404dea0929b55ec02b4338716fd844183085fd67a46dfa81292fa",
+      "bytes": 1976222062
+    }
+  },
+  "checks": {
+    "delta_exact_equal": true,
+    "recovery_exact_equal": true,
+    "optimizer_exact_equal": true,
+    "rng_exact_equal": true,
+    "cursor_exact_equal": true,
+    "cursor": 512
+  },
+  "delta_max_abs_error": 0.0,
+  "http_counters_available": false,
+  "http_counter_limit": "Original replay process collected artifacts before waiting; counters were not checkpointed",
+  "all_checks_passed": true
+}

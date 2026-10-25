@@ -1,0 +1,481 @@
+{
+  "run_id": "qwen05b-spot-20261025-c3",
+  "audited_at": 1792905342.8312345,
+  "config_hash": "1a60cd28890a76cdedfb0f6b43d6ce8c73d33852bb7a3975ab6b53ac78e66bb7",
+  "rounds": [
+    {
+      "round": 1,
+      "effective_tokens": 131072,
+      "workers": {
+        "hl": {
+          "cursor": 256,
+          "adam_steps": [
+            128
+          ],
+          "optimizer_parameter_states": 290,
+          "delta_l2": 5.957296530062576,
+          "finite_delta": true,
+          "finite_optimizer": true,
+          "cuda_rng_bytes": 16,
+          "cpu_rng_bytes": 5056,
+          "restored_previous_sha256": null,
+          "instance": "instance-0003",
+          "transport": {
+            "generation": 3,
+            "http_received_bytes": 1070,
+            "http_sent_bytes": 0,
+            "instance": "instance-0003",
+            "job_id": "ca66b3403fd4cc95979ed4bea3a9432da8a47f909263d953f56c8391f0306548"
+          },
+          "metrics": {
+            "compute_seconds": 33.096149891614914,
+            "first_train_loss": 3.392141342163086,
+            "last_train_loss": 2.7686400413513184,
+            "local_validation_loss": 2.223540782928467,
+            "mean_train_loss": 2.9087911769747734,
+            "peak_allocated_bytes": 9923468288
+          }
+        },
+        "lf": {
+          "cursor": 256,
+          "adam_steps": [
+            128
+          ],
+          "optimizer_parameter_states": 290,
+          "delta_l2": 5.950278377003697,
+          "finite_delta": true,
+          "finite_optimizer": true,
+          "cuda_rng_bytes": 16,
+          "cpu_rng_bytes": 5056,
+          "restored_previous_sha256": null,
+          "instance": "instance-0004",
+          "transport": {
+            "generation": 1,
+            "http_received_bytes": 5928727423,
+            "http_sent_bytes": 0,
+            "instance": "instance-0004",
+            "job_id": "15b7da15b83c1fe4d4d79840fdbb53352d19c4e4e1f5957a64de96af2a5ef97b"
+          },
+          "metrics": {
+            "compute_seconds": 22.787184488028288,
+            "first_train_loss": 3.4721574783325195,
+            "last_train_loss": 2.9623379707336426,
+            "local_validation_loss": 2.1934852600097656,
+            "mean_train_loss": 2.904098115861416,
+            "peak_allocated_bytes": 9923468288
+          }
+        }
+      },
+      "outer_recurrence_max_abs_error": 0.0,
+      "momentum_max_abs_error": 0.0
+    },
+    {
+      "round": 2,
+      "effective_tokens": 262144,
+      "workers": {
+        "hl": {
+          "cursor": 512,
+          "adam_steps": [
+            256
+          ],
+          "optimizer_parameter_states": 290,
+          "delta_l2": 5.57213444248488,
+          "finite_delta": true,
+          "finite_optimizer": true,
+          "cuda_rng_bytes": 16,
+          "cpu_rng_bytes": 5056,
+          "restored_previous_sha256": "a1c4e5f9667edfe6fd6624020f606207021264dd7f6e166228a8370bacb020ab",
+          "instance": "instance-0005",
+          "transport": {
+            "generation": 0,
+            "http_received_bytes": 54644,
+            "http_sent_bytes": 5928727312,
+            "instance": "instance-0005",
+            "job_id": "9c7065ee9ae0881dcd53d2e0638904598faf22702d7c305c44905ed19102ec8f"
+          },
+          "metrics": {
+            "compute_seconds": 34.068920239806175,
+            "first_train_loss": 2.749056577682495,
+            "last_train_loss": 3.7315964698791504,
+            "local_validation_loss": 2.2308714389801025,
+            "mean_train_loss": 2.924143483862281,
+            "peak_allocated_bytes": 9919601664
+          }
+        },
+        "lf": {
+          "cursor": 512,
+          "adam_steps": [
+            256
+          ],
+          "optimizer_parameter_states": 290,
+          "delta_l2": 5.597242970828844,
+          "finite_delta": true,
+          "finite_optimizer": true,
+          "cuda_rng_bytes": 16,
+          "cpu_rng_bytes": 5056,
+          "restored_previous_sha256": "3dff451be16a291ab8db6ee2f04e356f64c6b8d8c3e005280bc8eb4b804d19af",
+          "instance": "instance-0006",
+          "transport": {
+            "generation": 2,
+            "http_received_bytes": 5928781596,
+            "http_sent_bytes": 5928727312,
+            "instance": "instance-0006",
+            "job_id": "294752c0c5f63e70cf5a6ee8fd53150ea83e64fb246c4f3c8087c6f74d6cb840"
+          },
+          "metrics": {
+            "compute_seconds": 22.32618753798306,
+            "first_train_loss": 2.9740633964538574,
+            "last_train_loss": 3.830097198486328,
+            "local_validation_loss": 2.2784197330474854,
+            "mean_train_loss": 2.9294735863804817,
+            "peak_allocated_bytes": 9919601664
+          }
+        }
+      },
+      "outer_recurrence_max_abs_error": 0.0,
+      "momentum_max_abs_error": 0.0
+    },
+    {
+      "round": 3,
+      "effective_tokens": 393216,
+      "workers": {
+        "hl": {
+          "cursor": 768,
+          "adam_steps": [
+            384
+          ],
+          "optimizer_parameter_states": 290,
+          "delta_l2": 5.9550838126672705,
+          "finite_delta": true,
+          "finite_optimizer": true,
+          "cuda_rng_bytes": 16,
+          "cpu_rng_bytes": 5056,
+          "restored_previous_sha256": "79997c5ceb7a0f739a5616907f7b392068ac403920ac4bcbe49d04df8c9aecde",
+          "instance": "instance-0005",
+          "transport": {
+            "generation": 0,
+            "http_received_bytes": 5928781195,
+            "http_sent_bytes": 5928727312,
+            "instance": "instance-0005",
+            "job_id": "018bcf2c94a8a315f2c5abbb75db3c5b439344348025147f9581d9d1bd5586cb"
+          },
+          "metrics": {
+            "compute_seconds": 33.1643236130476,
+            "first_train_loss": 4.173280239105225,
+            "last_train_loss": 2.9942874908447266,
+            "local_validation_loss": 2.3610150814056396,
+            "mean_train_loss": 2.9841574961319566,
+            "peak_allocated_bytes": 9919601664
+          }
+        },
+        "lf": {
+          "cursor": 768,
+          "adam_steps": [
+            384
+          ],
+          "optimizer_parameter_states": 290,
+          "delta_l2": 5.945693690824617,
+          "finite_delta": true,
+          "finite_optimizer": true,
+          "cuda_rng_bytes": 16,
+          "cpu_rng_bytes": 5056,
+          "restored_previous_sha256": "d44c1719796b0a4b976d09e1f3c0c3dd7c55e60b3f49fd5d284c3617156a4c4f",
+          "instance": "instance-0007",
+          "transport": {
+            "generation": 0,
+            "http_received_bytes": 5928780998,
+            "http_sent_bytes": 5928727312,
+            "instance": "instance-0007",
+            "job_id": "395bcd6d22fbe01750954887c128f12eadba1ac507dc14a6ae2661580120c50f"
+          },
+          "metrics": {
+            "compute_seconds": 22.901765319984406,
+            "first_train_loss": 3.7408523559570312,
+            "last_train_loss": 3.1297390460968018,
+            "local_validation_loss": 2.3063933849334717,
+            "mean_train_loss": 2.9545598719269037,
+            "peak_allocated_bytes": 9919601664
+          }
+        }
+      },
+      "outer_recurrence_max_abs_error": 0.0,
+      "momentum_max_abs_error": 0.0
+    },
+    {
+      "round": 4,
+      "effective_tokens": 524288,
+      "workers": {
+        "hl": {
+          "cursor": 1024,
+          "adam_steps": [
+            512
+          ],
+          "optimizer_parameter_states": 290,
+          "delta_l2": 6.548806159752144,
+          "finite_delta": true,
+          "finite_optimizer": true,
+          "cuda_rng_bytes": 16,
+          "cpu_rng_bytes": 5056,
+          "restored_previous_sha256": "b7b0cdbb39f7916fda98bfa12662ff680eae25216b10cea42fe1fd6ae1031bc8",
+          "instance": "instance-0008",
+          "transport": {
+            "generation": 0,
+            "http_received_bytes": 5928780996,
+            "http_sent_bytes": 5928727312,
+            "instance": "instance-0008",
+            "job_id": "24835fb462006eb6259a978bccdc51d81f2414bfd44b13b49a47fca950b4103b"
+          },
+          "metrics": {
+            "compute_seconds": 33.88855953514576,
+            "first_train_loss": 2.9390358924865723,
+            "last_train_loss": 3.7239198684692383,
+            "local_validation_loss": 2.3683419227600098,
+            "mean_train_loss": 3.213592143729329,
+            "peak_allocated_bytes": 9919601664
+          }
+        },
+        "lf": {
+          "cursor": 1024,
+          "adam_steps": [
+            512
+          ],
+          "optimizer_parameter_states": 290,
+          "delta_l2": 6.5276293535214185,
+          "finite_delta": true,
+          "finite_optimizer": true,
+          "cuda_rng_bytes": 16,
+          "cpu_rng_bytes": 5056,
+          "restored_previous_sha256": "cfa00bcb181ccb7cf91550fb8042cc927959ec8955485166a6a6dd623cd75b49",
+          "instance": "instance-0007",
+          "transport": {
+            "generation": 0,
+            "http_received_bytes": 5928780994,
+            "http_sent_bytes": 5928727312,
+            "instance": "instance-0007",
+            "job_id": "a293dde3e06b7b845130ad35bc1bf9435e881af0d7b5bdbe71451076a4b47c4f"
+          },
+          "metrics": {
+            "compute_seconds": 22.193517185980454,
+            "first_train_loss": 3.013867139816284,
+            "last_train_loss": 3.295152187347412,
+            "local_validation_loss": 2.324373245239258,
+            "mean_train_loss": 3.218824727460742,
+            "peak_allocated_bytes": 9919601664
+          }
+        }
+      },
+      "outer_recurrence_max_abs_error": 0.0,
+      "momentum_max_abs_error": 0.0
+    }
+  ],
+  "recovery_scope": "Durable GPU optimizer, RNG, data cursor and controller cold-cache ancestry; no uninterrupted GPU weight-equivalence reference run",
+  "parameter_count": 494032768,
+  "lineage": {
+    "base_state": {
+      "bytes": 3952432695,
+      "sha256": "78d16be7be96428524c66f0058df12b4c138af29bbf9a85c57b9a367827a5d0c"
+    },
+    "child_uri": "<controller-storage-uri><operator>/lowband_training/runs/qwen05b-spot-20261025-c3",
+    "created_at": 1792900029.6206539,
+    "deadline": 1792910829.6204777,
+    "fork_round": 1,
+    "inherited_blobs": {
+      "3b2af43fab8f05a868e77b1eebdcd507bf20c1208893b1616c2d51acca27c170": {
+        "bytes": 3952432695,
+        "sha256": "3b2af43fab8f05a868e77b1eebdcd507bf20c1208893b1616c2d51acca27c170"
+      },
+      "3dff451be16a291ab8db6ee2f04e356f64c6b8d8c3e005280bc8eb4b804d19af": {
+        "bytes": 3952504290,
+        "sha256": "3dff451be16a291ab8db6ee2f04e356f64c6b8d8c3e005280bc8eb4b804d19af"
+      },
+      "7637e4034aba11682288df5a744909106ecf7f43c4f94d52db94bebec2fbfa04": {
+        "bytes": 1976222062,
+        "sha256": "7637e4034aba11682288df5a744909106ecf7f43c4f94d52db94bebec2fbfa04"
+      },
+      "78d16be7be96428524c66f0058df12b4c138af29bbf9a85c57b9a367827a5d0c": {
+        "bytes": 3952432695,
+        "sha256": "78d16be7be96428524c66f0058df12b4c138af29bbf9a85c57b9a367827a5d0c"
+      },
+      "a1c4e5f9667edfe6fd6624020f606207021264dd7f6e166228a8370bacb020ab": {
+        "bytes": 3952504290,
+        "sha256": "a1c4e5f9667edfe6fd6624020f606207021264dd7f6e166228a8370bacb020ab"
+      },
+      "c402f3b0a04be900329f7940a733863f313a600e848a25d4326d374677b158ec": {
+        "bytes": 1976222062,
+        "sha256": "c402f3b0a04be900329f7940a733863f313a600e848a25d4326d374677b158ec"
+      }
+    },
+    "inherited_effective_tokens": 131072,
+    "inherited_manifests": [
+      "dispatch/000000/hl/0003.json",
+      "dispatch/000000/lf/0001.json",
+      "rounds/000000.json",
+      "rounds/000001.json",
+      "updates/000000/hl.json",
+      "updates/000000/lf.json"
+    ],
+    "parent_deadline": 1792872323.30477,
+    "parent_run_sha256": "fe370dab2bf01105556b3dd13a451e50706280d462c27d05919894b1fd4fe979",
+    "parent_uri": "<controller-storage-uri><operator>/lowband_training/runs/qwen05b-spot-20261025-c1",
+    "read_only_parent_blob_mount": "<controller-storage-mount><operator>/lowband_training/runs/qwen05b-spot-20261025-c1/blobs"
+  },
+  "completed": {
+    "effective_tokens": 524288,
+    "round": 4,
+    "state": {
+      "bytes": 3952432695,
+      "sha256": "37908eacf2a0a69b3258dd77b81f94a44c616e964d1557749c3d6f1ce1ffa63e"
+    }
+  },
+  "blobs": {
+    "3b2af43fab8f05a868e77b1eebdcd507bf20c1208893b1616c2d51acca27c170": {
+      "bytes": 3952432695,
+      "sha256_verified": true,
+      "remote_path": "<controller-storage-mount><operator>/lowband_training/runs/qwen05b-spot-20261025-c1/blobs/3b2af43fab8f05a868e77b1eebdcd507bf20c1208893b1616c2d51acca27c170.pt",
+      "remote_read_seconds": 621.9002848993987,
+      "reused_from_audit_log": true
+    },
+    "78d16be7be96428524c66f0058df12b4c138af29bbf9a85c57b9a367827a5d0c": {
+      "bytes": 3952432695,
+      "sha256_verified": true,
+      "remote_path": "<controller-storage-mount><operator>/lowband_training/runs/qwen05b-spot-20261025-c1/blobs/78d16be7be96428524c66f0058df12b4c138af29bbf9a85c57b9a367827a5d0c.pt",
+      "remote_read_seconds": 377.92417354136705,
+      "reused_from_audit_log": true
+    },
+    "c402f3b0a04be900329f7940a733863f313a600e848a25d4326d374677b158ec": {
+      "bytes": 1976222062,
+      "sha256_verified": true,
+      "remote_path": "<controller-storage-mount><operator>/lowband_training/runs/qwen05b-spot-20261025-c1/blobs/c402f3b0a04be900329f7940a733863f313a600e848a25d4326d374677b158ec.pt",
+      "remote_read_seconds": 202.61247539985925,
+      "reused_from_audit_log": true
+    },
+    "a1c4e5f9667edfe6fd6624020f606207021264dd7f6e166228a8370bacb020ab": {
+      "bytes": 3952504290,
+      "sha256_verified": true,
+      "remote_path": "<controller-storage-mount><operator>/lowband_training/runs/qwen05b-spot-20261025-c1/blobs/a1c4e5f9667edfe6fd6624020f606207021264dd7f6e166228a8370bacb020ab.pt",
+      "remote_read_seconds": 298.521304236725,
+      "reused_from_audit_log": true
+    },
+    "7637e4034aba11682288df5a744909106ecf7f43c4f94d52db94bebec2fbfa04": {
+      "bytes": 1976222062,
+      "sha256_verified": true,
+      "remote_path": "<controller-storage-mount><operator>/lowband_training/runs/qwen05b-spot-20261025-c1/blobs/7637e4034aba11682288df5a744909106ecf7f43c4f94d52db94bebec2fbfa04.pt",
+      "remote_read_seconds": 189.16588214412332,
+      "reused_from_audit_log": true
+    },
+    "3dff451be16a291ab8db6ee2f04e356f64c6b8d8c3e005280bc8eb4b804d19af": {
+      "bytes": 3952504290,
+      "sha256_verified": true,
+      "remote_path": "<controller-storage-mount><operator>/lowband_training/runs/qwen05b-spot-20261025-c1/blobs/3dff451be16a291ab8db6ee2f04e356f64c6b8d8c3e005280bc8eb4b804d19af.pt",
+      "remote_read_seconds": 398.09633917175233,
+      "reused_from_audit_log": true
+    },
+    "0f142a44199b9f2e0076b67887d3d3fc4365d070df2f0dc055aa68e06a36c792": {
+      "bytes": 3952432695,
+      "sha256_verified": true,
+      "remote_path": "<controller-storage-mount><operator>/lowband_training/runs/qwen05b-spot-20261025-c3/blobs/0f142a44199b9f2e0076b67887d3d3fc4365d070df2f0dc055aa68e06a36c792.pt",
+      "remote_read_seconds": 281.4824103144929,
+      "verified_at": 1792902285.56699
+    },
+    "5d4d66a7408404dea0929b55ec02b4338716fd844183085fd67a46dfa81292fa": {
+      "bytes": 1976222062,
+      "sha256_verified": true,
+      "remote_path": "<controller-storage-mount><operator>/lowband_training/runs/qwen05b-spot-20261025-c3/blobs/5d4d66a7408404dea0929b55ec02b4338716fd844183085fd67a46dfa81292fa.pt",
+      "remote_read_seconds": 125.69042897224426,
+      "verified_at": 1792902129.781017
+    },
+    "79997c5ceb7a0f739a5616907f7b392068ac403920ac4bcbe49d04df8c9aecde": {
+      "bytes": 3952504290,
+      "sha256_verified": true,
+      "remote_path": "<controller-storage-mount><operator>/lowband_training/runs/qwen05b-spot-20261025-c3/blobs/79997c5ceb7a0f739a5616907f7b392068ac403920ac4bcbe49d04df8c9aecde.pt",
+      "remote_read_seconds": 869.4360095383599,
+      "verified_at": 1792902873.5319927
+    },
+    "8a63b117d58a5ed4db27d75d089e59d109dac8fd7b14a1a0a2d4b0b12b7a98fe": {
+      "bytes": 1976222062,
+      "sha256_verified": true,
+      "remote_path": "<controller-storage-mount><operator>/lowband_training/runs/qwen05b-spot-20261025-c3/blobs/8a63b117d58a5ed4db27d75d089e59d109dac8fd7b14a1a0a2d4b0b12b7a98fe.pt",
+      "remote_read_seconds": 192.58369452506304,
+      "verified_at": 1792902196.6850483
+    },
+    "d44c1719796b0a4b976d09e1f3c0c3dd7c55e60b3f49fd5d284c3617156a4c4f": {
+      "bytes": 3952504290,
+      "sha256_verified": true,
+      "remote_path": "<controller-storage-mount><operator>/lowband_training/runs/qwen05b-spot-20261025-c3/blobs/d44c1719796b0a4b976d09e1f3c0c3dd7c55e60b3f49fd5d284c3617156a4c4f.pt",
+      "remote_read_seconds": 214.7859457526356,
+      "verified_at": 1792902344.5670125
+    },
+    "e8de621fa8323baaf3dd8fd1a5e1ff0c9749fdd461258bef1948fbed6c3f2a69": {
+      "bytes": 3952432695,
+      "sha256_verified": true,
+      "remote_path": "<controller-storage-mount><operator>/lowband_training/runs/qwen05b-spot-20261025-c3/blobs/e8de621fa8323baaf3dd8fd1a5e1ff0c9749fdd461258bef1948fbed6c3f2a69.pt",
+      "remote_read_seconds": 552.8493791911751,
+      "verified_at": 1792904085.5969899
+    },
+    "ec76e710d4e1d143a922ab70fd25877ccc4d039c9e4ca6119b4e03960564481d": {
+      "bytes": 1976222062,
+      "sha256_verified": true,
+      "remote_path": "<controller-storage-mount><operator>/lowband_training/runs/qwen05b-spot-20261025-c3/blobs/ec76e710d4e1d143a922ab70fd25877ccc4d039c9e4ca6119b4e03960564481d.pt",
+      "remote_read_seconds": 130.7756572086364,
+      "verified_at": 1792903663.528823
+    },
+    "b7b0cdbb39f7916fda98bfa12662ff680eae25216b10cea42fe1fd6ae1031bc8": {
+      "bytes": 3952504290,
+      "sha256_verified": true,
+      "remote_path": "<controller-storage-mount><operator>/lowband_training/runs/qwen05b-spot-20261025-c3/blobs/b7b0cdbb39f7916fda98bfa12662ff680eae25216b10cea42fe1fd6ae1031bc8.pt",
+      "remote_read_seconds": 183.3768087849021,
+      "verified_at": 1792903716.135461
+    },
+    "72396916457a45666fc94c79011a8deff3536650120f459a27e928ba9f4bea1c": {
+      "bytes": 1976222062,
+      "sha256_verified": true,
+      "remote_path": "<controller-storage-mount><operator>/lowband_training/runs/qwen05b-spot-20261025-c3/blobs/72396916457a45666fc94c79011a8deff3536650120f459a27e928ba9f4bea1c.pt",
+      "remote_read_seconds": 142.31080943532288,
+      "verified_at": 1792903675.075006
+    },
+    "cfa00bcb181ccb7cf91550fb8042cc927959ec8955485166a6a6dd623cd75b49": {
+      "bytes": 3952504290,
+      "sha256_verified": true,
+      "remote_path": "<controller-storage-mount><operator>/lowband_training/runs/qwen05b-spot-20261025-c3/blobs/cfa00bcb181ccb7cf91550fb8042cc927959ec8955485166a6a6dd623cd75b49.pt",
+      "remote_read_seconds": 497.95018742326647,
+      "verified_at": 1792904161.4790602
+    },
+    "37908eacf2a0a69b3258dd77b81f94a44c616e964d1557749c3d6f1ce1ffa63e": {
+      "bytes": 3952432695,
+      "sha256_verified": true,
+      "remote_path": "<controller-storage-mount><operator>/lowband_training/runs/qwen05b-spot-20261025-c3/blobs/37908eacf2a0a69b3258dd77b81f94a44c616e964d1557749c3d6f1ce1ffa63e.pt",
+      "remote_read_seconds": 594.8259188663214,
+      "verified_at": 1792905547.7728362
+    },
+    "365b821a0b05d2d629f7c80ecca6e3cb9d2b5f1c45685865d75029b509e7b668": {
+      "bytes": 1976222062,
+      "sha256_verified": true,
+      "remote_path": "<controller-storage-mount><operator>/lowband_training/runs/qwen05b-spot-20261025-c3/blobs/365b821a0b05d2d629f7c80ecca6e3cb9d2b5f1c45685865d75029b509e7b668.pt",
+      "remote_read_seconds": 151.66757158283144,
+      "verified_at": 1792905104.6200364
+    },
+    "b89b0a92253195bb2fb8a85560ca9fa39c778edee9b783ec6b09f10f1e3f9b84": {
+      "bytes": 3952504290,
+      "sha256_verified": true,
+      "remote_path": "<controller-storage-mount><operator>/lowband_training/runs/qwen05b-spot-20261025-c3/blobs/b89b0a92253195bb2fb8a85560ca9fa39c778edee9b783ec6b09f10f1e3f9b84.pt",
+      "remote_read_seconds": 648.4024619525298,
+      "verified_at": 1792905601.3600512
+    },
+    "9bc884d6f0de528f3fd208ef13cd46578ebb1863ce0ae0af1763ec2ea68f9416": {
+      "bytes": 1976222062,
+      "sha256_verified": true,
+      "remote_path": "<controller-storage-mount><operator>/lowband_training/runs/qwen05b-spot-20261025-c3/blobs/9bc884d6f0de528f3fd208ef13cd46578ebb1863ce0ae0af1763ec2ea68f9416.pt",
+      "remote_read_seconds": 98.70881060045213,
+      "verified_at": 1792905051.671584
+    },
+    "ad7156a154e7870f24cce3fea3a85e4396067558644280e97f6e9f7ddbf946b5": {
+      "bytes": 3952504290,
+      "sha256_verified": true,
+      "remote_path": "<controller-storage-mount><operator>/lowband_training/runs/qwen05b-spot-20261025-c3/blobs/ad7156a154e7870f24cce3fea3a85e4396067558644280e97f6e9f7ddbf946b5.pt",
+      "remote_read_seconds": 308.7536286255345,
+      "verified_at": 1792905360.4252617
+    }
+  },
+  "total_unique_blob_bytes": 67191974291,
+  "all_checks_passed": true
+}

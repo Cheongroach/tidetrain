@@ -1,0 +1,11 @@
+{
+  "psm": "<configured-psm>",
+  "services": {
+    "hl": "<configured-service>",
+    "lf": "<configured-service>"
+  },
+  "region": "cn",
+  "cluster": ["default"],
+  "env_type": ["prod"],
+  "refresh_seconds": 30
+}

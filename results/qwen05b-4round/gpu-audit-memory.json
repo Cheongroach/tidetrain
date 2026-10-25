@@ -1,0 +1,9 @@
+{
+  "samples": 56,
+  "max_rss_bytes": 16179863552,
+  "max_hwm_bytes": 17076908032,
+  "max_cgroup_bytes": 32526159872,
+  "max_cgroup_rss_bytes": 26582859776,
+  "max_cgroup_cache_bytes": 10536685568,
+  "scope": "Full-state audit sampled every five seconds after GPU evaluation and saved replay comparison; cgroup includes unrelated workspace processes and page cache. Maxima need not coincide."
+}

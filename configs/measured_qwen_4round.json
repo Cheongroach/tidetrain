@@ -1,0 +1,21 @@
+{
+  "model": "qwen2.5-0.5b",
+  "model_path": "<controller-storage-mount><operator>/lowband_training/models/qwen2.5-0.5b-060db649",
+  "model_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "data_manifest": "<controller-storage-mount><operator>/lowband_training/data/wikitext2-b08601e0/manifest.json",
+  "data_manifest_sha256": "4dd4fa29c3816296cd94eca585eb15cb40d92091158d5b0b30b3cbb08f3afdbf",
+  "workers": ["hl", "lf"],
+  "quorum": 2,
+  "local_steps": 128,
+  "rounds": 4,
+  "seq_len": 256,
+  "batch_size": 2,
+  "round_timeout": 3600,
+  "max_seconds": 10800,
+  "outer_lr": 0.7,
+  "outer_momentum": 0.9,
+  "inner_lr": 2e-5,
+  "weight_decay": 0.1,
+  "seed": 42,
+  "gradient_checkpointing": true
+}

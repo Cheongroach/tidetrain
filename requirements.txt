@@ -1,0 +1,5 @@
+transformers==4.46.3
+safetensors==0.4.5
+pyarrow==18.1.0
+numpy==1.26.4
+# Keep the platform torch build; bootstrap checks torch >= 2.2.
