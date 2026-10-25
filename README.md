@@ -21,6 +21,8 @@ Qwen2.5-0.5B 在两个真实单 GPU slot（A10、A100 PCIe 80GB）完成四轮 l
 
 扩展改造已增加 safetensors 分片、流式归约、SQLite WAL 租约／fencing／CAS、紧凑恢复 manifest 和离线千卡启动入口。真实 Qwen checkpoint 的 CPU 分片审计误差为 0、峰值 RSS 1.61 GiB。旧的短截止 A10 请求已停止；按一周调度窗口重新提交千卡 A10，当前 queued。新增就绪集合、独立训练计时及 GPU·h 预算跟踪，相关 15 项回归通过。尚无千卡性能结果。详见 [扩容执行记录](results/scale-20261025/REPORT.md)。
 
+独立 localhost 控制面测试已完成：1000 逻辑客户端、64 并发，两轮合成提交耗时 69.237 秒，网关 RSS 峰值 1.20 GiB、线程峰值 18；去重、旧版本拒绝和恢复水合核验通过。这项测试没有 GPU 训练，详情见 [控制面结果](results/scale-20261025/control-plane-1000.json)。
+
 ## 项目成果：STAR
 
 **S — 场景。** Spot GPU 会被替换，GPU 容器不能访问共享 HDFS/NAS，参数与 Adam 状态达到 GiB 规模；成功的进程退出并不保证产物仍然存在。
@@ -97,3 +99,12 @@ python -m lowband_training.prepare_scale --help
 按生成的 `config.json` 启动 `scale_gateway`，然后依平台流程预检、合并预检标识并提交。每个实验使用独立 endpoint／账本；当前网关是单宿主机实现，多区域聚合和 HA 尚待实现。
 
 网关与后台跟踪已通过独立进程启动；`watch_scale` 使用绝对截止与累计分配 GPU·h 预算，阶段切换和平台自动续试不会重置预算。排队时间按一周预留，至少 1–2 小时的调度等待不视为失败。
+
+复现本机控制面测试，必须使用新的临时目录，避免误用生产账本：
+
+```bash
+python -m lowband_training.benchmark_control_plane \
+  --root /tmp/tidetrain-control-new --clients 1000 --concurrency 64 --seconds 900
+```
+
+该入口创建独立 localhost 网关并在完成后清理进程和 token；synthetic token 计数只测试接受协议。
