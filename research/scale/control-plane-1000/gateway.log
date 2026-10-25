@@ -1,0 +1,3 @@
+{"event":"scale_gateway_ready","members":1000,"port":56915}
+{"accepted":1000,"effective_tokens":8000,"event":"scale_round_committed","peak_chunk_bytes":65536,"reduce_seconds":5.634868714027107,"round":1}
+{"accepted":1000,"effective_tokens":16000,"event":"scale_round_committed","peak_chunk_bytes":65536,"reduce_seconds":5.595624582841992,"round":2}

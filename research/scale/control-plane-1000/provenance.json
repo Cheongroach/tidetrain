@@ -1,0 +1,20 @@
+{
+  "source_files_sha256": {
+    "benchmark_control_plane.py": "86251a8208e15012ce1ce7a59ea146546ee849244e52823e586279995f055a57",
+    "scale_gateway.py": "53a96fa4f4d49ef0935fde31b4f855aae2c3cd0a5e017082f9ac73450de30cab",
+    "ledger.py": "c0661ba76f52381e839703e6a239f4db42da1bbc0d56d9605ee42e27fcc0c414",
+    "scale_worker.py": "527bea6e8ddb9c828c1e9200e7c475c7d9b0adf21d2a1580517e56ec03b9a3cd",
+    "shards.py": "deecfa34a9802bbff44f39f36298e2232f4d4ac2b41c60fe7da5c92223ebf933",
+    "prepare_scale.py": "90699f4caac3c2749d251397913b33db3002bc454d5e30b81ac77a862c3ce2f8",
+    "http_transport.py": "72594de9a608bbb2b08f05b6f9e254d906c30d1e8ffc8b2a9ee1a660bac9687f",
+    "train.py": "448d30e2963fd34185a35cdb4274517cc1ed3bec08af9f60e6de1fafb66b0a10"
+  },
+  "versions": {
+    "python": "3.11.2 (main, Apr 28 2025, 14:11:48) [GCC 12.2.0]",
+    "torch": "2.9.1",
+    "safetensors": "0.4.5"
+  },
+  "command": "python -m lowband_training.benchmark_control_plane --root <new-temporary-directory> --clients 1000 --concurrency 64 --seconds 900",
+  "success_evidence": "Report present; two commits, complete recovery hydration, duplicate and stale checks asserted; temporary gateway and token cleaned",
+  "gpu_training": false
+}

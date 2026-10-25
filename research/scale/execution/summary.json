@@ -1,5 +1,5 @@
 {
-  "recorded_at_epoch": 1792919301.6411874,
+  "recorded_at_epoch": 1792926339.3283944,
   "direct_1000_gpu_authorized": true,
   "small_scale_prerequisite": false,
   "purpose": "protocol_capacity",
@@ -323,5 +323,72 @@
       "head_failure_requires_manual_cpu_gateway_recovery",
       "sampled_allocation_not_billing"
     ]
+  },
+  "control_plane_1000": {
+    "client_concurrency": 64,
+    "gpu_training": false,
+    "limitations": [
+      "localhost_only",
+      "synthetic_shared_deltas_and_recovery",
+      "deduplicated_blob_setup_not_data_plane_throughput",
+      "no_gpu_training_or_quality_result"
+    ],
+    "logical_clients": 1000,
+    "logical_operation_p95_seconds": 2.0423100413754582,
+    "max_record_bytes": 47294,
+    "peak_gateway_hwm_bytes": 1329868800,
+    "peak_gateway_rss_bytes": 1289039872,
+    "peak_gateway_threads": 18,
+    "physical_gpu_count": 0,
+    "purpose": "local_http_synthetic_control_plane",
+    "round_metrics": [
+      {
+        "accepted": 1000,
+        "effective_tokens": 8000,
+        "peak_chunk_bytes": 65536,
+        "reduce_seconds": 5.634868714027107,
+        "round": 1
+      },
+      {
+        "accepted": 1000,
+        "effective_tokens": 16000,
+        "peak_chunk_bytes": 65536,
+        "reduce_seconds": 5.595624582841992,
+        "round": 2
+      }
+    ],
+    "rounds": 2,
+    "server_io_concurrency": 16,
+    "sqlite_bytes": 96792576,
+    "stage_seconds": {
+      "leases_and_ready": 2.3545853439718485,
+      "submit_round_0": 22.04808828793466,
+      "submit_round_1": 23.88703294005245
+    },
+    "synthetic_accounted_tokens": 16000,
+    "total_seconds": 69.2373040271923,
+    "transient_retries": 0
+  },
+  "week_continuation_status": {
+    "recorded_at_epoch": 1792926339.326696,
+    "job_run_sid": "cb29420b46dc4e42",
+    "status": "started",
+    "trial": "439292969",
+    "trial_status": "queued",
+    "observed_trial_count": 7,
+    "timeline_auto_retry_count": 6,
+    "accepted_gpu_training_tokens": 0,
+    "ready_gpu_learners": 0,
+    "gateway_round": 0,
+    "allocation_estimate": {
+      "gpu_hours": 0.0,
+      "gpus_per_pod": 4,
+      "pods": {},
+      "purpose": "allocation_estimate_not_billing",
+      "sampled_at": 1792926168.009824
+    },
+    "week_window_unchanged": true,
+    "gateway_and_watcher_alive": true,
+    "source": "official run/trial/timeline plus local SQLite snapshot"
   }
 }

@@ -1,6 +1,150 @@
 [
   {
     "event_type": "task_group_submit",
+    "created_at": "2026-10-25T10:32:25.204Z",
+    "job_run_sid": "cb29420b46dc4e42",
+    "job_run_trial_sid": "439292969"
+  },
+  {
+    "event_type": "job_auto_retry",
+    "created_at": "2026-10-25T10:32:23.024Z",
+    "job_run_sid": "cb29420b46dc4e42",
+    "job_run_trial_sid": "439292969"
+  },
+  {
+    "event_type": "job_staging",
+    "created_at": "2026-10-25T10:25:50.345Z",
+    "job_run_sid": "cb29420b46dc4e42",
+    "job_run_trial_sid": "439288467"
+  },
+  {
+    "event_type": "job_queue",
+    "created_at": "2026-10-25T10:25:49.319Z",
+    "job_run_sid": "cb29420b46dc4e42",
+    "job_run_trial_sid": "439288467"
+  },
+  {
+    "event_type": "task_group_submit",
+    "created_at": "2026-10-25T10:19:21.221Z",
+    "job_run_sid": "cb29420b46dc4e42",
+    "job_run_trial_sid": "439288467"
+  },
+  {
+    "event_type": "job_auto_retry",
+    "created_at": "2026-10-25T10:19:18.853Z",
+    "job_run_sid": "cb29420b46dc4e42",
+    "job_run_trial_sid": "439288467"
+  },
+  {
+    "event_type": "job_staging",
+    "created_at": "2026-10-25T10:16:04.194Z",
+    "job_run_sid": "cb29420b46dc4e42",
+    "job_run_trial_sid": "439284215"
+  },
+  {
+    "event_type": "job_queue",
+    "created_at": "2026-10-25T10:16:02.944Z",
+    "job_run_sid": "cb29420b46dc4e42",
+    "job_run_trial_sid": "439284215"
+  },
+  {
+    "event_type": "task_group_submit",
+    "created_at": "2026-10-25T10:08:50.019Z",
+    "job_run_sid": "cb29420b46dc4e42",
+    "job_run_trial_sid": "439284215"
+  },
+  {
+    "event_type": "job_auto_retry",
+    "created_at": "2026-10-25T10:08:47.980Z",
+    "job_run_sid": "cb29420b46dc4e42",
+    "job_run_trial_sid": "439284215"
+  },
+  {
+    "event_type": "job_staging",
+    "created_at": "2026-10-25T10:05:26.057Z",
+    "job_run_sid": "cb29420b46dc4e42",
+    "job_run_trial_sid": "439280197"
+  },
+  {
+    "event_type": "job_queue",
+    "created_at": "2026-10-25T10:05:24.866Z",
+    "job_run_sid": "cb29420b46dc4e42",
+    "job_run_trial_sid": "439280197"
+  },
+  {
+    "event_type": "task_group_submit",
+    "created_at": "2026-10-25T09:58:47.988Z",
+    "job_run_sid": "cb29420b46dc4e42",
+    "job_run_trial_sid": "439280197"
+  },
+  {
+    "event_type": "job_auto_retry",
+    "created_at": "2026-10-25T09:58:46.046Z",
+    "job_run_sid": "cb29420b46dc4e42",
+    "job_run_trial_sid": "439280197"
+  },
+  {
+    "event_type": "job_staging",
+    "created_at": "2026-10-25T09:55:26.398Z",
+    "job_run_sid": "cb29420b46dc4e42",
+    "job_run_trial_sid": "439277317"
+  },
+  {
+    "event_type": "job_queue",
+    "created_at": "2026-10-25T09:55:25.264Z",
+    "job_run_sid": "cb29420b46dc4e42",
+    "job_run_trial_sid": "439277317"
+  },
+  {
+    "event_type": "task_group_submit",
+    "created_at": "2026-10-25T09:49:08.228Z",
+    "job_run_sid": "cb29420b46dc4e42",
+    "job_run_trial_sid": "439277317"
+  },
+  {
+    "event_type": "job_auto_retry",
+    "created_at": "2026-10-25T09:49:06.149Z",
+    "job_run_sid": "cb29420b46dc4e42",
+    "job_run_trial_sid": "439277317"
+  },
+  {
+    "event_type": "job_staging",
+    "created_at": "2026-10-25T09:45:09.962Z",
+    "job_run_sid": "cb29420b46dc4e42",
+    "job_run_trial_sid": "439273726"
+  },
+  {
+    "event_type": "job_queue",
+    "created_at": "2026-10-25T09:45:08.813Z",
+    "job_run_sid": "cb29420b46dc4e42",
+    "job_run_trial_sid": "439273726"
+  },
+  {
+    "event_type": "task_group_submit",
+    "created_at": "2026-10-25T09:38:29.504Z",
+    "job_run_sid": "cb29420b46dc4e42",
+    "job_run_trial_sid": "439273726"
+  },
+  {
+    "event_type": "job_auto_retry",
+    "created_at": "2026-10-25T09:38:27.531Z",
+    "job_run_sid": "cb29420b46dc4e42",
+    "job_run_trial_sid": "439273726"
+  },
+  {
+    "event_type": "job_staging",
+    "created_at": "2026-10-25T09:36:00.485Z",
+    "job_run_sid": "cb29420b46dc4e42",
+    "job_run_trial_sid": "439260181"
+  },
+  {
+    "event_type": "job_queue",
+    "created_at": "2026-10-25T09:35:58.781Z",
+    "job_run_sid": "cb29420b46dc4e42",
+    "job_run_trial_sid": "439260181"
+  },
+  {
+    "event_type": "task_group_submit",
     "created_at": "2026-10-25T08:54:36.626Z",
     "job_run_sid": "cb29420b46dc4e42",
     "job_run_trial_sid": "439260181"
