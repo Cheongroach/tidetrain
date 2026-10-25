@@ -1,0 +1,16 @@
+{
+  "recorded_at_epoch": 1792916453.051063,
+  "sid": "81acf246903e749a",
+  "status": "stopped",
+  "trial": "439245173",
+  "trial_status": "killed",
+  "trial_count": 11,
+  "accepted_updates": 0,
+  "effective_tokens": 0,
+  "round": 0,
+  "worker_reports": 0,
+  "deadline_stop_observed_epoch": 1792913596.479656,
+  "auto_retry_after_stop": true,
+  "terminal_observation_seconds": 120,
+  "root_cause_confirmed": false
+}

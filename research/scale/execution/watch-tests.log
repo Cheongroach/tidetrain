@@ -1,11 +1,17 @@
-{"control_plane":"cn","deadline_epoch":0.0,"sid":"run","status":"started","stop_requested":false,"time":1792910862.6007764,"trial":"trial","trial_status":"queued"}
-{"event":"deadline_stop_requested","sid":"run","time":1792910862.6012273}
-{"control_plane":"cn","deadline_epoch":0.0,"sid":"run","status":"stopped","stop_requested":true,"time":1792910862.6014595,"trial":"trial","trial_status":"stopped"}
-.{"control_plane":"cn","deadline_epoch":99999999999.0,"sid":"run","status":"started","stop_requested":false,"time":1792910862.6033058,"trial":"trial","trial_status":"queued"}
-{"control_plane":"cn","deadline_epoch":99999999999.0,"sid":"run","status":"started","stop_requested":false,"time":1792910862.603875,"trial":"trial","trial_status":"staging"}
-{"control_plane":"cn","deadline_epoch":99999999999.0,"sid":"run","status":"success","stop_requested":false,"time":1792910862.6041791,"trial":"trial","trial_status":"done"}
+{"control_plane":"cn","deadline_epoch":0.0,"sid":"run","status":"stopped","stop_requested":false,"time":1792916377.1820145,"trial":"trial","trial_status":"killed"}
+{"control_plane":"cn","deadline_epoch":0.0,"sid":"run","status":"started","stop_requested":false,"time":1792916377.1824799,"trial":"new-trial","trial_status":"queued"}
+{"event":"deadline_stop_requested","sid":"run","time":1792916377.1828158}
+{"control_plane":"cn","deadline_epoch":0.0,"sid":"run","status":"stopped","stop_requested":true,"time":1792916377.1828601,"trial":"trial","trial_status":"killed"}
+{"control_plane":"cn","deadline_epoch":0.0,"sid":"run","status":"stopped","stop_requested":true,"time":1792916377.1831467,"trial":"trial","trial_status":"killed"}
+{"control_plane":"cn","deadline_epoch":0.0,"sid":"run","status":"stopped","stop_requested":true,"time":1792916377.1834252,"trial":"trial","trial_status":"killed"}
+.{"control_plane":"cn","deadline_epoch":0.0,"sid":"run","status":"started","stop_requested":false,"time":1792916377.18519,"trial":"trial","trial_status":"queued"}
+{"event":"deadline_stop_requested","sid":"run","time":1792916377.1855655}
+{"control_plane":"cn","deadline_epoch":0.0,"sid":"run","status":"stopped","stop_requested":true,"time":1792916377.1857646,"trial":"trial","trial_status":"stopped"}
+.{"control_plane":"cn","deadline_epoch":99999999999.0,"sid":"run","status":"started","stop_requested":false,"time":1792916377.1873164,"trial":"trial","trial_status":"queued"}
+{"control_plane":"cn","deadline_epoch":99999999999.0,"sid":"run","status":"started","stop_requested":false,"time":1792916377.187928,"trial":"trial","trial_status":"staging"}
+{"control_plane":"cn","deadline_epoch":99999999999.0,"sid":"run","status":"success","stop_requested":false,"time":1792916377.1882267,"trial":"trial","trial_status":"done"}
 ..
 ----------------------------------------------------------------------
-Ran 3 tests in 0.006s
+Ran 4 tests in 0.009s
 
 OK

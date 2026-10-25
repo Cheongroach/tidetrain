@@ -2,9 +2,9 @@
   "control_plane": "cn",
   "deadline_epoch": 1792913542.0673995,
   "sid": "81acf246903e749a",
-  "status": "started",
+  "status": "stopped",
   "stop_requested": false,
-  "time": 1792910904.6898031,
-  "trial": "439214785",
-  "trial_status": "queued"
+  "time": 1792916448.2552114,
+  "trial": "439245173",
+  "trial_status": "killed"
 }

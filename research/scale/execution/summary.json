@@ -1,5 +1,5 @@
 {
-  "recorded_at_epoch": 1792910928.7842734,
+  "recorded_at_epoch": 1792916453.0553708,
   "direct_1000_gpu_authorized": true,
   "small_scale_prerequisite": false,
   "purpose": "protocol_capacity",
@@ -220,9 +220,9 @@
       "requested_nodes": 250,
       "gpu_type": "NVIDIA_A10",
       "job_run_sid": "81acf246903e749a",
-      "platform_status": "started",
-      "trial_sid": "439214785",
-      "trial_status": "queued",
+      "platform_status": "stopped",
+      "trial_sid": "439245173",
+      "trial_status": "killed",
       "created_at": "2026-10-25T06:21:40.382Z",
       "trial_evidence": [
         {
@@ -239,7 +239,9 @@
       "listed_pods": 250,
       "hosted_pods": 0,
       "pod_exit_codes": [],
-      "observed_prior_pod_count": 250
+      "observed_prior_pod_count": 250,
+      "trial_count": 11,
+      "auto_retry_after_stop": true
     }
   ],
   "tests": {
@@ -247,7 +249,7 @@
     "cpu_http_rounds": 2,
     "cpu_http_effective_tokens": 32,
     "cpu_http_test_exit": 0,
-    "watch_deadline_phase_pagination": 3
+    "watch_deadline_phase_pagination": 4
   },
   "limitations": [
     "no_100_or_1000_gpu_performance_result",
@@ -259,10 +261,26 @@
     "control_plane": "cn",
     "deadline_epoch": 1792913542.0673995,
     "sid": "81acf246903e749a",
-    "status": "started",
+    "status": "stopped",
     "stop_requested": false,
-    "time": 1792910904.6898031,
-    "trial": "439214785",
-    "trial_status": "queued"
+    "time": 1792916448.2552114,
+    "trial": "439245173",
+    "trial_status": "killed"
+  },
+  "deadline_followup": {
+    "recorded_at_epoch": 1792916453.051063,
+    "sid": "81acf246903e749a",
+    "status": "stopped",
+    "trial": "439245173",
+    "trial_status": "killed",
+    "trial_count": 11,
+    "accepted_updates": 0,
+    "effective_tokens": 0,
+    "round": 0,
+    "worker_reports": 0,
+    "deadline_stop_observed_epoch": 1792913596.479656,
+    "auto_retry_after_stop": true,
+    "terminal_observation_seconds": 120,
+    "root_cause_confirmed": false
   }
 }
