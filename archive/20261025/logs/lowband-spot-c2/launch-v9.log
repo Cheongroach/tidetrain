@@ -1,0 +1,28 @@
+[931054:931054:20261025,035005.856663:WARNING crashpad_client_linux.cc:432] prctl: Invalid argument (22)
+{"event": "waiting_for_v9_build", "time": 1792871407.271795, "launcher_pid": 931053, "build_id": "170574", "status": "BUILDING"}
+[931575:931575:20261025,035022.275023:WARNING crashpad_client_linux.cc:432] prctl: Invalid argument (22)
+{"event": "waiting_for_v9_build", "time": 1792871423.9020555, "launcher_pid": 931053, "build_id": "170574", "status": "BUILDING"}
+[931984:931984:20261025,035038.903288:WARNING crashpad_client_linux.cc:432] prctl: Invalid argument (22)
+{"event": "waiting_for_v9_build", "time": 1792871440.6314332, "launcher_pid": 931053, "build_id": "170574", "status": "BUILDING"}
+[932472:932472:20261025,035055.632536:WARNING crashpad_client_linux.cc:432] prctl: Invalid argument (22)
+{"event": "waiting_for_v9_build", "time": 1792871457.2808833, "launcher_pid": 931053, "build_id": "170574", "status": "BUILDING"}
+[932902:932902:20261025,035112.282061:WARNING crashpad_client_linux.cc:432] prctl: Invalid argument (22)
+{"event": "waiting_for_v9_build", "time": 1792871474.8617554, "launcher_pid": 931053, "build_id": "170574", "status": "BUILDING"}
+[933502:933502:20261025,035129.862958:WARNING crashpad_client_linux.cc:432] prctl: Invalid argument (22)
+{"event": "waiting_for_v9_build", "time": 1792871491.2519991, "launcher_pid": 931053, "build_id": "170574", "status": "BUILDING"}
+[933895:933895:20261025,035146.253075:WARNING crashpad_client_linux.cc:432] prctl: Invalid argument (22)
+{"event": "waiting_for_v9_build", "time": 1792871507.6808832, "launcher_pid": 931053, "build_id": "170574", "status": "OK"}
+[933925:933925:20261025,035147.683057:WARNING crashpad_client_linux.cc:432] prctl: Invalid argument (22)
+{"event": "v9_service_update_preflight", "time": 1792871508.4381444, "launcher_pid": 931053, "slot": "hl", "service_id": "<configured-service>", "container_image": "<worker-image>"}
+[933985:933985:20261025,035148.439114:WARNING crashpad_client_linux.cc:432] prctl: Invalid argument (22)
+{"event": "v9_service_update_submitted", "time": 1792871514.428997, "launcher_pid": 931053, "slot": "hl"}
+[934111:934111:20261025,035154.429925:WARNING crashpad_client_linux.cc:432] prctl: Invalid argument (22)
+{"event": "v9_service_update_preflight", "time": 1792871515.1787076, "launcher_pid": 931053, "slot": "lf", "service_id": "<configured-service>", "container_image": "<worker-image>"}
+[934144:934144:20261025,035155.179653:WARNING crashpad_client_linux.cc:432] prctl: Invalid argument (22)
+{"event": "v9_service_update_submitted", "time": 1792871521.0415804, "launcher_pid": 931053, "slot": "lf"}
+[934331:934331:20261025,035201.042507:WARNING crashpad_client_linux.cc:432] prctl: Invalid argument (22)
+[934361:934361:20261025,035202.320894:WARNING crashpad_client_linux.cc:432] prctl: Invalid argument (22)
+{"event": "v9_deployment_readback", "time": 1792871523.6264176, "launcher_pid": 931053, "matches": {"hl": true, "lf": true}}
+[938354:938354:20261025,035458.002719:WARNING crashpad_client_linux.cc:432] prctl: Invalid argument (22)
+{"event": "fork_controller_running", "time": 1792871698.004072, "launcher_pid": 931053, "child_controller_pid": 938354, "child_deadline": 1792876701.522374, "inherited_round": 1, "inherited_effective_tokens": 131072, "image": "<worker-image>"}
+{"event": "fork_controller_exited", "time": 1792871703.1482983, "launcher_pid": 931053, "exit_code": -11, "completed": false}

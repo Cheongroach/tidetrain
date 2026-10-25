@@ -1,0 +1,10 @@
+{
+  "sid": "dbegmtn1enl8i32rdr60",
+  "build_id": "170574",
+  "icm_id": 2424182,
+  "icm_version": "1.0.0.9",
+  "status": "OK",
+  "image_url": "<worker-image>",
+  "build_log": "<platform-url>",
+  "purpose": "v9 preserve HTTP training runtime outside temporary directories; check runtime readiness"
+}

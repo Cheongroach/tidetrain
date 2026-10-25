@@ -1,0 +1,49 @@
+{
+  "parent_uri": "<controller-storage-uri><operator>/lowband_training/runs/qwen05b-spot-20261025-c1",
+  "parent_run_sha256": "fe370dab2bf01105556b3dd13a451e50706280d462c27d05919894b1fd4fe979",
+  "parent_deadline": 1792872323.30477,
+  "fork_round": 1,
+  "base_state": {
+    "bytes": 3952432695,
+    "sha256": "78d16be7be96428524c66f0058df12b4c138af29bbf9a85c57b9a367827a5d0c"
+  },
+  "inherited_effective_tokens": 131072,
+  "child_uri": "<controller-storage-uri><operator>/lowband_training/runs/qwen05b-spot-20261025-c2",
+  "deadline": 1792876701.522374,
+  "inherited_manifests": [
+    "dispatch/000000/hl/0003.json",
+    "dispatch/000000/lf/0001.json",
+    "rounds/000000.json",
+    "rounds/000001.json",
+    "updates/000000/hl.json",
+    "updates/000000/lf.json"
+  ],
+  "inherited_blobs": {
+    "3b2af43fab8f05a868e77b1eebdcd507bf20c1208893b1616c2d51acca27c170": {
+      "bytes": 3952432695,
+      "sha256": "3b2af43fab8f05a868e77b1eebdcd507bf20c1208893b1616c2d51acca27c170"
+    },
+    "78d16be7be96428524c66f0058df12b4c138af29bbf9a85c57b9a367827a5d0c": {
+      "bytes": 3952432695,
+      "sha256": "78d16be7be96428524c66f0058df12b4c138af29bbf9a85c57b9a367827a5d0c"
+    },
+    "c402f3b0a04be900329f7940a733863f313a600e848a25d4326d374677b158ec": {
+      "bytes": 1976222062,
+      "sha256": "c402f3b0a04be900329f7940a733863f313a600e848a25d4326d374677b158ec"
+    },
+    "a1c4e5f9667edfe6fd6624020f606207021264dd7f6e166228a8370bacb020ab": {
+      "bytes": 3952504290,
+      "sha256": "a1c4e5f9667edfe6fd6624020f606207021264dd7f6e166228a8370bacb020ab"
+    },
+    "7637e4034aba11682288df5a744909106ecf7f43c4f94d52db94bebec2fbfa04": {
+      "bytes": 1976222062,
+      "sha256": "7637e4034aba11682288df5a744909106ecf7f43c4f94d52db94bebec2fbfa04"
+    },
+    "3dff451be16a291ab8db6ee2f04e356f64c6b8d8c3e005280bc8eb4b804d19af": {
+      "bytes": 3952504290,
+      "sha256": "3dff451be16a291ab8db6ee2f04e356f64c6b8d8c3e005280bc8eb4b804d19af"
+    }
+  },
+  "read_only_parent_blob_mount": "<controller-storage-mount><operator>/lowband_training/runs/qwen05b-spot-20261025-c1/blobs",
+  "created_at": 1792871301.5225616
+}

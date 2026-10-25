@@ -1,0 +1,14 @@
+{
+  "assertions_passed": true,
+  "tests": 1,
+  "command_returncode": 1,
+  "clean_exit": false,
+  "log": "lowband_training/.runtime/c3/evaluation-regression-isolated.log",
+  "attempt_logs": [
+    "lowband_training/.runtime/c3/evaluation-regression.log",
+    "lowband_training/.runtime/c3/evaluation-regression-confirmed.log",
+    "lowband_training/.runtime/c3/evaluation-regression-isolated.log"
+  ],
+  "limitation": "unittest reports OK; tool wrapper returns 1 because a native library attempts a restricted /proc/<pid>/task/<tid>/comm thread-name write. This is not a clean command exit.",
+  "full_gpu_evaluation_verified": true
+}

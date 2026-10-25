@@ -1,0 +1,31 @@
+{
+  "base_round": 4,
+  "base_sha256": "37908eacf2a0a69b3258dd77b81f94a44c616e964d1557749c3d6f1ce1ffa63e",
+  "config_hash": "1a60cd28890a76cdedfb0f6b43d6ce8c73d33852bb7a3975ab6b53ac78e66bb7",
+  "input_state": {
+    "bytes": 1976222459,
+    "sha256": "2d7055284026c2676e07a3ab4d2c1a392d2448d58799b6096b6331ddc4aea6af"
+  },
+  "instance": "instance-0002",
+  "job_id": "5171ee5c169cbc3a0638be1c69ce01acc25ce47aa879487956081adc692763fd",
+  "metrics": {
+    "batch_size": 4,
+    "device": "cuda",
+    "full_validation": true,
+    "perplexity": 29.132567861376817,
+    "precision": "fp32",
+    "seconds": 31.492284059524536,
+    "seq_len": 256,
+    "validation_loss": 3.371856718867076,
+    "validation_stream_tokens": 262210,
+    "validation_tokens": 262209,
+    "validation_windows": 1025
+  },
+  "operation": "evaluate",
+  "worker": "hl",
+  "checkpoint_sha256": "37908eacf2a0a69b3258dd77b81f94a44c616e964d1557749c3d6f1ce1ffa63e",
+  "effective_training_tokens": 524288,
+  "data_manifest_sha256": "4dd4fa29c3816296cd94eca585eb15cb40d92091158d5b0b30b3cbb08f3afdbf",
+  "http_sent_bytes": 1976222996,
+  "http_received_bytes": 21667
+}

@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/tmp/lowband-spot-c1/compare_saved_replay.py", line 36, in <module>
+    if time.time()>expires:raise TimeoutError('Waiting for accepted independent replay reference')
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: Waiting for accepted independent replay reference

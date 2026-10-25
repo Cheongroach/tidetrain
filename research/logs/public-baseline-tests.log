@@ -1,0 +1,116 @@
+./usr/local/lib/python3.11/dist-packages/torch/autograd/graph.py:841: UserWarning: CUDA initialization: Unexpected error from cudaGetDeviceCount(). Did you run some cuda functions before calling NumCudaDevices() that might have already set an error? Error 304: OS call failed or operation not supported on this OS (Triggered internally at /opt/tiger/compile_path/src/code.byted.org/pytorch/pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+.........{"event": "assigned", "time": 1792907120.337662, "worker": "hl", "round": 0, "generation": 0, "instance": "646bb68e953c427e8cc60f914e11aac8", "job_id": "536af0c7473c3fe6efb29f724d8e108e04eb68c46e4f282d914fb87dcde78611"}
+.{"event": "assigned", "time": 1792907122.6831393, "worker": "hl", "round": 0, "generation": 0, "instance": "d23e3a02c27b42aba5d25690be95f2a4", "job_id": "50e3d2410a7df1503069304757d7995ec53adc069a35ac792404ef33299724d8"}
+{"event": "artifact_uploaded", "time": 1792907122.736244, "worker": "hl", "round": 0, "field": "parameters", "bytes": 150354, "seconds": 0.051223340444266796, "http_bytes": 150354, "source_seconds": 0.00027410127222537994}
+{"event": "assigned", "time": 1792907122.7428567, "worker": "lf", "round": 0, "generation": 0, "instance": "29089c8ebee54264a672f1419804f548", "job_id": "7356e3bef28d7b77940361256c803d87139099c74312dafd63915e6bacde112a"}
+{"event": "artifact_uploaded", "time": 1792907122.7843733, "worker": "lf", "round": 0, "field": "parameters", "bytes": 150354, "seconds": 0.03768839035183191, "http_bytes": 150354, "source_seconds": 0.0003100680187344551}
+{"event": "artifact_downloaded", "time": 1792907125.944272, "worker": "hl", "round": 0, "field": "delta", "bytes": 150354, "seconds": 0.04889861401170492, "http_bytes": 150354}
+{"event": "artifact_downloaded", "time": 1792907126.00148, "worker": "hl", "round": 0, "field": "recovery", "bytes": 315181, "seconds": 0.05713693983852863, "http_bytes": 315181}
+{"event": "artifact_persisted", "time": 1792907126.0036542, "worker": "hl", "round": 0, "field": "delta", "bytes": 150354, "seconds": 0.002102780155837536}
+{"event": "artifact_persisted", "time": 1792907126.0048213, "worker": "hl", "round": 0, "field": "recovery", "bytes": 315181, "seconds": 0.0011114533990621567}
+{"event": "update_validation_started", "time": 1792907126.0048823, "worker": "hl", "round": 0, "job_id": "50e3d2410a7df1503069304757d7995ec53adc069a35ac792404ef33299724d8"}
+{"event": "update_validated", "time": 1792907126.037817, "worker": "hl", "round": 0, "job_id": "50e3d2410a7df1503069304757d7995ec53adc069a35ac792404ef33299724d8", "seconds": 0.03293360583484173}
+{"event": "update_persisted", "time": 1792907126.038583, "worker": "hl", "round": 0, "job_id": "50e3d2410a7df1503069304757d7995ec53adc069a35ac792404ef33299724d8"}
+{"event": "artifact_downloaded", "time": 1792907126.0710413, "worker": "lf", "round": 0, "field": "delta", "bytes": 150354, "seconds": 0.02870248258113861, "http_bytes": 150354}
+{"event": "artifact_downloaded", "time": 1792907126.1469386, "worker": "lf", "round": 0, "field": "recovery", "bytes": 315181, "seconds": 0.07583898399025202, "http_bytes": 315181}
+{"event": "artifact_persisted", "time": 1792907126.147852, "worker": "lf", "round": 0, "field": "delta", "bytes": 150354, "seconds": 0.0008580237627029419}
+{"event": "artifact_persisted", "time": 1792907126.148964, "worker": "lf", "round": 0, "field": "recovery", "bytes": 315181, "seconds": 0.0010656649246811867}
+{"event": "update_validation_started", "time": 1792907126.1490161, "worker": "lf", "round": 0, "job_id": "7356e3bef28d7b77940361256c803d87139099c74312dafd63915e6bacde112a"}
+{"event": "update_validated", "time": 1792907126.1619122, "worker": "lf", "round": 0, "job_id": "7356e3bef28d7b77940361256c803d87139099c74312dafd63915e6bacde112a", "seconds": 0.012895659543573856}
+{"event": "update_persisted", "time": 1792907126.16256, "worker": "lf", "round": 0, "job_id": "7356e3bef28d7b77940361256c803d87139099c74312dafd63915e6bacde112a"}
+{"event": "round_committed", "time": 1792907126.188116, "round": 1, "effective_tokens": 128}
+.{"event": "assigned", "time": 1792907126.73162, "worker": "hl", "round": 0, "generation": 0, "instance": "5b598e26a9204544996b211cd4ebd812", "job_id": "280600df2f95b29f094f6c83f083712664b0f0b97e0ecedbe2fa01e43beb606e"}
+.{"event": "assigned", "time": 1792907127.8593595, "worker": "hl", "round": 0, "generation": 0, "instance": "cf6a604c0e6d436d80667d502a08a498", "job_id": "2530f77517bfc067f30d5b329f0f858f87c5ccde4d5da90c04092f00bf5b05a5"}
+{"event": "attempt_failed", "time": 1792907127.862894, "worker": "hl", "round": 0, "job_id": "2530f77517bfc067f30d5b329f0f858f87c5ccde4d5da90c04092f00bf5b05a5", "reason": "Succeeded result references a missing artifact"}
+{"event": "assigned", "time": 1792907127.8657389, "worker": "hl", "round": 0, "generation": 1, "instance": "cf6a604c0e6d436d80667d502a08a498", "job_id": "748531bb18a9696ddbb4633e39a906c25088aba45e8d4cc8ec8ec68827ec3e57"}
+...{"event": "assigned", "time": 1792907128.1963413, "worker": "hl", "round": 0, "generation": 0, "instance": "7382985eae744e37a4afdd85f42df523", "job_id": "d015915cbab8453955643d5807f0dbdc446badf75da85b923cd3cb04a3b7d615"}
+.{"event": "assigned", "time": 1792907128.614745, "worker": "hl", "round": 0, "generation": 0, "instance": "9c2c36e019054e518e236d5e24f6be15", "job_id": "8ca5ff3ab837452e6a6affbb28c461043d357e0584a54ec8360023373e33b05b"}
+{"event": "artifact_uploaded", "time": 1792907128.6656609, "worker": "hl", "round": 0, "field": "parameters", "bytes": 150354, "seconds": 0.049018641002476215, "http_bytes": 150354, "source_seconds": 0.00029310304671525955}
+{"event": "assigned", "time": 1792907128.6738746, "worker": "lf", "round": 0, "generation": 0, "instance": "ee53acadef0640a9afc3e2eb5c42f4e6", "job_id": "9ac36be3a9cbc468dd589d3cf5db12244efc26f94ae5039c490e85f56c5c775e"}
+{"event": "artifact_uploaded", "time": 1792907128.731599, "worker": "lf", "round": 0, "field": "parameters", "bytes": 150354, "seconds": 0.05613208934664726, "http_bytes": 150354, "source_seconds": 0.000273263081908226}
+{"event": "artifact_downloaded", "time": 1792907132.645643, "worker": "hl", "round": 0, "field": "delta", "bytes": 150354, "seconds": 0.05843272525817156, "http_bytes": 150354}
+{"event": "artifact_downloaded", "time": 1792907132.7422462, "worker": "hl", "round": 0, "field": "recovery", "bytes": 315181, "seconds": 0.09654081240296364, "http_bytes": 315181}
+{"event": "artifact_persisted", "time": 1792907132.7432866, "worker": "hl", "round": 0, "field": "delta", "bytes": 150354, "seconds": 0.0009638313204050064}
+{"event": "artifact_persisted", "time": 1792907132.7444744, "worker": "hl", "round": 0, "field": "recovery", "bytes": 315181, "seconds": 0.001134638674557209}
+{"event": "update_validation_started", "time": 1792907132.7445354, "worker": "hl", "round": 0, "job_id": "8ca5ff3ab837452e6a6affbb28c461043d357e0584a54ec8360023373e33b05b"}
+{"event": "update_validated", "time": 1792907132.7582262, "worker": "hl", "round": 0, "job_id": "8ca5ff3ab837452e6a6affbb28c461043d357e0584a54ec8360023373e33b05b", "seconds": 0.013690127991139889}
+{"event": "update_persisted", "time": 1792907132.7590134, "worker": "hl", "round": 0, "job_id": "8ca5ff3ab837452e6a6affbb28c461043d357e0584a54ec8360023373e33b05b"}
+{"event": "artifact_downloaded", "time": 1792907132.7903156, "worker": "lf", "round": 0, "field": "delta", "bytes": 150354, "seconds": 0.027269975282251835, "http_bytes": 150354}
+{"event": "artifact_downloaded", "time": 1792907132.8840773, "worker": "lf", "round": 0, "field": "recovery", "bytes": 315181, "seconds": 0.09370767045766115, "http_bytes": 315181}
+{"event": "artifact_persisted", "time": 1792907132.8850548, "worker": "lf", "round": 0, "field": "delta", "bytes": 150354, "seconds": 0.0009138230234384537}
+{"event": "artifact_persisted", "time": 1792907132.8861248, "worker": "lf", "round": 0, "field": "recovery", "bytes": 315181, "seconds": 0.0010230140760540962}
+{"event": "update_validation_started", "time": 1792907132.8861763, "worker": "lf", "round": 0, "job_id": "9ac36be3a9cbc468dd589d3cf5db12244efc26f94ae5039c490e85f56c5c775e"}
+{"event": "update_validated", "time": 1792907132.9318397, "worker": "lf", "round": 0, "job_id": "9ac36be3a9cbc468dd589d3cf5db12244efc26f94ae5039c490e85f56c5c775e", "seconds": 0.04566291440278292}
+{"event": "update_persisted", "time": 1792907132.9324474, "worker": "lf", "round": 0, "job_id": "9ac36be3a9cbc468dd589d3cf5db12244efc26f94ae5039c490e85f56c5c775e"}
+{"event": "round_committed", "time": 1792907132.957688, "round": 1, "effective_tokens": 128}
+{"event": "assigned", "time": 1792907133.038254, "worker": "hl", "round": 1, "generation": 0, "instance": "9c2c36e019054e518e236d5e24f6be15", "job_id": "0d211a8c2b7402c33dc4ee09922c2d777ff1ed05bce032437e9d6712adcf00a3"}
+{"event": "artifact_uploaded", "time": 1792907133.0761425, "worker": "hl", "round": 1, "field": "parameters", "bytes": 150354, "seconds": 0.03615931421518326, "http_bytes": 150354, "source_seconds": 0.00028295256197452545}
+{"event": "artifact_uploaded", "time": 1792907133.1911314, "worker": "hl", "round": 1, "field": "recovery", "bytes": 315181, "seconds": 0.1144113214686513, "http_bytes": 315181, "source_seconds": 0.0004930393770337105}
+{"event": "assigned", "time": 1792907133.2368336, "worker": "lf", "round": 1, "generation": 0, "instance": "ee53acadef0640a9afc3e2eb5c42f4e6", "job_id": "606ce4f4e28a07b1889298553a63240387dc0e09434e981c2e99bbc380f4926c"}
+{"event": "artifact_uploaded", "time": 1792907133.2740238, "worker": "lf", "round": 1, "field": "parameters", "bytes": 150354, "seconds": 0.03558557108044624, "http_bytes": 150354, "source_seconds": 0.0002903491258621216}
+{"event": "artifact_uploaded", "time": 1792907133.4333766, "worker": "lf", "round": 1, "field": "recovery", "bytes": 315181, "seconds": 0.1588382963091135, "http_bytes": 315181, "source_seconds": 0.00044178497046232224}
+{"event": "artifact_downloaded", "time": 1792907137.264154, "worker": "hl", "round": 1, "field": "delta", "bytes": 150354, "seconds": 0.03055580612272024, "http_bytes": 150354}
+{"event": "artifact_downloaded", "time": 1792907137.3628383, "worker": "hl", "round": 1, "field": "recovery", "bytes": 315181, "seconds": 0.09862327389419079, "http_bytes": 315181}
+{"event": "artifact_persisted", "time": 1792907137.3637593, "worker": "hl", "round": 1, "field": "delta", "bytes": 150354, "seconds": 0.0008639339357614517}
+{"event": "artifact_persisted", "time": 1792907137.3648999, "worker": "hl", "round": 1, "field": "recovery", "bytes": 315181, "seconds": 0.0010920967906713486}
+{"event": "update_validation_started", "time": 1792907137.3649526, "worker": "hl", "round": 1, "job_id": "0d211a8c2b7402c33dc4ee09922c2d777ff1ed05bce032437e9d6712adcf00a3"}
+{"event": "update_validated", "time": 1792907137.3832912, "worker": "hl", "round": 1, "job_id": "0d211a8c2b7402c33dc4ee09922c2d777ff1ed05bce032437e9d6712adcf00a3", "seconds": 0.018337760120630264}
+{"event": "update_persisted", "time": 1792907137.3839915, "worker": "hl", "round": 1, "job_id": "0d211a8c2b7402c33dc4ee09922c2d777ff1ed05bce032437e9d6712adcf00a3"}
+{"event": "artifact_downloaded", "time": 1792907137.455775, "worker": "lf", "round": 1, "field": "delta", "bytes": 150354, "seconds": 0.06719639152288437, "http_bytes": 150354}
+{"event": "artifact_downloaded", "time": 1792907137.53697, "worker": "lf", "round": 1, "field": "recovery", "bytes": 315181, "seconds": 0.08113992214202881, "http_bytes": 315181}
+{"event": "artifact_persisted", "time": 1792907137.537855, "worker": "lf", "round": 1, "field": "delta", "bytes": 150354, "seconds": 0.0008294824510812759}
+{"event": "artifact_persisted", "time": 1792907137.5389507, "worker": "lf", "round": 1, "field": "recovery", "bytes": 315181, "seconds": 0.0010477351024746895}
+{"event": "update_validation_started", "time": 1792907137.5390034, "worker": "lf", "round": 1, "job_id": "606ce4f4e28a07b1889298553a63240387dc0e09434e981c2e99bbc380f4926c"}
+{"event": "update_validated", "time": 1792907137.556727, "worker": "lf", "round": 1, "job_id": "606ce4f4e28a07b1889298553a63240387dc0e09434e981c2e99bbc380f4926c", "seconds": 0.01772307325154543}
+{"event": "update_persisted", "time": 1792907137.557351, "worker": "lf", "round": 1, "job_id": "606ce4f4e28a07b1889298553a63240387dc0e09434e981c2e99bbc380f4926c"}
+{"event": "round_committed", "time": 1792907137.5936053, "round": 2, "effective_tokens": 256}
+{"event": "assigned", "time": 1792907137.6650667, "worker": "hl", "round": 0, "generation": 0, "instance": "9c2c36e019054e518e236d5e24f6be15", "job_id": "829b06b16aa547d55b937e889688f0ef0bdda625a1e3124c25fc097a2e91d807"}
+{"event": "artifact_uploaded", "time": 1792907137.7005427, "worker": "hl", "round": 0, "field": "parameters", "bytes": 150354, "seconds": 0.03389769699424505, "http_bytes": 150354, "source_seconds": 0.00027462374418973923}
+{"event": "assigned", "time": 1792907137.7327693, "worker": "lf", "round": 0, "generation": 0, "instance": "ee53acadef0640a9afc3e2eb5c42f4e6", "job_id": "535c8b8304cc56e6af3a1be1bdb8390eb1e7786687fa5a2b03d4b296b8848d1b"}
+{"event": "artifact_uploaded", "time": 1792907137.771994, "worker": "lf", "round": 0, "field": "parameters", "bytes": 150354, "seconds": 0.03600739501416683, "http_bytes": 150354, "source_seconds": 0.00026687048375606537}
+{"event": "artifact_downloaded", "time": 1792907141.561943, "worker": "hl", "round": 0, "field": "delta", "bytes": 150354, "seconds": 0.029972202144563198, "http_bytes": 150354}
+{"event": "artifact_downloaded", "time": 1792907141.638464, "worker": "hl", "round": 0, "field": "recovery", "bytes": 315181, "seconds": 0.07645688857883215, "http_bytes": 315181}
+{"event": "artifact_persisted", "time": 1792907141.6396556, "worker": "hl", "round": 0, "field": "delta", "bytes": 150354, "seconds": 0.001108662225306034}
+{"event": "artifact_persisted", "time": 1792907141.641137, "worker": "hl", "round": 0, "field": "recovery", "bytes": 315181, "seconds": 0.0014063306152820587}
+{"event": "update_validation_started", "time": 1792907141.6412191, "worker": "hl", "round": 0, "job_id": "829b06b16aa547d55b937e889688f0ef0bdda625a1e3124c25fc097a2e91d807"}
+{"event": "update_validated", "time": 1792907141.6620913, "worker": "hl", "round": 0, "job_id": "829b06b16aa547d55b937e889688f0ef0bdda625a1e3124c25fc097a2e91d807", "seconds": 0.020871526561677456}
+{"event": "update_persisted", "time": 1792907141.6630366, "worker": "hl", "round": 0, "job_id": "829b06b16aa547d55b937e889688f0ef0bdda625a1e3124c25fc097a2e91d807"}
+{"event": "artifact_downloaded", "time": 1792907141.7031465, "worker": "lf", "round": 0, "field": "delta", "bytes": 150354, "seconds": 0.0353340795263648, "http_bytes": 150354}
+{"event": "artifact_downloaded", "time": 1792907141.7727077, "worker": "lf", "round": 0, "field": "recovery", "bytes": 315181, "seconds": 0.06950928457081318, "http_bytes": 315181}
+{"event": "artifact_persisted", "time": 1792907141.7735784, "worker": "lf", "round": 0, "field": "delta", "bytes": 150354, "seconds": 0.0008188989013433456}
+{"event": "artifact_persisted", "time": 1792907141.7746718, "worker": "lf", "round": 0, "field": "recovery", "bytes": 315181, "seconds": 0.001045936718583107}
+{"event": "update_validation_started", "time": 1792907141.7747219, "worker": "lf", "round": 0, "job_id": "535c8b8304cc56e6af3a1be1bdb8390eb1e7786687fa5a2b03d4b296b8848d1b"}
+{"event": "update_validated", "time": 1792907141.786976, "worker": "lf", "round": 0, "job_id": "535c8b8304cc56e6af3a1be1bdb8390eb1e7786687fa5a2b03d4b296b8848d1b", "seconds": 0.012253469787538052}
+{"event": "update_persisted", "time": 1792907141.7876117, "worker": "lf", "round": 0, "job_id": "535c8b8304cc56e6af3a1be1bdb8390eb1e7786687fa5a2b03d4b296b8848d1b"}
+{"event": "round_committed", "time": 1792907141.832934, "round": 1, "effective_tokens": 128}
+{"event": "controller_pause", "time": 1792907141.8334048, "round": 1}
+{"event": "assigned", "time": 1792907141.8418567, "worker": "hl", "round": 1, "generation": 0, "instance": "9c2c36e019054e518e236d5e24f6be15", "job_id": "2c7a96a6ca6304ba67ea66ac2ee946f2db4bbc2066452346031c27233b7ce2bf"}
+{"event": "artifact_uploaded", "time": 1792907141.87898, "worker": "hl", "round": 1, "field": "parameters", "bytes": 150354, "seconds": 0.03553972393274307, "http_bytes": 150354, "source_seconds": 0.0002749962732195854}
+{"event": "artifact_uploaded", "time": 1792907141.973128, "worker": "hl", "round": 1, "field": "recovery", "bytes": 315181, "seconds": 0.09363969787955284, "http_bytes": 315181, "source_seconds": 0.0004288479685783386}
+{"event": "assigned", "time": 1792907141.9802058, "worker": "lf", "round": 1, "generation": 0, "instance": "ee53acadef0640a9afc3e2eb5c42f4e6", "job_id": "287655fb3529b790c90ce942dd48fce0ea4394b4cc8bb2af0c576c3b50306703"}
+{"event": "artifact_uploaded", "time": 1792907142.0418112, "worker": "lf", "round": 1, "field": "parameters", "bytes": 150354, "seconds": 0.060106558725237846, "http_bytes": 150354, "source_seconds": 0.0002790326252579689}
+{"event": "artifact_uploaded", "time": 1792907142.1424067, "worker": "lf", "round": 1, "field": "recovery", "bytes": 315181, "seconds": 0.10008892510086298, "http_bytes": 315181, "source_seconds": 0.00043180305510759354}
+{"event": "assigned", "time": 1792907142.3371892, "worker": "hl", "round": 1, "generation": 1, "instance": "963bc87390ae4b7fb7a09314ca632874", "job_id": "ed8c22a79f30e891743ec0bd2a76e97e001ea0b93510e6b06c08d7ee28dce026"}
+{"event": "artifact_uploaded", "time": 1792907142.3750901, "worker": "hl", "round": 1, "field": "parameters", "bytes": 150354, "seconds": 0.03605141118168831, "http_bytes": 150354, "source_seconds": 0.0003355666995048523}
+{"event": "artifact_uploaded", "time": 1792907142.4816637, "worker": "hl", "round": 1, "field": "recovery", "bytes": 315181, "seconds": 0.10597126744687557, "http_bytes": 315181, "source_seconds": 0.0005080103874206543}
+{"event": "artifact_downloaded", "time": 1792907145.559089, "worker": "lf", "round": 1, "field": "delta", "bytes": 150354, "seconds": 0.027183434925973415, "http_bytes": 150354}
+{"event": "artifact_downloaded", "time": 1792907145.6470187, "worker": "lf", "round": 1, "field": "recovery", "bytes": 315181, "seconds": 0.0878687659278512, "http_bytes": 315181}
+{"event": "artifact_persisted", "time": 1792907145.6479454, "worker": "lf", "round": 1, "field": "delta", "bytes": 150354, "seconds": 0.0008645672351121902}
+{"event": "artifact_persisted", "time": 1792907145.6489906, "worker": "lf", "round": 1, "field": "recovery", "bytes": 315181, "seconds": 0.000997277908027172}
+{"event": "update_validation_started", "time": 1792907145.6490488, "worker": "lf", "round": 1, "job_id": "287655fb3529b790c90ce942dd48fce0ea4394b4cc8bb2af0c576c3b50306703"}
+{"event": "update_validated", "time": 1792907145.6756954, "worker": "lf", "round": 1, "job_id": "287655fb3529b790c90ce942dd48fce0ea4394b4cc8bb2af0c576c3b50306703", "seconds": 0.0266459621489048}
+{"event": "update_persisted", "time": 1792907145.6764917, "worker": "lf", "round": 1, "job_id": "287655fb3529b790c90ce942dd48fce0ea4394b4cc8bb2af0c576c3b50306703"}
+{"event": "artifact_downloaded", "time": 1792907145.8664553, "worker": "hl", "round": 1, "field": "delta", "bytes": 150354, "seconds": 0.026824903674423695, "http_bytes": 150354}
+{"event": "artifact_downloaded", "time": 1792907145.9418433, "worker": "hl", "round": 1, "field": "recovery", "bytes": 315181, "seconds": 0.07533050328493118, "http_bytes": 315181}
+{"event": "artifact_persisted", "time": 1792907145.9427912, "worker": "hl", "round": 1, "field": "delta", "bytes": 150354, "seconds": 0.0008795689791440964}
+{"event": "artifact_persisted", "time": 1792907145.9438474, "worker": "hl", "round": 1, "field": "recovery", "bytes": 315181, "seconds": 0.0010077888146042824}
+{"event": "update_validation_started", "time": 1792907145.9438992, "worker": "hl", "round": 1, "job_id": "ed8c22a79f30e891743ec0bd2a76e97e001ea0b93510e6b06c08d7ee28dce026"}
+{"event": "update_validated", "time": 1792907145.9625137, "worker": "hl", "round": 1, "job_id": "ed8c22a79f30e891743ec0bd2a76e97e001ea0b93510e6b06c08d7ee28dce026", "seconds": 0.018614018335938454}
+{"event": "update_persisted", "time": 1792907145.9631245, "worker": "hl", "round": 1, "job_id": "ed8c22a79f30e891743ec0bd2a76e97e001ea0b93510e6b06c08d7ee28dce026"}
+{"event": "round_committed", "time": 1792907145.9991155, "round": 2, "effective_tokens": 256}
+...............
+----------------------------------------------------------------------
+Ran 32 tests in 32.319s
+
+OK

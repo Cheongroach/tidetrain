@@ -1,0 +1,7 @@
+{
+  "tests": 32,
+  "assertions_passed": true,
+  "returncode": 1,
+  "clean_exit": false,
+  "limitation": "unittest: OK; tool wrapper: restricted /proc thread-name writes and terminated child processes. Full GPU gates in measured baseline have independent terminal evidence."
+}

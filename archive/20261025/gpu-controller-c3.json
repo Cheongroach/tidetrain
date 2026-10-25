@@ -1,0 +1,8 @@
+{
+  "timeout_pid": 997154,
+  "deadline": 1792910829.6204777,
+  "run_id": "qwen05b-spot-20261025-c3",
+  "inherited_round": 1,
+  "time": 1792900529.350835,
+  "large_state_gates": "Sequential after controller exit; no large tensor audit runs concurrently"
+}

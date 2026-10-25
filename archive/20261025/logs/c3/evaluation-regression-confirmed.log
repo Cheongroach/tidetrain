@@ -1,0 +1,6 @@
+{"event": "assigned", "time": 1792905742.7558944, "worker": "hl", "round": 0, "generation": 0, "instance": "instance-0038", "job_id": "a223654e9058b8c4911f3be9824a68488a9ea10b32b06cf988f8e27e8f8c0976"}
+.
+----------------------------------------------------------------------
+Ran 1 test in 1.955s
+
+OK

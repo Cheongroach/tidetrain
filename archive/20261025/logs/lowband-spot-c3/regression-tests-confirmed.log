@@ -1,0 +1,114 @@
+..........{"event": "assigned", "time": 1792900575.7231522, "worker": "hl", "round": 0, "generation": 0, "instance": "instance-0016", "job_id": "87531ee60398e8f856b4b6ee67c0dc3f9b2dd8a68151e96d9176bf5a4df7c559"}
+.{"event": "assigned", "time": 1792900577.6491342, "worker": "hl", "round": 0, "generation": 0, "instance": "instance-0017", "job_id": "78035e827d5c11d7762f0f68e71ff6d0bd3956a26e217345b990c048dfcd70c4"}
+{"event": "artifact_uploaded", "time": 1792900577.6790771, "worker": "hl", "round": 0, "field": "parameters", "bytes": 150354, "seconds": 0.028350592590868473, "http_bytes": 150354, "source_seconds": 0.00023329537361860275}
+{"event": "assigned", "time": 1792900577.682185, "worker": "lf", "round": 0, "generation": 0, "instance": "instance-0018", "job_id": "9b2fa92f47d58c292839bd1107ca61a30fb49738bfd7156d62e21ce58bb143b7"}
+{"event": "artifact_uploaded", "time": 1792900577.710957, "worker": "lf", "round": 0, "field": "parameters", "bytes": 150354, "seconds": 0.02737268153578043, "http_bytes": 150354, "source_seconds": 0.0002391953021287918}
+{"event": "artifact_downloaded", "time": 1792900579.8563452, "worker": "hl", "round": 0, "field": "delta", "bytes": 150354, "seconds": 0.021886096335947514, "http_bytes": 150354}
+{"event": "artifact_downloaded", "time": 1792900579.9032218, "worker": "hl", "round": 0, "field": "recovery", "bytes": 315181, "seconds": 0.04682508483529091, "http_bytes": 315181}
+{"event": "artifact_persisted", "time": 1792900579.904893, "worker": "hl", "round": 0, "field": "delta", "bytes": 150354, "seconds": 0.0016336841508746147}
+{"event": "artifact_persisted", "time": 1792900579.9057744, "worker": "hl", "round": 0, "field": "recovery", "bytes": 315181, "seconds": 0.0008502509444952011}
+{"event": "update_validation_started", "time": 1792900579.905806, "worker": "hl", "round": 0, "job_id": "78035e827d5c11d7762f0f68e71ff6d0bd3956a26e217345b990c048dfcd70c4"}
+{"event": "update_validated", "time": 1792900579.918409, "worker": "hl", "round": 0, "job_id": "78035e827d5c11d7762f0f68e71ff6d0bd3956a26e217345b990c048dfcd70c4", "seconds": 0.012602392584085464}
+{"event": "update_persisted", "time": 1792900579.9189026, "worker": "hl", "round": 0, "job_id": "78035e827d5c11d7762f0f68e71ff6d0bd3956a26e217345b990c048dfcd70c4"}
+{"event": "artifact_downloaded", "time": 1792900579.9426057, "worker": "lf", "round": 0, "field": "delta", "bytes": 150354, "seconds": 0.020818754099309444, "http_bytes": 150354}
+{"event": "artifact_downloaded", "time": 1792900579.9835052, "worker": "lf", "round": 0, "field": "recovery", "bytes": 315181, "seconds": 0.04087081365287304, "http_bytes": 315181}
+{"event": "artifact_persisted", "time": 1792900579.9841626, "worker": "lf", "round": 0, "field": "delta", "bytes": 150354, "seconds": 0.0006288327276706696}
+{"event": "artifact_persisted", "time": 1792900579.9850383, "worker": "lf", "round": 0, "field": "recovery", "bytes": 315181, "seconds": 0.000852399505674839}
+{"event": "update_validation_started", "time": 1792900579.9850645, "worker": "lf", "round": 0, "job_id": "9b2fa92f47d58c292839bd1107ca61a30fb49738bfd7156d62e21ce58bb143b7"}
+{"event": "update_validated", "time": 1792900579.9969985, "worker": "lf", "round": 0, "job_id": "9b2fa92f47d58c292839bd1107ca61a30fb49738bfd7156d62e21ce58bb143b7", "seconds": 0.011933497153222561}
+{"event": "update_persisted", "time": 1792900579.9974055, "worker": "lf", "round": 0, "job_id": "9b2fa92f47d58c292839bd1107ca61a30fb49738bfd7156d62e21ce58bb143b7"}
+{"event": "round_committed", "time": 1792900580.0211663, "round": 1, "effective_tokens": 128}
+.{"event": "assigned", "time": 1792900580.32189, "worker": "hl", "round": 0, "generation": 0, "instance": "instance-0019", "job_id": "609ddc71ac2997a0210da37a32e57b962ae772b57062e0f58e46b300942b6165"}
+.{"event": "assigned", "time": 1792900581.3432896, "worker": "hl", "round": 0, "generation": 0, "instance": "instance-0020", "job_id": "5c173bb644f93e188d03b8b0b7529dc80c3c925ad164dfb0d90502625b3c9d69"}
+{"event": "attempt_failed", "time": 1792900581.3459337, "worker": "hl", "round": 0, "job_id": "5c173bb644f93e188d03b8b0b7529dc80c3c925ad164dfb0d90502625b3c9d69", "reason": "Succeeded result references a missing artifact"}
+{"event": "assigned", "time": 1792900581.3474863, "worker": "hl", "round": 0, "generation": 1, "instance": "instance-0020", "job_id": "406661a294a19456ed207abfa9d0c1ed68769fd31955373136733a86c3822e2a"}
+...{"event": "assigned", "time": 1792900581.6338444, "worker": "hl", "round": 0, "generation": 0, "instance": "instance-0021", "job_id": "e0641ce10cb35b57667c4a9157e98989ec05d11138767d2303df0b506fa7d6e8"}
+.{"event": "assigned", "time": 1792900581.974375, "worker": "hl", "round": 0, "generation": 0, "instance": "instance-0022", "job_id": "13fded33c4c01a0fd2f32d20a80d22b930353d8f69300c7301557f9e58192ad8"}
+{"event": "artifact_uploaded", "time": 1792900582.004334, "worker": "hl", "round": 0, "field": "parameters", "bytes": 150354, "seconds": 0.028441494330763817, "http_bytes": 150354, "source_seconds": 0.00023128744214773178}
+{"event": "assigned", "time": 1792900582.0073202, "worker": "lf", "round": 0, "generation": 0, "instance": "instance-0023", "job_id": "7d4e7d9f2721b072b4ae40a2dd75e9ba16c47ae65b589e97b7254f86ced87b07"}
+{"event": "artifact_uploaded", "time": 1792900582.0372446, "worker": "lf", "round": 0, "field": "parameters", "bytes": 150354, "seconds": 0.028566911816596985, "http_bytes": 150354, "source_seconds": 0.00022848602384328842}
+{"event": "artifact_downloaded", "time": 1792900584.1408, "worker": "hl", "round": 0, "field": "delta", "bytes": 150354, "seconds": 0.021270801313221455, "http_bytes": 150354}
+{"event": "artifact_downloaded", "time": 1792900584.1837022, "worker": "hl", "round": 0, "field": "recovery", "bytes": 315181, "seconds": 0.04286683816462755, "http_bytes": 315181}
+{"event": "artifact_persisted", "time": 1792900584.1843762, "worker": "hl", "round": 0, "field": "delta", "bytes": 150354, "seconds": 0.0006404286250472069}
+{"event": "artifact_persisted", "time": 1792900584.1852233, "worker": "hl", "round": 0, "field": "recovery", "bytes": 315181, "seconds": 0.0008165659382939339}
+{"event": "update_validation_started", "time": 1792900584.1852524, "worker": "hl", "round": 0, "job_id": "13fded33c4c01a0fd2f32d20a80d22b930353d8f69300c7301557f9e58192ad8"}
+{"event": "update_validated", "time": 1792900584.197358, "worker": "hl", "round": 0, "job_id": "13fded33c4c01a0fd2f32d20a80d22b930353d8f69300c7301557f9e58192ad8", "seconds": 0.012105158530175686}
+{"event": "update_persisted", "time": 1792900584.1978035, "worker": "hl", "round": 0, "job_id": "13fded33c4c01a0fd2f32d20a80d22b930353d8f69300c7301557f9e58192ad8"}
+{"event": "artifact_downloaded", "time": 1792900584.2218924, "worker": "lf", "round": 0, "field": "delta", "bytes": 150354, "seconds": 0.020999301224946976, "http_bytes": 150354}
+{"event": "artifact_downloaded", "time": 1792900584.2644224, "worker": "lf", "round": 0, "field": "recovery", "bytes": 315181, "seconds": 0.042499840259552, "http_bytes": 315181}
+{"event": "artifact_persisted", "time": 1792900584.265062, "worker": "lf", "round": 0, "field": "delta", "bytes": 150354, "seconds": 0.0006084684282541275}
+{"event": "artifact_persisted", "time": 1792900584.2659292, "worker": "lf", "round": 0, "field": "recovery", "bytes": 315181, "seconds": 0.0008430061861872673}
+{"event": "update_validation_started", "time": 1792900584.2659569, "worker": "lf", "round": 0, "job_id": "7d4e7d9f2721b072b4ae40a2dd75e9ba16c47ae65b589e97b7254f86ced87b07"}
+{"event": "update_validated", "time": 1792900584.2779708, "worker": "lf", "round": 0, "job_id": "7d4e7d9f2721b072b4ae40a2dd75e9ba16c47ae65b589e97b7254f86ced87b07", "seconds": 0.012013278901576996}
+{"event": "update_persisted", "time": 1792900584.2784202, "worker": "lf", "round": 0, "job_id": "7d4e7d9f2721b072b4ae40a2dd75e9ba16c47ae65b589e97b7254f86ced87b07"}
+{"event": "round_committed", "time": 1792900584.3027594, "round": 1, "effective_tokens": 128}
+{"event": "assigned", "time": 1792900584.3600838, "worker": "hl", "round": 1, "generation": 0, "instance": "instance-0022", "job_id": "87ae417534811d09053940b45411150ab1649ddf30290bde951c902ce368e64f"}
+{"event": "artifact_uploaded", "time": 1792900584.3891547, "worker": "hl", "round": 1, "field": "parameters", "bytes": 150354, "seconds": 0.027634963393211365, "http_bytes": 150354, "source_seconds": 0.00024413969367742538}
+{"event": "artifact_uploaded", "time": 1792900584.445675, "worker": "hl", "round": 1, "field": "recovery", "bytes": 315181, "seconds": 0.056095510721206665, "http_bytes": 315181, "source_seconds": 0.0003914050757884979}
+{"event": "assigned", "time": 1792900584.4488456, "worker": "lf", "round": 1, "generation": 0, "instance": "instance-0023", "job_id": "3a572c7186f58ac304b190d9f7f84339b1a5d940cff6c3bc15fdd0acab321018"}
+{"event": "artifact_uploaded", "time": 1792900584.4773057, "worker": "lf", "round": 1, "field": "parameters", "bytes": 150354, "seconds": 0.027159646153450012, "http_bytes": 150354, "source_seconds": 0.00022928602993488312}
+{"event": "artifact_uploaded", "time": 1792900584.5305288, "worker": "lf", "round": 1, "field": "recovery", "bytes": 315181, "seconds": 0.05281016603112221, "http_bytes": 315181, "source_seconds": 0.0003808243200182915}
+{"event": "artifact_downloaded", "time": 1792900586.5659914, "worker": "hl", "round": 1, "field": "delta", "bytes": 150354, "seconds": 0.02335843164473772, "http_bytes": 150354}
+{"event": "artifact_downloaded", "time": 1792900586.6095865, "worker": "hl", "round": 1, "field": "recovery", "bytes": 315181, "seconds": 0.04355922341346741, "http_bytes": 315181}
+{"event": "artifact_persisted", "time": 1792900586.6102853, "worker": "hl", "round": 1, "field": "delta", "bytes": 150354, "seconds": 0.0006577875465154648}
+{"event": "artifact_persisted", "time": 1792900586.6111214, "worker": "hl", "round": 1, "field": "recovery", "bytes": 315181, "seconds": 0.0008135372772812843}
+{"event": "update_validation_started", "time": 1792900586.6111507, "worker": "hl", "round": 1, "job_id": "87ae417534811d09053940b45411150ab1649ddf30290bde951c902ce368e64f"}
+{"event": "update_validated", "time": 1792900586.6290996, "worker": "hl", "round": 1, "job_id": "87ae417534811d09053940b45411150ab1649ddf30290bde951c902ce368e64f", "seconds": 0.01794799230992794}
+{"event": "update_persisted", "time": 1792900586.6295185, "worker": "hl", "round": 1, "job_id": "87ae417534811d09053940b45411150ab1649ddf30290bde951c902ce368e64f"}
+{"event": "artifact_downloaded", "time": 1792900586.6551993, "worker": "lf", "round": 1, "field": "delta", "bytes": 150354, "seconds": 0.02184614073485136, "http_bytes": 150354}
+{"event": "artifact_downloaded", "time": 1792900586.6975799, "worker": "lf", "round": 1, "field": "recovery", "bytes": 315181, "seconds": 0.04235051479190588, "http_bytes": 315181}
+{"event": "artifact_persisted", "time": 1792900586.6982439, "worker": "lf", "round": 1, "field": "delta", "bytes": 150354, "seconds": 0.0006293840706348419}
+{"event": "artifact_persisted", "time": 1792900586.6990993, "worker": "lf", "round": 1, "field": "recovery", "bytes": 315181, "seconds": 0.0008309734985232353}
+{"event": "update_validation_started", "time": 1792900586.6991296, "worker": "lf", "round": 1, "job_id": "3a572c7186f58ac304b190d9f7f84339b1a5d940cff6c3bc15fdd0acab321018"}
+{"event": "update_validated", "time": 1792900586.7168868, "worker": "lf", "round": 1, "job_id": "3a572c7186f58ac304b190d9f7f84339b1a5d940cff6c3bc15fdd0acab321018", "seconds": 0.017756719142198563}
+{"event": "update_persisted", "time": 1792900586.7172837, "worker": "lf", "round": 1, "job_id": "3a572c7186f58ac304b190d9f7f84339b1a5d940cff6c3bc15fdd0acab321018"}
+{"event": "round_committed", "time": 1792900586.7516184, "round": 2, "effective_tokens": 256}
+{"event": "assigned", "time": 1792900586.819953, "worker": "hl", "round": 0, "generation": 0, "instance": "instance-0022", "job_id": "fe6a5dfead0042a0f95e770a99da6efc1db2111168d11447cf22703e94d3c33b"}
+{"event": "artifact_uploaded", "time": 1792900586.8487065, "worker": "hl", "round": 0, "field": "parameters", "bytes": 150354, "seconds": 0.02736848685890436, "http_bytes": 150354, "source_seconds": 0.00022590160369873047}
+{"event": "assigned", "time": 1792900586.851666, "worker": "lf", "round": 0, "generation": 0, "instance": "instance-0023", "job_id": "3c6e61f27b30c87e27b6f7f5aaa89dcf226bbfb5a1864c989a54f1d97a48ffaa"}
+{"event": "artifact_uploaded", "time": 1792900586.8835533, "worker": "lf", "round": 0, "field": "parameters", "bytes": 150354, "seconds": 0.030532742850482464, "http_bytes": 150354, "source_seconds": 0.00022802036255598068}
+{"event": "artifact_downloaded", "time": 1792900589.029555, "worker": "hl", "round": 0, "field": "delta", "bytes": 150354, "seconds": 0.022434620186686516, "http_bytes": 150354}
+{"event": "artifact_downloaded", "time": 1792900589.0754406, "worker": "hl", "round": 0, "field": "recovery", "bytes": 315181, "seconds": 0.0458490876480937, "http_bytes": 315181}
+{"event": "artifact_persisted", "time": 1792900589.0761242, "worker": "hl", "round": 0, "field": "delta", "bytes": 150354, "seconds": 0.0006418796256184578}
+{"event": "artifact_persisted", "time": 1792900589.0769293, "worker": "hl", "round": 0, "field": "recovery", "bytes": 315181, "seconds": 0.000781540758907795}
+{"event": "update_validation_started", "time": 1792900589.0769563, "worker": "hl", "round": 0, "job_id": "fe6a5dfead0042a0f95e770a99da6efc1db2111168d11447cf22703e94d3c33b"}
+{"event": "update_validated", "time": 1792900589.0895653, "worker": "hl", "round": 0, "job_id": "fe6a5dfead0042a0f95e770a99da6efc1db2111168d11447cf22703e94d3c33b", "seconds": 0.01260834839195013}
+{"event": "update_persisted", "time": 1792900589.0900095, "worker": "hl", "round": 0, "job_id": "fe6a5dfead0042a0f95e770a99da6efc1db2111168d11447cf22703e94d3c33b"}
+{"event": "artifact_downloaded", "time": 1792900589.114347, "worker": "lf", "round": 0, "field": "delta", "bytes": 150354, "seconds": 0.020975553430616856, "http_bytes": 150354}
+{"event": "artifact_downloaded", "time": 1792900589.1558502, "worker": "lf", "round": 0, "field": "recovery", "bytes": 315181, "seconds": 0.041474261321127415, "http_bytes": 315181}
+{"event": "artifact_persisted", "time": 1792900589.156438, "worker": "lf", "round": 0, "field": "delta", "bytes": 150354, "seconds": 0.0005594892427325249}
+{"event": "artifact_persisted", "time": 1792900589.1572099, "worker": "lf", "round": 0, "field": "recovery", "bytes": 315181, "seconds": 0.0007497631013393402}
+{"event": "update_validation_started", "time": 1792900589.1572347, "worker": "lf", "round": 0, "job_id": "3c6e61f27b30c87e27b6f7f5aaa89dcf226bbfb5a1864c989a54f1d97a48ffaa"}
+{"event": "update_validated", "time": 1792900589.1690514, "worker": "lf", "round": 0, "job_id": "3c6e61f27b30c87e27b6f7f5aaa89dcf226bbfb5a1864c989a54f1d97a48ffaa", "seconds": 0.011816228739917278}
+{"event": "update_persisted", "time": 1792900589.1694474, "worker": "lf", "round": 0, "job_id": "3c6e61f27b30c87e27b6f7f5aaa89dcf226bbfb5a1864c989a54f1d97a48ffaa"}
+{"event": "round_committed", "time": 1792900589.193266, "round": 1, "effective_tokens": 128}
+{"event": "controller_pause", "time": 1792900589.1936557, "round": 1}
+{"event": "assigned", "time": 1792900589.2009366, "worker": "hl", "round": 1, "generation": 0, "instance": "instance-0022", "job_id": "a1822943725d8a774cecb0a4e6e509ed34ca512b0210e0e7654014826dffb99f"}
+{"event": "artifact_uploaded", "time": 1792900589.2296195, "worker": "hl", "round": 1, "field": "parameters", "bytes": 150354, "seconds": 0.027295030653476715, "http_bytes": 150354, "source_seconds": 0.00022258609533309937}
+{"event": "artifact_uploaded", "time": 1792900589.2887847, "worker": "hl", "round": 1, "field": "recovery", "bytes": 315181, "seconds": 0.05877102166414261, "http_bytes": 315181, "source_seconds": 0.00036078039556741714}
+{"event": "assigned", "time": 1792900589.2921026, "worker": "lf", "round": 1, "generation": 0, "instance": "instance-0023", "job_id": "6aeaea202c8c0d53f2b702ad1850d06c8fff7584d96a8d8199616f98c543fa5c"}
+{"event": "artifact_uploaded", "time": 1792900589.320721, "worker": "lf", "round": 1, "field": "parameters", "bytes": 150354, "seconds": 0.027271270751953125, "http_bytes": 150354, "source_seconds": 0.00025912467390298843}
+{"event": "artifact_uploaded", "time": 1792900589.3761563, "worker": "lf", "round": 1, "field": "recovery", "bytes": 315181, "seconds": 0.054993254132568836, "http_bytes": 315181, "source_seconds": 0.0004002731293439865}
+{"event": "assigned", "time": 1792900589.6016233, "worker": "hl", "round": 1, "generation": 1, "instance": "instance-0024", "job_id": "ea9ea7967c51ffb36390e35fa5a4f0a6dc2232d6c7144c40085c9f24a327bca7"}
+{"event": "artifact_uploaded", "time": 1792900589.6317265, "worker": "hl", "round": 1, "field": "parameters", "bytes": 150354, "seconds": 0.028615440241992474, "http_bytes": 150354, "source_seconds": 0.00023395754396915436}
+{"event": "artifact_uploaded", "time": 1792900589.68577, "worker": "hl", "round": 1, "field": "recovery", "bytes": 315181, "seconds": 0.053625485859811306, "http_bytes": 315181, "source_seconds": 0.00038387253880500793}
+{"event": "artifact_downloaded", "time": 1792900591.5608127, "worker": "lf", "round": 1, "field": "delta", "bytes": 150354, "seconds": 0.02166744414716959, "http_bytes": 150354}
+{"event": "artifact_downloaded", "time": 1792900591.6050646, "worker": "lf", "round": 1, "field": "recovery", "bytes": 315181, "seconds": 0.04421629663556814, "http_bytes": 315181}
+{"event": "artifact_persisted", "time": 1792900591.6057172, "worker": "lf", "round": 1, "field": "delta", "bytes": 150354, "seconds": 0.0006206342950463295}
+{"event": "artifact_persisted", "time": 1792900591.606561, "worker": "lf", "round": 1, "field": "recovery", "bytes": 315181, "seconds": 0.0008182739838957787}
+{"event": "update_validation_started", "time": 1792900591.6065903, "worker": "lf", "round": 1, "job_id": "6aeaea202c8c0d53f2b702ad1850d06c8fff7584d96a8d8199616f98c543fa5c"}
+{"event": "update_validated", "time": 1792900591.624802, "worker": "lf", "round": 1, "job_id": "6aeaea202c8c0d53f2b702ad1850d06c8fff7584d96a8d8199616f98c543fa5c", "seconds": 0.01821129210293293}
+{"event": "update_persisted", "time": 1792900591.6252575, "worker": "lf", "round": 1, "job_id": "6aeaea202c8c0d53f2b702ad1850d06c8fff7584d96a8d8199616f98c543fa5c"}
+{"event": "artifact_downloaded", "time": 1792900591.8056788, "worker": "hl", "round": 1, "field": "delta", "bytes": 150354, "seconds": 0.020992676727473736, "http_bytes": 150354}
+{"event": "artifact_downloaded", "time": 1792900591.8492541, "worker": "hl", "round": 1, "field": "recovery", "bytes": 315181, "seconds": 0.04354376811534166, "http_bytes": 315181}
+{"event": "artifact_persisted", "time": 1792900591.8499043, "worker": "hl", "round": 1, "field": "delta", "bytes": 150354, "seconds": 0.0006189458072185516}
+{"event": "artifact_persisted", "time": 1792900591.8507295, "worker": "hl", "round": 1, "field": "recovery", "bytes": 315181, "seconds": 0.0008013686165213585}
+{"event": "update_validation_started", "time": 1792900591.850757, "worker": "hl", "round": 1, "job_id": "ea9ea7967c51ffb36390e35fa5a4f0a6dc2232d6c7144c40085c9f24a327bca7"}
+{"event": "update_validated", "time": 1792900591.868577, "worker": "hl", "round": 1, "job_id": "ea9ea7967c51ffb36390e35fa5a4f0a6dc2232d6c7144c40085c9f24a327bca7", "seconds": 0.017819765955209732}
+{"event": "update_persisted", "time": 1792900591.8689768, "worker": "hl", "round": 1, "job_id": "ea9ea7967c51ffb36390e35fa5a4f0a6dc2232d6c7144c40085c9f24a327bca7"}
+{"event": "round_committed", "time": 1792900591.9030635, "round": 2, "effective_tokens": 256}
+..........
+----------------------------------------------------------------------
+Ran 27 tests in 22.434s
+
+OK

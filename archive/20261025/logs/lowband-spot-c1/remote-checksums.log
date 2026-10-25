@@ -1,0 +1,13 @@
+{"event": "parallel_remote_sha256_verified", "sha256": "7637e4034aba11682288df5a744909106ecf7f43c4f94d52db94bebec2fbfa04", "bytes": 1976222062, "sha256_verified": true, "remote_path": "<controller-storage-mount><operator>/lowband_training/runs/qwen05b-spot-20261025-c1/blobs/7637e4034aba11682288df5a744909106ecf7f43c4f94d52db94bebec2fbfa04.pt", "remote_read_seconds": 189.16588214412332, "verified_at": 1792870977.0686913}
+{"event": "parallel_remote_sha256_verified", "sha256": "c402f3b0a04be900329f7940a733863f313a600e848a25d4326d374677b158ec", "bytes": 1976222062, "sha256_verified": true, "remote_path": "<controller-storage-mount><operator>/lowband_training/runs/qwen05b-spot-20261025-c1/blobs/c402f3b0a04be900329f7940a733863f313a600e848a25d4326d374677b158ec.pt", "remote_read_seconds": 202.61247539985925, "verified_at": 1792870990.5046937}
+{"event": "parallel_remote_sha256_verified", "sha256": "a1c4e5f9667edfe6fd6624020f606207021264dd7f6e166228a8370bacb020ab", "bytes": 3952504290, "sha256_verified": true, "remote_path": "<controller-storage-mount><operator>/lowband_training/runs/qwen05b-spot-20261025-c1/blobs/a1c4e5f9667edfe6fd6624020f606207021264dd7f6e166228a8370bacb020ab.pt", "remote_read_seconds": 298.521304236725, "verified_at": 1792871086.418803}
+{"event": "parallel_remote_sha256_verified", "sha256": "78d16be7be96428524c66f0058df12b4c138af29bbf9a85c57b9a367827a5d0c", "bytes": 3952432695, "sha256_verified": true, "remote_path": "<controller-storage-mount><operator>/lowband_training/runs/qwen05b-spot-20261025-c1/blobs/78d16be7be96428524c66f0058df12b4c138af29bbf9a85c57b9a367827a5d0c.pt", "remote_read_seconds": 377.92417354136705, "verified_at": 1792871165.8109734}
+{"event": "parallel_remote_sha256_verified", "sha256": "3dff451be16a291ab8db6ee2f04e356f64c6b8d8c3e005280bc8eb4b804d19af", "bytes": 3952504290, "sha256_verified": true, "remote_path": "<controller-storage-mount><operator>/lowband_training/runs/qwen05b-spot-20261025-c1/blobs/3dff451be16a291ab8db6ee2f04e356f64c6b8d8c3e005280bc8eb4b804d19af.pt", "remote_read_seconds": 398.09633917175233, "verified_at": 1792871375.1650946}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "<workspace>/lowband_training/prefetch_gpu_checksums.py", line 87, in <module>
+    main()
+  File "<workspace>/lowband_training/prefetch_gpu_checksums.py", line 83, in main
+    raise TimeoutError("Remote checksum audit did not close within its bound")
+TimeoutError: Remote checksum audit did not close within its bound

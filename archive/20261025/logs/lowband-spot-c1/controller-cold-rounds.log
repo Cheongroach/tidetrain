@@ -1,0 +1,81 @@
+{"event": "cold_controller_start", "time": 1792869838.9531536, "pid": 898282, "cache_empty": true, "base_round": 1, "base_state": {"bytes": 3952432695, "sha256": "78d16be7be96428524c66f0058df12b4c138af29bbf9a85c57b9a367827a5d0c"}, "workers": {"hl": {"api": 1, "config_hash": "1a60cd28890a76cdedfb0f6b43d6ce8c73d33852bb7a3975ab6b53ac78e66bb7", "cuda_ready": true, "deadline": 1792879090.335166, "device": "cuda", "instance": "instance-0010", "lease_seconds": 120, "training_verified": false, "worker": "hl"}, "lf": {"api": 1, "config_hash": "1a60cd28890a76cdedfb0f6b43d6ce8c73d33852bb7a3975ab6b53ac78e66bb7", "cuda_ready": true, "deadline": 1792879114.034084, "device": "cuda", "instance": "instance-0011", "lease_seconds": 120, "training_verified": false, "worker": "lf"}}, "deadline": 1792872323.30477, "hdfs_read_mapping": {"uri": "<controller-storage-uri><operator>/lowband_training/runs/qwen05b-spot-20261025-c1", "mount": "<controller-storage-mount><operator>/lowband_training/runs/qwen05b-spot-20261025-c1"}}
+{"event": "assigned", "time": 1792870245.2106035, "worker": "hl", "round": 1, "generation": 0, "instance": "instance-0010", "job_id": "e497005e50e857005f38c62a50067c87b13bb3ec0a0b5ddd09c10513ef594c1a"}
+{"event": "artifact_uploaded", "time": 1792870274.0983984, "worker": "hl", "round": 1, "field": "parameters", "bytes": 1976222459, "seconds": 27.279570044018328, "http_bytes": 1976222459, "source_seconds": 1.6012619687244296}
+{"event": "artifact_uploaded", "time": 1792870563.7170315, "worker": "hl", "round": 1, "field": "recovery", "bytes": 3952504290, "seconds": 55.51512265205383, "http_bytes": 3952504290, "source_seconds": 234.10339645296335}
+{"event": "endpoint_retry", "time": 1792870572.0526652, "worker": "lf", "reason": "URLError"}
+{"event": "endpoint_retry", "time": 1792870589.2615547, "worker": "lf", "reason": "URLError"}
+{"event": "endpoint_retry", "time": 1792870606.9103417, "worker": "lf", "reason": "URLError"}
+{"event": "endpoint_retry", "time": 1792870623.9357548, "worker": "lf", "reason": "URLError"}
+{"event": "artifact_downloaded", "time": 1792870668.851505, "worker": "hl", "round": 1, "field": "delta", "bytes": 1976222062, "seconds": 25.82660999521613, "http_bytes": 1976222062}
+{"event": "artifact_persisted", "time": 1792870752.759134, "worker": "hl", "round": 1, "field": "delta", "bytes": 1976222062, "seconds": 83.9075335804373}
+{"event": "attempt_failed", "time": 1792870764.9667177, "worker": "hl", "round": 1, "job_id": "e497005e50e857005f38c62a50067c87b13bb3ec0a0b5ddd09c10513ef594c1a", "reason": "Succeeded result references a missing artifact"}
+{"event": "endpoint_retry", "time": 1792870766.7666917, "worker": "lf", "reason": "URLError"}
+{"event": "assigned", "time": 1792870792.0061467, "worker": "hl", "round": 1, "generation": 1, "instance": "instance-0010", "job_id": "5e3418d988d6d83b35e6ce5cfd229a4753de6a1ca761bff2b1652d9ec90660f4"}
+{"event": "artifact_uploaded", "time": 1792870821.476086, "worker": "hl", "round": 1, "field": "parameters", "bytes": 1976222459, "seconds": 27.841342490166426, "http_bytes": 1976222459, "source_seconds": 1.6218322291970253}
+{"event": "artifact_uploaded", "time": 1792870881.0899773, "worker": "hl", "round": 1, "field": "recovery", "bytes": 3952504290, "seconds": 56.051025822758675, "http_bytes": 3952504290, "source_seconds": 3.5627605579793453}
+{"event": "assigned", "time": 1792870902.2502968, "worker": "lf", "round": 1, "generation": 0, "instance": "instance-0039", "job_id": "270d49190cc956991fa97ea66b8135be6540198848e0899fc1df238d0d41c51a"}
+{"event": "artifact_uploaded", "time": 1792870929.2160892, "worker": "lf", "round": 1, "field": "parameters", "bytes": 1976222459, "seconds": 22.979834004305303, "http_bytes": 1976222459, "source_seconds": 3.978165205568075}
+{"event": "controller_session_end", "time": 1792871229.3649998, "seconds": 1372.8318946072832, "storage_read_bytes": 7904936985, "storage_write_bytes": 3952449314, "storage_transfer_seconds": 0.0, "storage_command_count": 94, "storage_command_seconds": 1120.5522395363078, "http_sent_bytes": 13833677079, "http_received_bytes": 1976348616}
+Traceback (most recent call last):
+  File "<workspace>/lowband_training/http_transport.py", line 163, in request
+    with self.opener.open(Request(self.endpoint + path, data=body, headers=head, method=method), timeout=timeout) as response:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 525, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<workspace>/lowband_training/http_controller.py", line 182, in step
+    client = self.clients.setdefault(job_id, Client(endpoint, self.token, health["instance"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/lowband_training/http_transport.py", line 178, in request
+    raise RemoteError(exc.code, exc.read(4096).decode(errors="replace")) from exc
+lowband_training.http_transport.RemoteError: HTTP 404: {"error":"Not found"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "<workspace>/lowband_training/http_controller.py", line 301, in <module>
+    http_sent_bytes=sum(client.sent_bytes for client in controller.clients.values()),
+
+  File "<workspace>/lowband_training/http_controller.py", line 289, in main
+    controller = Controller(store, config, provider, token, args.assets, args.run_id)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/lowband_training/http_controller.py", line 232, in run
+    return None
+                
+  File "<workspace>/lowband_training/http_controller.py", line 190, in step
+    raise
+          
+  File "<workspace>/lowband_training/hdfs_store.py", line 156, in export_file
+    self._run("-get", self._uri(f"blobs/{ref['sha256']}.pt"), str(temp))
+  File "<workspace>/lowband_training/hdfs_store.py", line 53, in _run
+    result = subprocess.run([*self.command, *args], capture_output=True, timeout=timeout)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/subprocess.py", line 1207, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/subprocess.py", line 2060, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/usr/lib/python3.11/subprocess.py", line 1251, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['/tmp/lowband-http-offline-env/bin/python', '-m', 'lowband_training.hdfs_mounted_reader', '--uri-prefix', '<controller-storage-uri><operator>/lowband_training/runs/qwen05b-spot-20261025-c1', '--mount-prefix', '<controller-storage-mount><operator>/lowband_training/runs/qwen05b-spot-20261025-c1', '-get', '<controller-storage-uri><operator>/lowband_training/runs/qwen05b-spot-20261025-c1/blobs/3dff451be16a291ab8db6ee2f04e356f64c6b8d8c3e005280bc8eb4b804d19af.pt', '/tmp/lowband-spot-c1/cold-controller-cache/3dff451be16a291ab8db6ee2f04e356f64c6b8d8c3e005280bc8eb4b804d19af.pt.instance-0040.partial']' timed out after 300 seconds

@@ -1,0 +1,15 @@
+{"event": "cachefix_resume", "pid": 883518, "time": 1792868926.5909107, "round": 0}
+{"event": "artifact_downloaded", "time": 1792868973.9932864, "worker": "hl", "round": 0, "field": "delta", "bytes": 1976222062, "seconds": 4.1127079809084535}
+{"event": "artifact_persisted", "time": 1792868979.4476707, "worker": "hl", "round": 0, "field": "delta", "bytes": 1976222062, "seconds": 5.454218308441341}
+{"event": "artifact_downloaded", "time": 1792868984.930078, "worker": "hl", "round": 0, "field": "recovery", "bytes": 3952504290, "seconds": 5.482276789844036}
+{"event": "artifact_persisted", "time": 1792868991.8585608, "worker": "hl", "round": 0, "field": "recovery", "bytes": 3952504290, "seconds": 6.928339470177889}
+{"event": "update_persisted", "time": 1792869022.7803843, "worker": "hl", "round": 0, "job_id": "ca66b3403fd4cc95979ed4bea3a9432da8a47f909263d953f56c8391f0306548"}
+{"event": "artifact_downloaded", "time": 1792869098.0691605, "worker": "lf", "round": 0, "field": "delta", "bytes": 1976222062, "seconds": 57.536706333979964}
+{"event": "artifact_persisted", "time": 1792869184.5942466, "worker": "lf", "round": 0, "field": "delta", "bytes": 1976222062, "seconds": 86.52496652957052}
+{"event": "artifact_downloaded", "time": 1792869298.899338, "worker": "lf", "round": 0, "field": "recovery", "bytes": 3952504290, "seconds": 114.30499022919685}
+{"event": "artifact_persisted", "time": 1792869450.8072548, "worker": "lf", "round": 0, "field": "recovery", "bytes": 3952504290, "seconds": 151.90782252606004}
+{"event": "update_persisted", "time": 1792869478.7407236, "worker": "lf", "round": 0, "job_id": "15b7da15b83c1fe4d4d79840fdbb53352d19c4e4e1f5957a64de96af2a5ef97b"}
+{"event": "round_committed", "time": 1792869730.0749958, "round": 1, "effective_tokens": 131072}
+{"event": "controller_pause", "time": 1792869734.1366327, "round": 1}
+{"paused": true, "round": 1}
+{"event": "controller_session_end", "time": 1792869736.198781, "seconds": 794.7359900064766, "storage_read_bytes": 0, "storage_write_bytes": 9881163055, "storage_transfer_seconds": 0.0, "storage_command_count": 68, "storage_command_seconds": 475.6830021077767}

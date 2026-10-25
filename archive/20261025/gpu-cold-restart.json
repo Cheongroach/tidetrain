@@ -1,0 +1,40 @@
+{
+  "event": "cold_controller_start",
+  "time": 1792869838.9531536,
+  "pid": 898282,
+  "cache_empty": true,
+  "base_round": 1,
+  "base_state": {
+    "bytes": 3952432695,
+    "sha256": "78d16be7be96428524c66f0058df12b4c138af29bbf9a85c57b9a367827a5d0c"
+  },
+  "workers": {
+    "hl": {
+      "api": 1,
+      "config_hash": "1a60cd28890a76cdedfb0f6b43d6ce8c73d33852bb7a3975ab6b53ac78e66bb7",
+      "cuda_ready": true,
+      "deadline": 1792879090.335166,
+      "device": "cuda",
+      "instance": "instance-0010",
+      "lease_seconds": 120,
+      "training_verified": false,
+      "worker": "hl"
+    },
+    "lf": {
+      "api": 1,
+      "config_hash": "1a60cd28890a76cdedfb0f6b43d6ce8c73d33852bb7a3975ab6b53ac78e66bb7",
+      "cuda_ready": true,
+      "deadline": 1792879114.034084,
+      "device": "cuda",
+      "instance": "instance-0011",
+      "lease_seconds": 120,
+      "training_verified": false,
+      "worker": "lf"
+    }
+  },
+  "deadline": 1792872323.30477,
+  "hdfs_read_mapping": {
+    "uri": "<controller-storage-uri><operator>/lowband_training/runs/qwen05b-spot-20261025-c1",
+    "mount": "<controller-storage-mount><operator>/lowband_training/runs/qwen05b-spot-20261025-c1"
+  }
+}

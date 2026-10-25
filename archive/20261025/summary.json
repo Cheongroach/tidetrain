@@ -1,0 +1,924 @@
+{
+  "run_id": "qwen05b-spot-20261025-c3",
+  "completed": {
+    "effective_tokens": 524288,
+    "round": 4,
+    "state": {
+      "bytes": 3952432695,
+      "sha256": "37908eacf2a0a69b3258dd77b81f94a44c616e964d1557749c3d6f1ce1ffa63e"
+    }
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "effective_tokens": 131072,
+      "workers": {
+        "hl": {
+          "gpu_compute_seconds": 33.096149891614914,
+          "tokens": 65536,
+          "tokens_per_compute_second": 1980.169905400504,
+          "serialization_payload_budget_bytes": 7904948811,
+          "generation": 3
+        },
+        "lf": {
+          "gpu_compute_seconds": 22.787184488028288,
+          "tokens": 65536,
+          "tokens_per_compute_second": 2876.0025195052367,
+          "serialization_payload_budget_bytes": 7904948811,
+          "generation": 1
+        }
+      },
+      "created_at": 1792869717.409142
+    },
+    {
+      "round": 2,
+      "effective_tokens": 262144,
+      "workers": {
+        "hl": {
+          "gpu_compute_seconds": 34.068920239806175,
+          "tokens": 65536,
+          "tokens_per_compute_second": 1923.6300868563378,
+          "serialization_payload_budget_bytes": 11857453101,
+          "generation": 0
+        },
+        "lf": {
+          "gpu_compute_seconds": 22.32618753798306,
+          "tokens": 65536,
+          "tokens_per_compute_second": 2935.3869705029138,
+          "serialization_payload_budget_bytes": 11857453101,
+          "generation": 2
+        }
+      },
+      "created_at": 1792901989.1560469
+    },
+    {
+      "round": 3,
+      "effective_tokens": 393216,
+      "workers": {
+        "hl": {
+          "gpu_compute_seconds": 33.1643236130476,
+          "tokens": 65536,
+          "tokens_per_compute_second": 1976.0994002065715,
+          "serialization_payload_budget_bytes": 11857453101,
+          "generation": 0
+        },
+        "lf": {
+          "gpu_compute_seconds": 22.901765319984406,
+          "tokens": 65536,
+          "tokens_per_compute_second": 2861.6134644787558,
+          "serialization_payload_budget_bytes": 11857453101,
+          "generation": 0
+        }
+      },
+      "created_at": 1792903501.8476315
+    },
+    {
+      "round": 4,
+      "effective_tokens": 524288,
+      "workers": {
+        "hl": {
+          "gpu_compute_seconds": 33.88855953514576,
+          "tokens": 65536,
+          "tokens_per_compute_second": 1933.8679748849383,
+          "serialization_payload_budget_bytes": 11857453101,
+          "generation": 0
+        },
+        "lf": {
+          "gpu_compute_seconds": 22.193517185980454,
+          "tokens": 65536,
+          "tokens_per_compute_second": 2952.934383983031,
+          "serialization_payload_budget_bytes": 11857453101,
+          "generation": 0
+        }
+      },
+      "created_at": 1792904930.8900313
+    }
+  ],
+  "first_initialization_to_final_commit_seconds": 43204.06192278862,
+  "effective_tokens_per_elapsed_second": 12.135155276301846,
+  "round1_to_round4_seconds": 35213.48088932037,
+  "continuation_effective_tokens_per_second": 11.166632496114733,
+  "c3_launch_to_final_commit_seconds": 4401.539196252823,
+  "c3_effective_tokens_per_second": 89.3360214387635,
+  "c3_elapsed_scope": "Recorded C3 controller launch to final durable commit, including initialization, recovery, failed attempts, GPU computation and storage; excludes C1/C2 downtime and final evaluation.",
+  "elapsed_scope": "Durable commit timestamps; includes recovery, image rollout, storage, idle time and failed attempts. Excludes initial asset preparation and final evaluation.",
+  "accepted_gpu_compute_seconds": 224.42660781159066,
+  "accepted_gpu_compute_hours": 0.06234072439210851,
+  "serialization_payload_budget_bytes": 86954616228,
+  "payload_scope": "Accepted-job serialized objects without endpoint/controller cache reuse; excludes retries and evaluation. This is not measured wire traffic.",
+  "unique_committed_blob_bytes": 67191974291,
+  "controller_sessions": [
+    {
+      "event": "controller_session_end",
+      "time": 1792869736.198781,
+      "seconds": 794.7359900064766,
+      "storage_read_bytes": 0,
+      "storage_write_bytes": 9881163055,
+      "storage_transfer_seconds": 0.0,
+      "storage_command_count": 68,
+      "storage_command_seconds": 475.6830021077767,
+      "source_log": "logs/lowband-spot-c1/controller-cachefix-round1.log"
+    },
+    {
+      "event": "controller_session_end",
+      "time": 1792871229.3649998,
+      "seconds": 1372.8318946072832,
+      "storage_read_bytes": 7904936985,
+      "storage_write_bytes": 3952449314,
+      "storage_transfer_seconds": 0.0,
+      "storage_command_count": 94,
+      "storage_command_seconds": 1120.5522395363078,
+      "http_sent_bytes": 13833677079,
+      "http_received_bytes": 1976348616,
+      "source_log": "logs/lowband-spot-c1/controller-cold-rounds.log"
+    },
+    {
+      "event": "controller_session_end",
+      "time": 1792881822.5567598,
+      "seconds": 9956.180081547238,
+      "storage_read_bytes": 0,
+      "storage_write_bytes": 7904951320,
+      "storage_transfer_seconds": 0.0,
+      "storage_command_count": 54,
+      "storage_command_seconds": 304.4160049073398,
+      "http_sent_bytes": 11857454622,
+      "http_received_bytes": 5928834568,
+      "source_log": "logs/lowband-spot-c2/controller-rounds.log"
+    },
+    {
+      "event": "controller_session_end",
+      "time": 1792904958.0063415,
+      "seconds": 4410.791037286632,
+      "storage_read_bytes": 0,
+      "storage_write_bytes": 53358345938,
+      "storage_transfer_seconds": 0.0,
+      "storage_command_count": 319,
+      "storage_command_seconds": 2143.1886728620157,
+      "http_sent_bytes": 41501091184,
+      "http_received_bytes": 29815982006,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    }
+  ],
+  "artifact_phases": [
+    {
+      "event": "artifact_downloaded",
+      "time": 1792868973.9932864,
+      "worker": "hl",
+      "round": 0,
+      "field": "delta",
+      "bytes": 1976222062,
+      "seconds": 4.1127079809084535,
+      "source_log": "logs/lowband-spot-c1/controller-cachefix-round1.log"
+    },
+    {
+      "event": "artifact_persisted",
+      "time": 1792868979.4476707,
+      "worker": "hl",
+      "round": 0,
+      "field": "delta",
+      "bytes": 1976222062,
+      "seconds": 5.454218308441341,
+      "source_log": "logs/lowband-spot-c1/controller-cachefix-round1.log"
+    },
+    {
+      "event": "artifact_downloaded",
+      "time": 1792868984.930078,
+      "worker": "hl",
+      "round": 0,
+      "field": "recovery",
+      "bytes": 3952504290,
+      "seconds": 5.482276789844036,
+      "source_log": "logs/lowband-spot-c1/controller-cachefix-round1.log"
+    },
+    {
+      "event": "artifact_persisted",
+      "time": 1792868991.8585608,
+      "worker": "hl",
+      "round": 0,
+      "field": "recovery",
+      "bytes": 3952504290,
+      "seconds": 6.928339470177889,
+      "source_log": "logs/lowband-spot-c1/controller-cachefix-round1.log"
+    },
+    {
+      "event": "artifact_downloaded",
+      "time": 1792869098.0691605,
+      "worker": "lf",
+      "round": 0,
+      "field": "delta",
+      "bytes": 1976222062,
+      "seconds": 57.536706333979964,
+      "source_log": "logs/lowband-spot-c1/controller-cachefix-round1.log"
+    },
+    {
+      "event": "artifact_persisted",
+      "time": 1792869184.5942466,
+      "worker": "lf",
+      "round": 0,
+      "field": "delta",
+      "bytes": 1976222062,
+      "seconds": 86.52496652957052,
+      "source_log": "logs/lowband-spot-c1/controller-cachefix-round1.log"
+    },
+    {
+      "event": "artifact_downloaded",
+      "time": 1792869298.899338,
+      "worker": "lf",
+      "round": 0,
+      "field": "recovery",
+      "bytes": 3952504290,
+      "seconds": 114.30499022919685,
+      "source_log": "logs/lowband-spot-c1/controller-cachefix-round1.log"
+    },
+    {
+      "event": "artifact_persisted",
+      "time": 1792869450.8072548,
+      "worker": "lf",
+      "round": 0,
+      "field": "recovery",
+      "bytes": 3952504290,
+      "seconds": 151.90782252606004,
+      "source_log": "logs/lowband-spot-c1/controller-cachefix-round1.log"
+    },
+    {
+      "event": "artifact_uploaded",
+      "time": 1792870274.0983984,
+      "worker": "hl",
+      "round": 1,
+      "field": "parameters",
+      "bytes": 1976222459,
+      "seconds": 27.279570044018328,
+      "http_bytes": 1976222459,
+      "source_seconds": 1.6012619687244296,
+      "source_log": "logs/lowband-spot-c1/controller-cold-rounds.log"
+    },
+    {
+      "event": "artifact_uploaded",
+      "time": 1792870563.7170315,
+      "worker": "hl",
+      "round": 1,
+      "field": "recovery",
+      "bytes": 3952504290,
+      "seconds": 55.51512265205383,
+      "http_bytes": 3952504290,
+      "source_seconds": 234.10339645296335,
+      "source_log": "logs/lowband-spot-c1/controller-cold-rounds.log"
+    },
+    {
+      "event": "artifact_downloaded",
+      "time": 1792870668.851505,
+      "worker": "hl",
+      "round": 1,
+      "field": "delta",
+      "bytes": 1976222062,
+      "seconds": 25.82660999521613,
+      "http_bytes": 1976222062,
+      "source_log": "logs/lowband-spot-c1/controller-cold-rounds.log"
+    },
+    {
+      "event": "artifact_persisted",
+      "time": 1792870752.759134,
+      "worker": "hl",
+      "round": 1,
+      "field": "delta",
+      "bytes": 1976222062,
+      "seconds": 83.9075335804373,
+      "source_log": "logs/lowband-spot-c1/controller-cold-rounds.log"
+    },
+    {
+      "event": "artifact_uploaded",
+      "time": 1792870821.476086,
+      "worker": "hl",
+      "round": 1,
+      "field": "parameters",
+      "bytes": 1976222459,
+      "seconds": 27.841342490166426,
+      "http_bytes": 1976222459,
+      "source_seconds": 1.6218322291970253,
+      "source_log": "logs/lowband-spot-c1/controller-cold-rounds.log"
+    },
+    {
+      "event": "artifact_uploaded",
+      "time": 1792870881.0899773,
+      "worker": "hl",
+      "round": 1,
+      "field": "recovery",
+      "bytes": 3952504290,
+      "seconds": 56.051025822758675,
+      "http_bytes": 3952504290,
+      "source_seconds": 3.5627605579793453,
+      "source_log": "logs/lowband-spot-c1/controller-cold-rounds.log"
+    },
+    {
+      "event": "artifact_uploaded",
+      "time": 1792870929.2160892,
+      "worker": "lf",
+      "round": 1,
+      "field": "parameters",
+      "bytes": 1976222459,
+      "seconds": 22.979834004305303,
+      "http_bytes": 1976222459,
+      "source_seconds": 3.978165205568075,
+      "source_log": "logs/lowband-spot-c1/controller-cold-rounds.log"
+    },
+    {
+      "event": "artifact_uploaded",
+      "time": 1792872018.2545457,
+      "worker": "hl",
+      "round": 1,
+      "field": "parameters",
+      "bytes": 1976222459,
+      "seconds": 24.84232304804027,
+      "http_bytes": 1976222459,
+      "source_seconds": 1.6380912810564041,
+      "source_log": "logs/lowband-spot-c2/controller-rounds.log"
+    },
+    {
+      "event": "artifact_uploaded",
+      "time": 1792872077.4968262,
+      "worker": "hl",
+      "round": 1,
+      "field": "recovery",
+      "bytes": 3952504290,
+      "seconds": 49.859120099805295,
+      "http_bytes": 3952504290,
+      "source_seconds": 9.383055862039328,
+      "source_log": "logs/lowband-spot-c2/controller-rounds.log"
+    },
+    {
+      "event": "artifact_uploaded",
+      "time": 1792872126.6514797,
+      "worker": "lf",
+      "round": 1,
+      "field": "parameters",
+      "bytes": 1976222459,
+      "seconds": 22.44268742017448,
+      "http_bytes": 1976222459,
+      "source_seconds": 2.082112199626863,
+      "source_log": "logs/lowband-spot-c2/controller-rounds.log"
+    },
+    {
+      "event": "artifact_uploaded",
+      "time": 1792872184.2681127,
+      "worker": "lf",
+      "round": 1,
+      "field": "recovery",
+      "bytes": 3952504290,
+      "seconds": 45.751595785841346,
+      "http_bytes": 3952504290,
+      "source_seconds": 11.86493475548923,
+      "source_log": "logs/lowband-spot-c2/controller-rounds.log"
+    },
+    {
+      "event": "artifact_downloaded",
+      "time": 1792872254.3362997,
+      "worker": "hl",
+      "round": 1,
+      "field": "delta",
+      "bytes": 1976222062,
+      "seconds": 40.6918581482023,
+      "http_bytes": 1976222062,
+      "source_log": "logs/lowband-spot-c2/controller-rounds.log"
+    },
+    {
+      "event": "artifact_downloaded",
+      "time": 1792872337.138496,
+      "worker": "hl",
+      "round": 1,
+      "field": "recovery",
+      "bytes": 3952504290,
+      "seconds": 82.8020781148225,
+      "http_bytes": 3952504290,
+      "source_log": "logs/lowband-spot-c2/controller-rounds.log"
+    },
+    {
+      "event": "artifact_persisted",
+      "time": 1792872394.1720376,
+      "worker": "hl",
+      "round": 1,
+      "field": "delta",
+      "bytes": 1976222062,
+      "seconds": 57.033442533575,
+      "source_log": "logs/lowband-spot-c2/controller-rounds.log"
+    },
+    {
+      "event": "artifact_persisted",
+      "time": 1792872503.2592735,
+      "worker": "hl",
+      "round": 1,
+      "field": "recovery",
+      "bytes": 3952504290,
+      "seconds": 109.08714598510414,
+      "source_log": "logs/lowband-spot-c2/controller-rounds.log"
+    },
+    {
+      "event": "artifact_uploaded",
+      "time": 1792900682.2225292,
+      "worker": "hl",
+      "round": 1,
+      "field": "parameters",
+      "bytes": 1976222459,
+      "seconds": 24.76768979523331,
+      "http_bytes": 1976222459,
+      "source_seconds": 1.5945791229605675,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_uploaded",
+      "time": 1792900736.9404323,
+      "worker": "hl",
+      "round": 1,
+      "field": "recovery",
+      "bytes": 3952504290,
+      "seconds": 49.55683405324817,
+      "http_bytes": 3952504290,
+      "source_seconds": 5.160966954194009,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_uploaded",
+      "time": 1792900783.1927037,
+      "worker": "lf",
+      "round": 1,
+      "field": "parameters",
+      "bytes": 1976222459,
+      "seconds": 22.690054962411523,
+      "http_bytes": 1976222459,
+      "source_seconds": 1.5860503800213337,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_uploaded",
+      "time": 1792900840.3874664,
+      "worker": "lf",
+      "round": 1,
+      "field": "recovery",
+      "bytes": 3952504290,
+      "seconds": 45.34479525312781,
+      "http_bytes": 3952504290,
+      "source_seconds": 11.849853769876063,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_downloaded",
+      "time": 1792900873.5552652,
+      "worker": "hl",
+      "round": 1,
+      "field": "delta",
+      "bytes": 1976222062,
+      "seconds": 5.8840208407491446,
+      "http_bytes": 0,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_downloaded",
+      "time": 1792900880.0942159,
+      "worker": "hl",
+      "round": 1,
+      "field": "recovery",
+      "bytes": 3952504290,
+      "seconds": 6.538791328668594,
+      "http_bytes": 0,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_persisted",
+      "time": 1792900928.4087222,
+      "worker": "hl",
+      "round": 1,
+      "field": "delta",
+      "bytes": 1976222062,
+      "seconds": 48.31439308729023,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_persisted",
+      "time": 1792901056.8972602,
+      "worker": "hl",
+      "round": 1,
+      "field": "recovery",
+      "bytes": 3952504290,
+      "seconds": 128.48843634035438,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_uploaded",
+      "time": 1792901217.763717,
+      "worker": "lf",
+      "round": 1,
+      "field": "parameters",
+      "bytes": 1976222459,
+      "seconds": 22.322527433745563,
+      "http_bytes": 1976222459,
+      "source_seconds": 5.231077117845416,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_uploaded",
+      "time": 1792901272.462903,
+      "worker": "lf",
+      "round": 1,
+      "field": "recovery",
+      "bytes": 3952504290,
+      "seconds": 44.11581192817539,
+      "http_bytes": 3952504290,
+      "source_seconds": 10.583273643627763,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_downloaded",
+      "time": 1792901403.9468627,
+      "worker": "lf",
+      "round": 1,
+      "field": "delta",
+      "bytes": 1976222062,
+      "seconds": 57.12947292905301,
+      "http_bytes": 1976222062,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_downloaded",
+      "time": 1792901516.5408719,
+      "worker": "lf",
+      "round": 1,
+      "field": "recovery",
+      "bytes": 3952504290,
+      "seconds": 112.593884521164,
+      "http_bytes": 3952504290,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_persisted",
+      "time": 1792901580.3827415,
+      "worker": "lf",
+      "round": 1,
+      "field": "delta",
+      "bytes": 1976222062,
+      "seconds": 63.841763485223055,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_persisted",
+      "time": 1792901699.2090237,
+      "worker": "lf",
+      "round": 1,
+      "field": "recovery",
+      "bytes": 3952504290,
+      "seconds": 118.82617698516697,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_uploaded",
+      "time": 1792902178.1851437,
+      "worker": "hl",
+      "round": 2,
+      "field": "parameters",
+      "bytes": 1976222459,
+      "seconds": 24.80677857529372,
+      "http_bytes": 1976222459,
+      "source_seconds": 1.7500488990917802,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_uploaded",
+      "time": 1792902243.4938262,
+      "worker": "hl",
+      "round": 2,
+      "field": "recovery",
+      "bytes": 3952504290,
+      "seconds": 53.714801204390824,
+      "http_bytes": 3952504290,
+      "source_seconds": 11.593780565075576,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_uploaded",
+      "time": 1792902321.9803598,
+      "worker": "lf",
+      "round": 2,
+      "field": "parameters",
+      "bytes": 1976222459,
+      "seconds": 22.427761814557016,
+      "http_bytes": 1976222459,
+      "source_seconds": 5.3409786485135555,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_uploaded",
+      "time": 1792902378.7745106,
+      "worker": "lf",
+      "round": 2,
+      "field": "recovery",
+      "bytes": 3952504290,
+      "seconds": 44.75519442465156,
+      "http_bytes": 3952504290,
+      "source_seconds": 12.03883068729192,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_downloaded",
+      "time": 1792902450.9383593,
+      "worker": "hl",
+      "round": 2,
+      "field": "delta",
+      "bytes": 1976222062,
+      "seconds": 40.574193893931806,
+      "http_bytes": 1976222062,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_downloaded",
+      "time": 1792902536.7800193,
+      "worker": "hl",
+      "round": 2,
+      "field": "recovery",
+      "bytes": 3952504290,
+      "seconds": 85.84154182113707,
+      "http_bytes": 3952504290,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_persisted",
+      "time": 1792902620.9281294,
+      "worker": "hl",
+      "round": 2,
+      "field": "delta",
+      "bytes": 1976222062,
+      "seconds": 84.14800388831645,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_persisted",
+      "time": 1792902737.256981,
+      "worker": "hl",
+      "round": 2,
+      "field": "recovery",
+      "bytes": 3952504290,
+      "seconds": 116.32873785868287,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_downloaded",
+      "time": 1792902925.8388891,
+      "worker": "lf",
+      "round": 2,
+      "field": "delta",
+      "bytes": 1976222062,
+      "seconds": 65.5752675794065,
+      "http_bytes": 1976222062,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_downloaded",
+      "time": 1792903051.8775654,
+      "worker": "lf",
+      "round": 2,
+      "field": "recovery",
+      "bytes": 3952504290,
+      "seconds": 126.03856657631695,
+      "http_bytes": 3952504290,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_persisted",
+      "time": 1792903123.1959481,
+      "worker": "lf",
+      "round": 2,
+      "field": "delta",
+      "bytes": 1976222062,
+      "seconds": 71.3182825082913,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_persisted",
+      "time": 1792903228.7786095,
+      "worker": "lf",
+      "round": 2,
+      "field": "recovery",
+      "bytes": 3952504290,
+      "seconds": 105.5825515165925,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_uploaded",
+      "time": 1792903700.3352962,
+      "worker": "hl",
+      "round": 3,
+      "field": "parameters",
+      "bytes": 1976222459,
+      "seconds": 27.943067108280957,
+      "http_bytes": 1976222459,
+      "source_seconds": 5.495859486982226,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_uploaded",
+      "time": 1792903777.5903897,
+      "worker": "hl",
+      "round": 3,
+      "field": "recovery",
+      "bytes": 3952504290,
+      "seconds": 57.693577208556235,
+      "http_bytes": 3952504290,
+      "source_seconds": 19.56140009779483,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_uploaded",
+      "time": 1792903832.4640758,
+      "worker": "lf",
+      "round": 3,
+      "field": "parameters",
+      "bytes": 1976222459,
+      "seconds": 22.56270227394998,
+      "http_bytes": 1976222459,
+      "source_seconds": 3.035064176656306,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_uploaded",
+      "time": 1792903894.194105,
+      "worker": "lf",
+      "round": 3,
+      "field": "recovery",
+      "bytes": 3952504290,
+      "seconds": 49.78061667829752,
+      "http_bytes": 3952504290,
+      "source_seconds": 11.949308086186647,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_downloaded",
+      "time": 1792903966.5961754,
+      "worker": "hl",
+      "round": 3,
+      "field": "delta",
+      "bytes": 1976222062,
+      "seconds": 40.16343432571739,
+      "http_bytes": 1976222062,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_downloaded",
+      "time": 1792904048.6449466,
+      "worker": "hl",
+      "round": 3,
+      "field": "recovery",
+      "bytes": 3952504290,
+      "seconds": 82.04865267593414,
+      "http_bytes": 3952504290,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_persisted",
+      "time": 1792904135.8683238,
+      "worker": "hl",
+      "round": 3,
+      "field": "delta",
+      "bytes": 1976222062,
+      "seconds": 87.22327653504908,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_persisted",
+      "time": 1792904251.6636715,
+      "worker": "hl",
+      "round": 3,
+      "field": "recovery",
+      "bytes": 3952504290,
+      "seconds": 115.79516515880823,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_downloaded",
+      "time": 1792904380.9280005,
+      "worker": "lf",
+      "round": 3,
+      "field": "delta",
+      "bytes": 1976222062,
+      "seconds": 57.594184992834926,
+      "http_bytes": 1976222062,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_downloaded",
+      "time": 1792904495.211291,
+      "worker": "lf",
+      "round": 3,
+      "field": "recovery",
+      "bytes": 3952504290,
+      "seconds": 114.28318265359849,
+      "http_bytes": 3952504290,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_persisted",
+      "time": 1792904549.214733,
+      "worker": "lf",
+      "round": 3,
+      "field": "delta",
+      "bytes": 1976222062,
+      "seconds": 54.00323252007365,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    },
+    {
+      "event": "artifact_persisted",
+      "time": 1792904643.684419,
+      "worker": "lf",
+      "round": 3,
+      "field": "recovery",
+      "bytes": 3952504290,
+      "seconds": 94.46957251429558,
+      "source_log": "logs/lowband-spot-c3/controller-rounds.log"
+    }
+  ],
+  "cost": {
+    "scope": "left-endpoint integration of sampled cur_instances; includes idle/warmup/failure",
+    "exact_billing": false,
+    "samples": 184,
+    "first_observation": 1792847014.2530324,
+    "last_observation": 1792905709.079733,
+    "sampled_gpu_hours_by_type": {
+      "a10": 105.38789917627975,
+      "a100-pcie-80GB": 98.23440662437018
+    },
+    "sampled_gpu_hours": 203.62230580064994,
+    "peak_reported_instances": 16,
+    "unknown_count_slot_hours": 5.131442170474265,
+    "intervals_with_unknown_counts": 22,
+    "limits": "Failed-query intervals are excluded for the affected slot; counts there are unknown, not zero. The integral covers observed counts only and may omit rollout overlap or changes between samples; last interval is not extrapolated."
+  },
+  "controller_memory": {
+    "samples": 866,
+    "max_controller_rss_bytes": 12004200448,
+    "max_controller_hwm_bytes": 12544409600,
+    "max_cgroup_bytes": 32622108672,
+    "max_cgroup_rss_bytes": 28842491904,
+    "max_cgroup_cache_bytes": 21648527360,
+    "scope": "C3 controller sampled every five seconds; cgroup includes other workspace processes and file cache. Maxima can occur at different times."
+  },
+  "audit_memory": {
+    "samples": 56,
+    "max_rss_bytes": 16179863552,
+    "max_hwm_bytes": 17076908032,
+    "max_cgroup_bytes": 32526159872,
+    "max_cgroup_rss_bytes": 26582859776,
+    "max_cgroup_cache_bytes": 10536685568,
+    "scope": "Full-state audit sampled every five seconds after GPU evaluation and saved replay comparison; cgroup includes unrelated workspace processes and page cache. Maxima need not coincide."
+  },
+  "evaluation_regression": {
+    "assertions_passed": true,
+    "tests": 1,
+    "command_returncode": 1,
+    "clean_exit": false,
+    "log": "lowband_training/.runtime/c3/evaluation-regression-isolated.log",
+    "attempt_logs": [
+      "lowband_training/.runtime/c3/evaluation-regression.log",
+      "lowband_training/.runtime/c3/evaluation-regression-confirmed.log",
+      "lowband_training/.runtime/c3/evaluation-regression-isolated.log"
+    ],
+    "limitation": "unittest reports OK; tool wrapper returns 1 because a native library attempts a restricted /proc/<pid>/task/<tid>/comm thread-name write. This is not a clean command exit.",
+    "full_gpu_evaluation_verified": true
+  },
+  "effective_tokens_per_sampled_gpu_hour": 2574.8063206458714,
+  "sampled_gpu_hours_per_million_effective_tokens": 388.37872657899845,
+  "sampled_cost_efficiency_scope": "Completed C1/C3 accepted tokens divided by task3 deployment sampled GPU-hours, including earlier failed attempts and idle replicas. Missing-count intervals are excluded; this is not billing or stable-state training efficiency.",
+  "independent_prefetch_http_body_bytes": 0,
+  "independent_prefetch_scope": "Historical prefetch logs include earlier runs and potentially unaccepted attempts; excluded from accepted-job payload budget.",
+  "initial_validation": {
+    "batch_size": 4,
+    "device": "cuda",
+    "full_validation": true,
+    "perplexity": 21.92559025780685,
+    "precision": "fp32",
+    "seconds": 29.60968516767025,
+    "seq_len": 256,
+    "validation_loss": 3.0876544595746265,
+    "validation_stream_tokens": 262210,
+    "validation_tokens": 262209,
+    "validation_windows": 1025
+  },
+  "final_validation": {
+    "batch_size": 4,
+    "device": "cuda",
+    "full_validation": true,
+    "perplexity": 29.132567861376817,
+    "precision": "fp32",
+    "seconds": 31.492284059524536,
+    "seq_len": 256,
+    "validation_loss": 3.371856718867076,
+    "validation_stream_tokens": 262210,
+    "validation_tokens": 262209,
+    "validation_windows": 1025
+  },
+  "validation_loss_change": 0.28420225929244936,
+  "perplexity_change_fraction": 0.3287016458315799,
+  "parent_run_sha256": "fe370dab2bf01105556b3dd13a451e50706280d462c27d05919894b1fd4fe979",
+  "source_sha256": {
+    "train.py": "448d30e2963fd34185a35cdb4274517cc1ed3bec08af9f60e6de1fafb66b0a10",
+    "protocol.py": "e319288e3cd1be93f4ca5f7fcd58e7306b6698e98989d2492163df9d92740b7a",
+    "http_worker.py": "f22e1fa04eddb4b4e17e02f2589af3fb769bc068655b930811f7f2bc38a30867",
+    "http_controller.py": "0c32ea4c15f51e1dca74de2f5d484a88911f8d5a1f34195591affa98e0e72e0b",
+    "hdfs_store.py": "12a1d13bab0c5e80f339f3c4d973d64875ccda1cda78ed9578751cb21cb1cdb8"
+  }
+}

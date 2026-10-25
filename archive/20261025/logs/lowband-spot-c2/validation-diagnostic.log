@@ -1,0 +1,14 @@
+{"phase": "hash_start", "sha256": "78d16be7be96428524c66f0058df12b4c138af29bbf9a85c57b9a367827a5d0c"}
+{"phase": "hash_done", "seconds": 10.32701653894037}
+{"phase": "load_done", "seconds": 2.163045924156904, "keys": ["parameters", "momentum"]}
+{"phase": "validate_start"}
+{"phase": "hash_start", "sha256": "5d4d66a7408404dea0929b55ec02b4338716fd844183085fd67a46dfa81292fa"}
+{"phase": "hash_done", "seconds": 5.893656863830984}
+{"phase": "load_done", "seconds": 1.1089926660060883, "keys": ["delta"]}
+{"phase": "hash_start", "sha256": "79997c5ceb7a0f739a5616907f7b392068ac403920ac4bcbe49d04df8c9aecde"}
+{"phase": "hash_done", "seconds": 11.33058825880289}
+{"phase": "load_done", "seconds": 2.058669521473348, "keys": ["optimizer", "cursor", "rng"]}
+{"phase": "hash_start", "sha256": "a1c4e5f9667edfe6fd6624020f606207021264dd7f6e166228a8370bacb020ab"}
+{"phase": "hash_done", "seconds": 9.424769949167967}
+{"phase": "load_done", "seconds": 2.9055851558223367, "keys": ["optimizer", "cursor", "rng"]}
+{"phase": "validate_complete", "seconds": 33.96306367404759, "parameters": 290, "not_durable_acceptance": true}

@@ -1,0 +1,33 @@
+{"event": "fork_controller_retry_start", "time": 1792871778.5939941, "child_controller_pid": 939394, "child_deadline": 1792876701.522374, "inherited_round": 1, "parent_run_sha256": "fe370dab2bf01105556b3dd13a451e50706280d462c27d05919894b1fd4fe979", "image": "<worker-image>"}
+{"event": "fork_controller_retry_start", "time": 1792871851.4857986, "child_controller_pid": 940717, "child_deadline": 1792876701.522374, "inherited_round": 1, "parent_run_sha256": "fe370dab2bf01105556b3dd13a451e50706280d462c27d05919894b1fd4fe979", "image": "<worker-image>"}
+{"event": "assigned", "time": 1792871991.7653656, "worker": "hl", "round": 1, "generation": 0, "instance": "instance-0034", "job_id": "1f68a02634360fd44dcb5c54067ed0a5b2bb35ec4d2e40a818b96a870d8263fe"}
+{"event": "artifact_uploaded", "time": 1792872018.2545457, "worker": "hl", "round": 1, "field": "parameters", "bytes": 1976222459, "seconds": 24.84232304804027, "http_bytes": 1976222459, "source_seconds": 1.6380912810564041}
+{"event": "artifact_uploaded", "time": 1792872077.4968262, "worker": "hl", "round": 1, "field": "recovery", "bytes": 3952504290, "seconds": 49.859120099805295, "http_bytes": 3952504290, "source_seconds": 9.383055862039328}
+{"event": "assigned", "time": 1792872102.118914, "worker": "lf", "round": 1, "generation": 0, "instance": "instance-0035", "job_id": "a3eda95153692530fd02d33aaa16ed2617d66a54e17373d2f3cf829729fde89d"}
+{"event": "artifact_uploaded", "time": 1792872126.6514797, "worker": "lf", "round": 1, "field": "parameters", "bytes": 1976222459, "seconds": 22.44268742017448, "http_bytes": 1976222459, "source_seconds": 2.082112199626863}
+{"event": "artifact_uploaded", "time": 1792872184.2681127, "worker": "lf", "round": 1, "field": "recovery", "bytes": 3952504290, "seconds": 45.751595785841346, "http_bytes": 3952504290, "source_seconds": 11.86493475548923}
+{"event": "artifact_downloaded", "time": 1792872254.3362997, "worker": "hl", "round": 1, "field": "delta", "bytes": 1976222062, "seconds": 40.6918581482023, "http_bytes": 1976222062}
+{"event": "artifact_downloaded", "time": 1792872337.138496, "worker": "hl", "round": 1, "field": "recovery", "bytes": 3952504290, "seconds": 82.8020781148225, "http_bytes": 3952504290}
+{"event": "artifact_persisted", "time": 1792872394.1720376, "worker": "hl", "round": 1, "field": "delta", "bytes": 1976222062, "seconds": 57.033442533575}
+{"event": "artifact_persisted", "time": 1792872503.2592735, "worker": "hl", "round": 1, "field": "recovery", "bytes": 3952504290, "seconds": 109.08714598510414}
+{"event": "endpoint_retry", "time": 1792881822.5562005, "worker": "hl", "reason": "TimeoutError"}
+{"event": "controller_session_end", "time": 1792881822.5567598, "seconds": 9956.180081547238, "storage_read_bytes": 0, "storage_write_bytes": 7904951320, "storage_transfer_seconds": 0.0, "storage_command_count": 54, "storage_command_seconds": 304.4160049073398, "http_sent_bytes": 11857454622, "http_received_bytes": 5928834568}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "<workspace>/lowband_training/http_controller.py", line 306, in <module>
+    main()
+  File "<workspace>/lowband_training/http_controller.py", line 294, in main
+    print(json.dumps(controller.run(pause_after_round=args.pause_after_round)), flush=True)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/lowband_training/http_controller.py", line 237, in run
+    completed = self.step()
+                ^^^^^^^^^^^
+  File "<workspace>/lowband_training/http_controller.py", line 170, in step
+    if self.store.exists(f"updates/{base['round']:06d}/{worker}.json"):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/lowband_training/hdfs_store.py", line 70, in exists
+    self.check_deadline()
+  File "<workspace>/lowband_training/storage.py", line 49, in check_deadline
+    raise TimeoutError("Persisted run deadline reached")
+TimeoutError: Persisted run deadline reached

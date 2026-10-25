@@ -1,0 +1,2 @@
+{"event": "replay_upload", "previous": {"bytes": 3952504290, "sha256": "a1c4e5f9667edfe6fd6624020f606207021264dd7f6e166228a8370bacb020ab"}, "input": {"bytes": 1976222459, "sha256": "4af6c66b6652b7722b09123b16369def9697a8aec5f2ad8797170a1f12998fe6"}}
+{"event": "replay_collected", "metrics": {"compute_seconds": 34.1961722522974, "first_train_loss": 2.749056577682495, "last_train_loss": 3.7315964698791504, "local_validation_loss": 2.2308714389801025, "mean_train_loss": 2.924143483862281, "peak_allocated_bytes": 9919601664}}
