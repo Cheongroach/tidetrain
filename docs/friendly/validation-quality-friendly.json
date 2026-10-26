@@ -1,0 +1,16 @@
+{
+  "insight": "Validation quality worsened in this observed run.",
+  "source_files": [
+    "results/qwen05b-4round/validation-r0-full-gpu.json",
+    "results/qwen05b-4round/validation-r4-full-gpu.json"
+  ],
+  "perplexity": [
+    21.92559025780685,
+    29.132567861376817
+  ],
+  "relative_change_percent": 32.87016458315799,
+  "target_tokens": 262209,
+  "windows": 1025,
+  "training_runs": 1,
+  "error_bars": "None; multi-seed variability not measured."
+}
