@@ -1,0 +1,258 @@
+{
+  "edition_date": "2026-10-26",
+  "scope": "TideTrain publication and source training documents; runtime/vendor/source snapshots excluded",
+  "scientific_skill": "scientific-writing-editing",
+  "final_validation_date": "2026-10-27",
+  "verification_report": "DOCUMENT_CHECKS-friendly.json",
+  "friendly_file_sha256_reference": "DOCUMENT_CHECKS-friendly.json#/file_sha256",
+  "originals_preserved": true,
+  "documents": [
+    {
+      "original": "tidetrain-research/README.md",
+      "sha256": "3edf5f27395e7dad03a3849ff36400eb1790db41e15b4da91404a2d335cb73c8",
+      "bytes": 4475,
+      "format": ".md",
+      "friendly": "tidetrain-research/README-friendly.md",
+      "kind": "overview",
+      "reason_original_kept": "保留发布时的说明、数字与分支安排。",
+      "friendly_notebook": null
+    },
+    {
+      "original": "tidetrain-research/archive/20261025/GPU_PROGRESS.md",
+      "sha256": "cf15e73d4ca2f72c09b200b3f2e91dbcf5af8df06cb9074800ef71f10b5b63bb",
+      "bytes": 16768,
+      "format": ".md",
+      "friendly": "tidetrain-research/archive/20261025/GPU_PROGRESS-friendly.md",
+      "kind": "progress",
+      "reason_original_kept": "保留历史操作、配置或研究推导，便于核对当时状态。",
+      "friendly_notebook": null
+    },
+    {
+      "original": "tidetrain-research/archive/20261025/GPU_REPORT.md",
+      "sha256": "a1804cc49671ff2e8935cd5c0bb4a925a8edb93343459584743a3ba0ef7bebfa",
+      "bytes": 6308,
+      "format": ".md",
+      "friendly": "tidetrain-research/archive/20261025/GPU_REPORT-friendly.md",
+      "kind": "gpu_report",
+      "reason_original_kept": "保留原始终验设置、精确数值和证据引用。",
+      "friendly_notebook": null
+    },
+    {
+      "original": "tidetrain-research/archive/20261025/HTTP_DEPLOYMENT.md",
+      "sha256": "3b02d746f8ea0db5bf5e8bb383e9e261bf31cc8ae87f39b21a373c0453a2fdd4",
+      "bytes": 10236,
+      "format": ".md",
+      "friendly": "tidetrain-research/archive/20261025/HTTP_DEPLOYMENT-friendly.md",
+      "kind": "deployment",
+      "reason_original_kept": "保留历史操作、配置或研究推导，便于核对当时状态。",
+      "friendly_notebook": null
+    },
+    {
+      "original": "tidetrain-research/archive/20261025/SCALING_DESIGN.md",
+      "sha256": "1ef7a04e57d7e5dfc2f2177b54a396d74ca16c2020fa4d51c07e964e13337948",
+      "bytes": 7179,
+      "format": ".md",
+      "friendly": "tidetrain-research/archive/20261025/SCALING_DESIGN-friendly.md",
+      "kind": "scale_design",
+      "reason_original_kept": "保留历史操作、配置或研究推导，便于核对当时状态。",
+      "friendly_notebook": null
+    },
+    {
+      "original": "tidetrain-research/docs/HTTP_DEPLOYMENT.md",
+      "sha256": "3b02d746f8ea0db5bf5e8bb383e9e261bf31cc8ae87f39b21a373c0453a2fdd4",
+      "bytes": 10236,
+      "format": ".md",
+      "friendly": "tidetrain-research/docs/HTTP_DEPLOYMENT-friendly.md",
+      "kind": "deployment",
+      "reason_original_kept": "保留历史操作、配置或研究推导，便于核对当时状态。",
+      "friendly_notebook": null
+    },
+    {
+      "original": "tidetrain-research/docs/PUBLIC_EXPORT.md",
+      "sha256": "7b0928380834d52b559518fd3a64d38d12da62c738ee737299ec3fefa1b624a1",
+      "bytes": 1588,
+      "format": ".md",
+      "friendly": "tidetrain-research/docs/PUBLIC_EXPORT-friendly.md",
+      "kind": "public_export",
+      "reason_original_kept": "保留历史操作、配置或研究推导，便于核对当时状态。",
+      "friendly_notebook": null
+    },
+    {
+      "original": "tidetrain-research/docs/SCALE_PLAN.md",
+      "sha256": "a0c547fb08cac2c75c156752cb763c57fdf50a11f88d9e3cbc25b543b2f31425",
+      "bytes": 4467,
+      "format": ".md",
+      "friendly": "tidetrain-research/docs/SCALE_PLAN-friendly.md",
+      "kind": "scale_design",
+      "reason_original_kept": "保留历史操作、配置或研究推导，便于核对当时状态。",
+      "friendly_notebook": null
+    },
+    {
+      "original": "tidetrain-research/lowband_training/HTTP_DEPLOYMENT.md",
+      "sha256": "3b02d746f8ea0db5bf5e8bb383e9e261bf31cc8ae87f39b21a373c0453a2fdd4",
+      "bytes": 10236,
+      "format": ".md",
+      "friendly": "tidetrain-research/lowband_training/HTTP_DEPLOYMENT-friendly.md",
+      "kind": "deployment",
+      "reason_original_kept": "保留历史操作、配置或研究推导，便于核对当时状态。",
+      "friendly_notebook": null
+    },
+    {
+      "original": "tidetrain-research/lowband_training/dorado_http_training.ipynb",
+      "sha256": "cf9aaf618407b089c6f73399b4981bca2595401bc67da7d2e06039f5b16815b3",
+      "bytes": 4840,
+      "format": ".ipynb",
+      "friendly": "tidetrain-research/lowband_training/dorado_http_training-friendly.md",
+      "kind": "notebook",
+      "reason_original_kept": "保留原始可执行代码和当时的环境说明。",
+      "friendly_notebook": "tidetrain-research/lowband_training/dorado_http_training-friendly.ipynb"
+    },
+    {
+      "original": "tidetrain-research/research/LITERATURE_REVIEW.md",
+      "sha256": "d437b683a788ad33fd932ec375b5a9c669547b977ea222a32c33588bc57162a4",
+      "bytes": 8665,
+      "format": ".md",
+      "friendly": "tidetrain-research/research/LITERATURE_REVIEW-friendly.md",
+      "kind": "literature",
+      "reason_original_kept": "保留历史操作、配置或研究推导，便于核对当时状态。",
+      "friendly_notebook": null
+    },
+    {
+      "original": "tidetrain-research/research/conversation/CONVERSATION_HISTORY.md",
+      "sha256": "8ed7dcfcb647d7cb90353c9ef84e7fb3c987243ee3fc17ce6c4419d73ae1c46b",
+      "bytes": 428482,
+      "format": ".md",
+      "friendly": "tidetrain-research/research/conversation/CONVERSATION_HISTORY-friendly.md",
+      "kind": "conversation",
+      "reason_original_kept": "保留授权、原始措辞及历史顺序。",
+      "friendly_notebook": null
+    },
+    {
+      "original": "tidetrain-research/research/conversation/SCALE_CONTINUATION.md",
+      "sha256": "81ee515a6b23bef02be21871fdab26c9ad2fddce22df8a7c0e588b2766c250c6",
+      "bytes": 2193,
+      "format": ".md",
+      "friendly": "tidetrain-research/research/conversation/SCALE_CONTINUATION-friendly.md",
+      "kind": "continuation",
+      "reason_original_kept": "保留历史操作、配置或研究推导，便于核对当时状态。",
+      "friendly_notebook": null
+    },
+    {
+      "original": "tidetrain-research/research/manuscripts/GPU_PROGRESS.md",
+      "sha256": "cf15e73d4ca2f72c09b200b3f2e91dbcf5af8df06cb9074800ef71f10b5b63bb",
+      "bytes": 16768,
+      "format": ".md",
+      "friendly": "tidetrain-research/research/manuscripts/GPU_PROGRESS-friendly.md",
+      "kind": "progress",
+      "reason_original_kept": "保留历史操作、配置或研究推导，便于核对当时状态。",
+      "friendly_notebook": null
+    },
+    {
+      "original": "tidetrain-research/research/manuscripts/HTTP_DEPLOYMENT.md",
+      "sha256": "3b02d746f8ea0db5bf5e8bb383e9e261bf31cc8ae87f39b21a373c0453a2fdd4",
+      "bytes": 10236,
+      "format": ".md",
+      "friendly": "tidetrain-research/research/manuscripts/HTTP_DEPLOYMENT-friendly.md",
+      "kind": "deployment",
+      "reason_original_kept": "保留历史操作、配置或研究推导，便于核对当时状态。",
+      "friendly_notebook": null
+    },
+    {
+      "original": "tidetrain-research/research/manuscripts/ICM_V3_HANDOFF.md",
+      "sha256": "7acda4159306eb084938fbdaa5afe33b531e0db9da2d156660a6bf026fec66fd",
+      "bytes": 2679,
+      "format": ".md",
+      "friendly": "tidetrain-research/research/manuscripts/ICM_V3_HANDOFF-friendly.md",
+      "kind": "icm",
+      "reason_original_kept": "保留历史操作、配置或研究推导，便于核对当时状态。",
+      "friendly_notebook": null
+    },
+    {
+      "original": "tidetrain-research/research/manuscripts/SCALING_DESIGN.md",
+      "sha256": "1ef7a04e57d7e5dfc2f2177b54a396d74ca16c2020fa4d51c07e964e13337948",
+      "bytes": 7179,
+      "format": ".md",
+      "friendly": "tidetrain-research/research/manuscripts/SCALING_DESIGN-friendly.md",
+      "kind": "scale_design",
+      "reason_original_kept": "保留历史操作、配置或研究推导，便于核对当时状态。",
+      "friendly_notebook": null
+    },
+    {
+      "original": "tidetrain-research/research/manuscripts/SPOT_B1_STATUS.md",
+      "sha256": "a2f336bda994933a0538e7dcd8c63ed61f1f19db6c605eaacac5dd1d931789f7",
+      "bytes": 5504,
+      "format": ".md",
+      "friendly": "tidetrain-research/research/manuscripts/SPOT_B1_STATUS-friendly.md",
+      "kind": "spot_second",
+      "reason_original_kept": "保留历史操作、配置或研究推导，便于核对当时状态。",
+      "friendly_notebook": null
+    },
+    {
+      "original": "tidetrain-research/research/manuscripts/SPOT_STATUS.md",
+      "sha256": "dacd8d6fa37d28ea9fd43751fb84814dbac1a912a6d8a150779480eb0456f1ff",
+      "bytes": 3237,
+      "format": ".md",
+      "friendly": "tidetrain-research/research/manuscripts/SPOT_STATUS-friendly.md",
+      "kind": "spot_first",
+      "reason_original_kept": "保留历史操作、配置或研究推导，便于核对当时状态。",
+      "friendly_notebook": null
+    },
+    {
+      "original": "tidetrain-research/research/manuscripts/UI_HANDOFF.md",
+      "sha256": "92447e17a1c724a3b8004fd0086fa80168bda6ea58a03cd9e30a01a2579053dd",
+      "bytes": 5433,
+      "format": ".md",
+      "friendly": "tidetrain-research/research/manuscripts/UI_HANDOFF-friendly.md",
+      "kind": "ui_handoff",
+      "reason_original_kept": "保留历史操作、配置或研究推导，便于核对当时状态。",
+      "friendly_notebook": null
+    },
+    {
+      "original": "tidetrain-research/research/manuscripts/deployment-followup.md",
+      "sha256": "c3b1c47071f506248e9759e6609e6334e78603ad03c02623943d3add9a739c10",
+      "bytes": 2148,
+      "format": ".md",
+      "friendly": "tidetrain-research/research/manuscripts/deployment-followup-friendly.md",
+      "kind": "mount_history",
+      "reason_original_kept": "保留历史操作、配置或研究推导，便于核对当时状态。",
+      "friendly_notebook": null
+    },
+    {
+      "original": "tidetrain-research/research/manuscripts/dorado_http_training.ipynb",
+      "sha256": "cf9aaf618407b089c6f73399b4981bca2595401bc67da7d2e06039f5b16815b3",
+      "bytes": 4840,
+      "format": ".ipynb",
+      "friendly": "tidetrain-research/research/manuscripts/dorado_http_training-friendly.md",
+      "kind": "notebook",
+      "reason_original_kept": "保留原始可执行代码和当时的环境说明。",
+      "friendly_notebook": "tidetrain-research/research/manuscripts/dorado_http_training-friendly.ipynb"
+    },
+    {
+      "original": "tidetrain-research/research/scale/EXECUTION_REPORT.md",
+      "sha256": "a4e007e5984f3feafc2babeb312e5fff5aa299d1e0707113110027dbdf8aabb7",
+      "bytes": 9266,
+      "format": ".md",
+      "friendly": "tidetrain-research/research/scale/EXECUTION_REPORT-friendly.md",
+      "kind": "scale_execution",
+      "reason_original_kept": "保留历史操作、配置或研究推导，便于核对当时状态。",
+      "friendly_notebook": null
+    },
+    {
+      "original": "tidetrain-research/results/qwen05b-4round/REPORT.md",
+      "sha256": "76030f05bd0f4f1e92251b186d86ef38c76993891cbbbe435d75b4ca8a8db6d3",
+      "bytes": 6483,
+      "format": ".md",
+      "friendly": "tidetrain-research/results/qwen05b-4round/REPORT-friendly.md",
+      "kind": "gpu_report",
+      "reason_original_kept": "保留原始终验设置、精确数值和证据引用。",
+      "friendly_notebook": null
+    }
+  ],
+  "notebook_code_cells_preserved": true,
+  "resource_execution_resumed": false,
+  "clarifications": [
+    "resource_entry_was_wrong",
+    "no_actual_1000_gpu_result",
+    "quality_worsened_in_one_observed_run"
+  ]
+}
